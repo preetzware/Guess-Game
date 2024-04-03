@@ -10,3 +10,45 @@
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1.2rem 18rem;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    border: 5px solid #000C66;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.start,
+.howTo {
+  width: 160px;
+  font-size: 17px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  background-color: #000C66; 
+  color: #fff; 
+  border: none;
+  border-radius: 15px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  margin-top: 4.8rem;
+}

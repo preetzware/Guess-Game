@@ -3,3 +3,10 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  body {
+    background-image: url(../img/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -96,7 +96,7 @@
 .timercontainer {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 22rem;
+  margin: 1rem 10rem;
 }
 
 .timercontainer #clock {
@@ -181,3 +181,11 @@
   filter: brightness(.8);
  }
  
+ #wrapper {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color:#fffdfd89;
+}

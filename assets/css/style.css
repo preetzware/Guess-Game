@@ -101,7 +101,19 @@
 
 .timercontainer #clock {
   background-color: #fff;
+  opacity: 0.7;
   width: 130px;
   padding: 4px;
   border-radius: 25px;
+}
+
+#landmark{
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#landmark-img {
+  width: 350px;
+  height: 250px;
+  border: solid #231557;
 }

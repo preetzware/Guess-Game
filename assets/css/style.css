@@ -189,3 +189,28 @@
   justify-content: center;
   background-color:#fffdfd89;
 }
+
+#nextBtn {
+  padding: 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#win-display {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#timer {
+  font-size: 28px;
+}

@@ -153,7 +153,6 @@ landmarkElement.alt = pictureArray[questionNumber].picture;
 for (let i = 0; i < allOptions.length; i++) {
     allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
     }
-
 }
 
 //Audio for correct Answer
@@ -174,4 +173,27 @@ function checkAnswer(e) {
     if(startGame === false){
         alert("Click start button to start");
         return;
+}
+
+    let answer = e.innerHTML;
+    //when any of the options is clicked setTimeOut will be activated
+    const current = pictureArray[questionNumber];
+    let buttonId = e.id;
+    console.log("buttonId", buttonId);
+    if (answer === current.answer) {
+        document.getElementById(buttonId).style.backgroundColor = '#04D010';
+        audioCorrectAnswer();
+        score = score + 1;
+        scoreValue.innerHTML = score;
+    } else {
+        document.getElementById(buttonId).style.backgroundColor = '#FF0F39';
+        audioWrongAnswer();
+        document.querySelectorAll('.option').forEach(button => {
+            if (button.innerText === current.answer) {
+                button.style.backgroundColor = '#04D010';
+            }
+            button.disabled = true;
+        });
     }
+
+    console.log("questionNumber", questionNumber);

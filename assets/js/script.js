@@ -134,3 +134,11 @@ function startInterval() {
         }
     }, 1000);
 }
+
+//created nextQuestion function to increment the questionNumber by 1
+function nextQuestion() {
+    //if all the questions were answered return
+    if (questionNumber === 9) { 
+        // alert("test");     
+        return;
+    }

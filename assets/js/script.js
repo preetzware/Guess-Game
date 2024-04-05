@@ -110,3 +110,27 @@ function removeBackgroundColor() {
 
     });
 }
+
+function startInterval() {
+    setTimer = setInterval(function () {
+        timer = timer + 1;
+        // console.log("timer", timer)
+        displayTimer.innerHTML = timer;
+        if (timer === 30) {
+            stopInterval();
+            //displayScore();
+            nextQuestion();
+            removeBackgroundColor();
+            timer = 0;
+            if (questionNumber === 9) {                
+                // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
+                document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
+                // document.getElementById('popupContainer').style.display = "block";
+                document.getElementById('scoreDisplay').innerHTML = score;
+                return;
+            }
+            startInterval();
+
+        }
+    }, 1000);
+}

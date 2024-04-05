@@ -29,7 +29,8 @@
 
     <!-- Quiz content in wrapper -->
 
-    <div id="wrapper">
+    <div id="game-wrapper">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -40,25 +41,46 @@
 
     <!-- Timer Container -->
 
-    <div class="timercontainer">
-        <h2>Player: <span id="player-name"></span></h2>
-        <h2 id="clock">Time:<span id="timer"></span>s</h2>    
-        <h2>Score: <span id="score">0</span>/10</h2>
-    </div>
+        <div class="timercontainer">
+            <h2>Player: <span id="player-name"></span></h2>
+            <h2 id="clock">Time:<span id="timer"></span>s</h2>    
+            <h2>Score: <span id="score">0</span>/10</h2>
+        </div>
 
     <!-- Landmarks Images -->
 
-    <div>
-        <div id="landmark">
-            <img id="landmark-img" src="" alt="landmark image">
-        </div>
+        <div>
+            <div id="landmark">
+                <img id="landmark-img" src="" alt="landmark image">
+            </div>
 
     <!-- Answer Options -->
 
-    <div class="options">
-        <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
-        <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
-        <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
+        <div class="options">
+            <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
+            <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
+            <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
+        </div>
+
+    <!-- Star rating feedback form --> 
+
+        <div class="star-wrapper">
+            <h3>Give us a rating and your feedback!</h3>
+            <form action="#">
+            <div class="star-rating">
+                <input type="number" name="rating" hidden>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+            </div>
+            <textarea name="opinion" cols="30" rows="5" 
+            placeholder="Describe your experience..."></textarea>
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
     </div>
 
     <!-- Audios -->
@@ -116,11 +138,10 @@
 </div>
 
 
-<!-- User name pop -->
+<!-- User name pop-up -->
 
-<div id="usernamePopup"></div>
-<div id="usernameMsgbox">
-    <div>
+<div id="usernamePopup">Enter your name:</div>
+<div id="usernameMsgbox"><div>
 
     <!-- <span class="displayPop" onclick="startDisplayPopup()">x</span> -->
         <div class="usernameContainer">
@@ -146,28 +167,6 @@
                 <!-- <div class="question">Q: 2</div> -->
                 <button id="restart" onclick="restart()">Restart</button>
             </div>
-        </div>
-
-        <!-- Star rating feedback form --> 
-
-        <div class="star-wrapper">
-            <h3>Give us a rating and your feedback!</h3>
-            <form action="#">
-                <div class="star-rating">
-                    <input type="number" name="rating" hidden>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                </div>
-                <textarea name="opinion" cols="30" rows="5" 
-                placeholder="Describe your experience..."></textarea>
-                <div class="btn-group">
-                    <button type="submit" class="btn-submit">Submit</button>
-                    <button class="btn-submit">Cancel</button>
-                </div>
-            </form>
         </div>
 
     </div>

@@ -90,3 +90,23 @@ scoreValue.innerHTML = score;
 let timer = 0;
 let displayTimer = document.getElementById("timer");
 displayTimer.innerHTML = 0;
+
+//to increment the timer value from 0 to 30 use javascript internal function called setInverval
+
+function displayScore() {
+    console.log("test");
+}
+
+let setTimer;
+
+function stopInterval() {
+    clearInterval(setTimer);    
+}
+
+function removeBackgroundColor() {
+    document.querySelectorAll('.option').forEach(button => {
+        button.style.backgroundColor = '';
+        button.disabled = false;
+
+    });
+}

@@ -141,4 +141,24 @@ function nextQuestion() {
     if (questionNumber === 9) { 
         // alert("test");     
         return;
+}
+
+//if questions are in between 1 to 10 these lines will be executed
+questionNumber = questionNumber + 1;
+console.log("questionNumber", questionNumber);
+landmarkElement.src = pictureArray[questionNumber].img;
+landmarkElement.alt = pictureArray[questionNumber].picture;
+
+//when question increased then next question options are updated
+for (let i = 0; i < allOptions.length; i++) {
+    allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
     }
+
+}
+
+//Audio for correct Answer
+function audioCorrectAnswer() {
+    console.log("audio correct answer");
+    let correctAnswer = document.getElementById("correctAnswer");
+    correctAnswer.play();
+}

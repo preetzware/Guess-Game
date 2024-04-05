@@ -212,3 +212,54 @@ document.getElementById('howToPlayMsgbx').style.display = "none";
 
 document.getElementById('scorePopup').style.display = "none";
 document.getElementById('scoreMsgbx').style.display = "none";
+
+//create functions and block of codes for pop-ups
+
+function displayPop() {
+    document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "none";
+}
+
+function startDisplayPopup() {
+    document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
+}
+
+function howToPlay() {
+    console.log("how to play");
+    document.getElementById('howToPlayPopup').style.display = "block";
+    document.getElementById('howToPlayMsgbx').style.display = "block";
+}
+
+function howToPlayDisplay() {
+    console.log("how to play text");
+    document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
+    document.getElementById('howToPlayPoup').style.display = document.getElementById('howToPlayMsgbx').style.display = "none";
+}
+
+function start() {
+    console.log("start");
+    
+    document.getElementById('usernamePopup').style.display = "block";
+    document.getElementById('usernameMsgbox').style.display = "block";
+ 
+    document.getElementById('startPopup').style.display = "none";
+     document.getElementById('startMsgbx').style.display = "none";
+    document.getElementById('howToPlayPopup').style.display = "none";
+    document.getElementById('howToPlayMsgbx').style.display = "none";
+    document.getElementById('scorePopup').style.display = "none";
+    document.getElementById('scoreMsgbx').style.display = "none";
+}
+
+function restart(){
+    window.location.reload();
+}
+
+function getName(){
+    document.getElementById('usernamePopup').style.display = "none";
+    document.getElementById('usernameMsgbox').style.display = "none";
+
+    let name = document.getElementById("name").value;
+    document.getElementById("player-name").innerHTML = name;
+
+    startGame = true;
+    startInterval();
+}

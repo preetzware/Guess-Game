@@ -162,3 +162,16 @@ function audioCorrectAnswer() {
     let correctAnswer = document.getElementById("correctAnswer");
     correctAnswer.play();
 }
+
+//Audio for wrong Answer
+function audioWrongAnswer() {
+    let wrongAnswer = document.getElementById("wrongAnswer");
+    wrongAnswer.play();
+}
+
+function checkAnswer(e) {
+    console.log("check answer clicked", e.innerHTML, questionNumber);
+    if(startGame === false){
+        alert("Click start button to start");
+        return;
+    }

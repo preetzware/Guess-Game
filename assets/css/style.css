@@ -142,9 +142,9 @@
   text-transform: uppercase;
   color: var(--color);
   z-index: 1;
- }
+}
  
- .option::before, .option::after {
+.option::before, .option::after {
   content: '';
   display: block;
   width: 50px;
@@ -155,32 +155,32 @@
   z-index: -1;
   background-color: var(--color);
   transition: 1s ease;
- }
+}
  
- .option::before {
+.option::before {
   top: -1em;
   left: -1em;
- }
+}
  
- .option::after {
+.option::after {
   left: calc(100% + 1em);
   top: calc(100% + 1em);
- }
+}
  
  .option:hover::before, .option:hover::after {
   height: 410px;
   width: 410px;
- }
+}
  
  .option:hover {
   color: #E7F2F8;
- }
+}
  
  .option.button:active {
   filter: brightness(.8);
- }
+}
  
- #wrapper {
+#wrapper {
   width: 75%;
   margin: auto;
   display: flex;
@@ -214,4 +214,79 @@
   font-size: 28px;
 }
 
+#popupContainer {
+  height: 1024px;
+  width: 100%;
+  opacity: .75;
+  filter: alpha(opacity=75);
+  -ms-filter: "alpha(opacity=75)";
+  -khtml-opacity: .75;
+  -moz-opacity: .75;
+  background: #B8B8B8;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* height: 1024px;
+  width: 100%; */
+  z-index:990
+}
+
+#startPopup, #scorePopup, #howToPlayPopup, #usernamePopup {
+  opacity: .75;
+  filter: alpha(opacity=75);
+  -ms-filter: "alpha(opacity=75)";
+  -khtml-opacity: .75;
+  -moz-opacity: .75;
+  background: #B8B8B8;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: auto;
+  width: 100%;
+  z-index:990;
+}
+
+#startMsgbx, #scoreMsgbx, #howToPlayMsgbx, #usernameMsgbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 350px;
+  margin-top: -75px;
+  margin-left: -175px;
+  background-color:bisque;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 7px #777;
+  -webkit-box-shadow: 3px 3px 7px #777;
+  -moz-border-radius: 22px;
+  -webkit-border-radius: 22px;
+  z-index:999
+}
+
+#startMsgbx, #scoreMsgbx, #howToPlayMsgbx {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;    
+}
+    
+.score, .question {
+  margin-bottom: 10px;
+}
+    
+.score {
+  font-weight: bold;
+  color: #007bff;    
+}
+    
+.question {
+  font-style: italic;
+}
+    
+.displayPop, .displayHowToPlay {
+  position: absolute;
+  top: 5px; 
+  right: 5px; 
+  cursor: pointer; 
+  color: red;
+}
 

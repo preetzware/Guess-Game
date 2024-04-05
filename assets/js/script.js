@@ -197,3 +197,4 @@ function checkAnswer(e) {
     }
 
     console.log("questionNumber", questionNumber);
+}

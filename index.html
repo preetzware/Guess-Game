@@ -96,6 +96,57 @@
     </div>
 </div>
 
+<!-- start button and how to play -->
+
+<div id="startPopup"></div>
+<div id="startMsgbx">
+    <div>
+        <span class="displayPop" onclick="startDisplayPopup()">x</span>
+        <div class="startContainer">
+            <div>
+                <button class="start" onclick="start()">Start</button>
+            </div>
+            <div>
+                <button class="howTo" onclick="howToPlay()">How to play</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- User name pop -->
+
+<div id="usernamePopup"></div>
+<div id="usernameMsgbox">
+    <div>
+
+    <!-- <span class="displayPop" onclick="startDisplayPopup()">x</span> -->
+        <div class="usernameContainer">
+            <div>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <button class="howTo" onclick="getName()">Ok</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- score board -->
+    <div id="scorePopup"></div>
+    <div id="scoreMsgbx">
+        <div>
+            <span class="displayPop" onclick="displayPop()">x</span>
+            <div>
+                <div><h4>Game Over!</h4></div>
+                <h4 id="message"></h4>
+                <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
+                <!-- <div class="question">Q: 2</div> -->
+                <button id="restart" onclick="restart()">Restart</button>
+            </div>
+        </div>
+
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

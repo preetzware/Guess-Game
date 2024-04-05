@@ -60,7 +60,6 @@
 .howTo:hover {
     background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 55%, #895cf2 100%);
     background-position: right center;
-    
 }
 
 .heading {
@@ -215,23 +214,3 @@
   font-size: 28px;
 }
 
-.start,
-.howTo {
-  width: 160px;
-  padding: 10px 20px; 
-  font-size: 16px; 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 600;
-  background-color: #000C66; 
-  color: #fff; 
-  border: none;
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-  margin: 10px;
-}
-
-.start:hover,
-.howTo:hover {
-  background-color: #0056b3; 
-}

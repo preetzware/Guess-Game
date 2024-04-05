@@ -198,3 +198,17 @@ function checkAnswer(e) {
 
     console.log("questionNumber", questionNumber);
 }
+
+//Access pop-up elements and hide display
+console.log("document.getElementById('startPopup')", document.getElementById('startPopup'));
+document.getElementById('usernamePopup').style.display = "none";
+document.getElementById('usernameMsgbox').style.display = "none";
+
+document.getElementById('startPopup').style.display = "none";
+document.getElementById('startMsgbx').style.display = "none";
+
+document.getElementById('howToPlayPopup').style.display =  "none";
+document.getElementById('howToPlayMsgbx').style.display = "none";
+
+document.getElementById('scorePopup').style.display = "none";
+document.getElementById('scoreMsgbx').style.display = "none";

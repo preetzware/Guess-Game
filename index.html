@@ -68,7 +68,7 @@
 
         <div class="star-wrapper">
             <h3>Give us a rating and your feedback!</h3>
-            <form action="#">
+            <form>
             <div class="star-rating">
                 <input type="number" name="rating" hidden>
                 <i class='bx bx-star star' style="--i: 0;"></i>
@@ -77,13 +77,16 @@
                 <i class='bx bx-star star' style="--i: 3;"></i>
                 <i class='bx bx-star star' style="--i: 4;"></i>
             </div>
-            <textarea name="opinion" cols="30" rows="5" 
+            <textarea name="opinion" id="feedbackText" cols="30" rows="5" 
             placeholder="Describe your experience..."></textarea>
             <div class="btn-group">
-                <button type="submit" class="btn-submit">Submit</button>
+                <button type="submit" class="btn-submit" onclick="feedback(event)">Submit</button>
             </div>
             </form>
+            
         </div>
+
+        
 
     <!-- Footer section -->   
         <div id="footer">
@@ -103,7 +106,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
@@ -116,12 +119,12 @@
                   </a>
                 </li>
                 <li>
-                  <a class="google" href="#">
+                  <a class="github" href="#">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                   </a>
                 </li>
             </ul>
@@ -208,6 +211,18 @@
                 <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
                 <!-- <div class="question">Q: 2</div> -->
                 <button id="restart" onclick="restart()">Restart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- feedback board -->
+    <div id="feedbackPopup"></div>
+    <div id="feedbackMsgbx">
+        <div>            
+            <div>
+                <div><h4>Thank you for your feedback</h4></div>
+                <button class="feedbackPopup" onclick="displayFeedback()">Close</button>                
             </div>
         </div>
 

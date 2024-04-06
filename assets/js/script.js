@@ -282,12 +282,13 @@ function restart(){
     window.location.reload();
 }
 
+let user;
 function getName(){
     document.getElementById('usernamePopup').style.display = "none";
     document.getElementById('usernameMsgbox').style.display = "none";
 
-    let name = document.getElementById("name").value;
-    document.getElementById("player-name").innerHTML = name;
+    user = document.getElementById("name").value;
+    document.getElementById("player-name").innerHTML = user;
 
     startGame = true;
     startInterval();
@@ -297,12 +298,18 @@ function getName(){
 
 const allStar = document.querySelectorAll('.star-rating .star')
 const ratingValue = document.querySelector('.star-rating input')
-
 allStar.forEach((item, idx)=> {
     item.addEventListener('click', function () {
         let click = 0
-        ratingValue.value = idx + 1
-        console.log(ratingValue.value)
+        
+        ratingValue.value = idx + 1        
+        
+        //if idx is 0 and first star is highlighted and previous is 1 then remove the star
+        if(idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1){            
+            console.log("test");
+            allStar[idx].classList.replace('bxs-star', 'bx-star');
+            return;           
+        }
 
         allStar.forEach(i=> {
             i.classList.replace('bxs-star', 'bx-star')
@@ -317,5 +324,19 @@ allStar.forEach((item, idx)=> {
                 click++
             }
         }
+        ratingValue.prev = idx +1        
+      console.log("ratingValue.prev", ratingValue.prev)
     })
+    
 })
+
+function feedback(event){
+    event.preventDefault();
+    document.getElementById("feedbackPopup").style.display ="block";
+    document.getElementById("feedbackMsgbx").style.display ="block";
+} 
+
+function displayFeedback(){
+    document.getElementById("feedbackPopup").style.display ="none";
+    document.getElementById("feedbackMsgbx").style.display ="none";
+}

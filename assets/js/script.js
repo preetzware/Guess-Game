@@ -197,21 +197,50 @@ function checkAnswer(e) {
     }
 
     console.log("questionNumber", questionNumber);
+
+    if (questionNumber == 9) {
+        console.log("questionNumber", questionNumber, "inside")
+
+        if(score === 10){
+            document.getElementById("message").innerHTML = "Congratulation"
+            document.getElementById("restart").style.display = "none"
+        }else{
+            document.getElementById("message").innerHTML = "Better luck next time do you want to replay"
+            // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
+        document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
+        // document.getElementById('popupContainer').style.display = "block";
+        document.getElementById('scoreDisplay').innerHTML = score;
+        document.getElementById("restart").style.display = 'block';
+        }       
+
+        stopInterval();
+        timer = 0;       
+        return;
+    }else{
+        setTimeout(function () {
+            stopInterval();
+            //displayScore();
+            nextQuestion();
+            removeBackgroundColor();
+            timer = 0;
+            startInterval();
+        }, 2000)
+    }
 }
 
 //Access pop-up elements and hide display
 console.log("document.getElementById('startPopup')", document.getElementById('startPopup'));
-document.getElementById('usernamePopup').style.display = "none";
-document.getElementById('usernameMsgbox').style.display = "none";
+// document.getElementById('usernamePopup').style.display = "none";
+// document.getElementById('usernameMsgbox').style.display = "none";
 
-document.getElementById('startPopup').style.display = "none";
-document.getElementById('startMsgbx').style.display = "none";
+// document.getElementById('startPopup').style.display = "none";
+// document.getElementById('startMsgbx').style.display = "none";
 
-document.getElementById('howToPlayPopup').style.display =  "none";
-document.getElementById('howToPlayMsgbx').style.display = "none";
+// document.getElementById('howToPlayPopup').style.display =  "none";
+// document.getElementById('howToPlayMsgbx').style.display = "none";
 
-document.getElementById('scorePopup').style.display = "none";
-document.getElementById('scoreMsgbx').style.display = "none";
+// document.getElementById('scorePopup').style.display = "none";
+// document.getElementById('scoreMsgbx').style.display = "none";
 
 //create functions and block of codes for pop-ups
 

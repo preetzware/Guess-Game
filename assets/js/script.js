@@ -1,6 +1,5 @@
 //Create array of objects for image and answers
-const pictureArray = [
-    {
+const pictureArray = [{
         picture: 'Mount Fuji',
         img: 'assets/img/q1.jpeg',
         answer: 'Japan',
@@ -100,7 +99,7 @@ function displayScore() {
 let setTimer;
 
 function stopInterval() {
-    clearInterval(setTimer);    
+    clearInterval(setTimer);
 }
 
 function removeBackgroundColor() {
@@ -108,6 +107,20 @@ function removeBackgroundColor() {
         button.style.backgroundColor = '';
         button.disabled = false;
 
+    });
+}
+
+function timeUp() {
+    document.getElementById('message').innerHTML = "Time Up!";
+    document.getElementById('scoreDisplay').innerHTML = score;
+    document.getElementById('scorePopup').style.display = "block";
+    document.getElementById('scoreMsgbx').style.display = "block";
+    return true;
+}
+
+function disableButton(){
+    document.querySelectorAll('.option').forEach(button => {        
+        button.disabled = true;
     });
 }
 
@@ -119,10 +132,16 @@ function startInterval() {
         if (timer === 30) {
             stopInterval();
             //displayScore();
+            // alert("test")
+            let value = timeUp();            
+            if(value){
+                disableButton();
+                return;
+            }
             nextQuestion();
             removeBackgroundColor();
             timer = 0;
-            if (questionNumber === 9) {                
+            if (questionNumber === 9) {
                 // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
                 document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
                 // document.getElementById('popupContainer').style.display = "block";
@@ -138,20 +157,20 @@ function startInterval() {
 //created nextQuestion function to increment the questionNumber by 1
 function nextQuestion() {
     //if all the questions were answered return
-    if (questionNumber === 9) { 
+    if (questionNumber === 9) {
         // alert("test");     
         return;
-}
+    }
 
-//if questions are in between 1 to 10 these lines will be executed
-questionNumber = questionNumber + 1;
-console.log("questionNumber", questionNumber);
-landmarkElement.src = pictureArray[questionNumber].img;
-landmarkElement.alt = pictureArray[questionNumber].picture;
+    //if questions are in between 1 to 10 these lines will be executed
+    questionNumber = questionNumber + 1;
+    console.log("questionNumber", questionNumber);
+    landmarkElement.src = pictureArray[questionNumber].img;
+    landmarkElement.alt = pictureArray[questionNumber].picture;
 
-//when question increased then next question options are updated
-for (let i = 0; i < allOptions.length; i++) {
-    allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
+    //when question increased then next question options are updated
+    for (let i = 0; i < allOptions.length; i++) {
+        allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
     }
 }
 
@@ -168,12 +187,17 @@ function audioWrongAnswer() {
     wrongAnswer.play();
 }
 
+function audioCongratulation() {
+    let congratulation = document.getElementById("congratulations");
+    congratulation.play();
+}
+
 function checkAnswer(e) {
     console.log("check answer clicked", e.innerHTML, questionNumber);
-    if(startGame === false){
+    if (startGame === false) {
         alert("Click start button to start");
         return;
-}
+    }
 
     let answer = e.innerHTML;
     //when any of the options is clicked setTimeOut will be activated
@@ -187,13 +211,15 @@ function checkAnswer(e) {
         scoreValue.innerHTML = score;
     } else {
         document.getElementById(buttonId).style.backgroundColor = '#FF0F39';
-        audioWrongAnswer();
         document.querySelectorAll('.option').forEach(button => {
-            if (button.innerText === current.answer) {
+            console.log("button.innerText", button.innerText.toLowerCase())
+            console.log("current.answer", current.answer.toLowerCase())
+            if (button.innerText.toLowerCase() === current.answer.toLowerCase()) {
                 button.style.backgroundColor = '#04D010';
             }
             button.disabled = true;
         });
+        audioWrongAnswer();
     }
 
     console.log("questionNumber", questionNumber);
@@ -201,22 +227,27 @@ function checkAnswer(e) {
     if (questionNumber == 9) {
         console.log("questionNumber", questionNumber, "inside")
 
-        if(score === 10){
+        if (score === 10) {
             document.getElementById("message").innerHTML = "Congratulation"
             document.getElementById("restart").style.display = "none"
-        }else{
+            document.getElementById('scoreDisplay').innerHTML = score;
+            document.getElementById('scorePopup').style.display = "block";
+            document.getElementById('scoreMsgbx').style.display = "block";
+            audioCongratulation();
+
+        } else {
             document.getElementById("message").innerHTML = "Better luck next time do you want to replay"
             // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
-        document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
-        // document.getElementById('popupContainer').style.display = "block";
-        document.getElementById('scoreDisplay').innerHTML = score;
-        document.getElementById("restart").style.display = 'block';
-        }       
+            document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
+            // document.getElementById('popupContainer').style.display = "block";
+            document.getElementById('scoreDisplay').innerHTML = score;
+            document.getElementById("restart").style.display = 'block';
+        }
 
         stopInterval();
-        timer = 0;       
+        timer = 0;
         return;
-    }else{
+    } else {
         setTimeout(function () {
             stopInterval();
             //displayScore();
@@ -252,6 +283,10 @@ function startDisplayPopup() {
     document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
 }
 
+function displayHow() {
+    document.getElementById('howToPlayPopup').style.display = document.getElementById('howToPlayMsgbx').style.display = "none";
+}
+
 function howToPlay() {
     console.log("how to play");
     document.getElementById('howToPlayPopup').style.display = "block";
@@ -266,24 +301,25 @@ function howToPlayDisplay() {
 
 function start() {
     console.log("start");
-    
+
     document.getElementById('usernamePopup').style.display = "block";
     document.getElementById('usernameMsgbox').style.display = "block";
- 
+
     document.getElementById('startPopup').style.display = "none";
-     document.getElementById('startMsgbx').style.display = "none";
+    document.getElementById('startMsgbx').style.display = "none";
     document.getElementById('howToPlayPopup').style.display = "none";
     document.getElementById('howToPlayMsgbx').style.display = "none";
     document.getElementById('scorePopup').style.display = "none";
     document.getElementById('scoreMsgbx').style.display = "none";
 }
 
-function restart(){
+function restart() {
     window.location.reload();
 }
 
 let user;
-function getName(){
+
+function getName() {
     document.getElementById('usernamePopup').style.display = "none";
     document.getElementById('usernameMsgbox').style.display = "none";
 
@@ -298,25 +334,25 @@ function getName(){
 
 const allStar = document.querySelectorAll('.star-rating .star')
 const ratingValue = document.querySelector('.star-rating input')
-allStar.forEach((item, idx)=> {
+allStar.forEach((item, idx) => {
     item.addEventListener('click', function () {
         let click = 0
-        
-        ratingValue.value = idx + 1        
-        
+        // console.log("idx", idx)
+        ratingValue.value = idx + 1
+
         //if idx is 0 and first star is highlighted and previous is 1 then remove the star
-        if(idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1){            
+        if (idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1) {
             console.log("test");
             allStar[idx].classList.replace('bxs-star', 'bx-star');
-            return;           
+            return;
         }
 
-        allStar.forEach(i=> {
+        allStar.forEach(i => {
             i.classList.replace('bxs-star', 'bx-star')
             i.classList.remove('active')
         })
-        for(let i=0; i<allStar.length; i++) {
-            if(i <= idx) {
+        for (let i = 0; i < allStar.length; i++) {
+            if (i <= idx) {
                 allStar[i].classList.replace('bx-star', 'bxs-star')
                 allStar[i].classList.add('active')
             } else {
@@ -324,19 +360,19 @@ allStar.forEach((item, idx)=> {
                 click++
             }
         }
-        ratingValue.prev = idx +1        
-      console.log("ratingValue.prev", ratingValue.prev)
+        ratingValue.prev = idx + 1
+        console.log("ratingValue.prev", ratingValue.prev)
     })
-    
+
 })
 
-function feedback(event){
+function feedback(event) {
     event.preventDefault();
-    document.getElementById("feedbackPopup").style.display ="block";
-    document.getElementById("feedbackMsgbx").style.display ="block";
-} 
+    document.getElementById("feedbackPopup").style.display = "block";
+    document.getElementById("feedbackMsgbx").style.display = "block";
+}
 
-function displayFeedback(){
-    document.getElementById("feedbackPopup").style.display ="none";
-    document.getElementById("feedbackMsgbx").style.display ="none";
+function displayFeedback() {
+    document.getElementById("feedbackPopup").style.display = "none";
+    document.getElementById("feedbackMsgbx").style.display = "none";
 }

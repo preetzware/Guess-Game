@@ -327,6 +327,11 @@ textarea {
   z-index:990
 }
 
+.howToPlayContainer .pop-msg {
+   padding: 1rem;
+   
+}
+
 #startPopup, #scorePopup, #howToPlayPopup, #usernamePopup, #feedbackPopup {
   display: none;
   opacity: .75;

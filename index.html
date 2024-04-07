@@ -23,10 +23,18 @@
 </head>
 <body>
      <!-- Logo and buttons -->
-    <div class="logo">
+    <div class="logo">        
         <button class="start" onclick="start()">Start</button>
-        <img src="assets/img/guessing-cat.png" alt="Logo">
+        <img src="assets/img/guessing-cat.png" alt="Logo">            
         <button class="howTo" onclick="howToPlay()">How to play</button>
+    </div>
+    <!-- <div class="startButtonContainer">
+        <img src="assets/img/guessing-cat.png" alt="Logo">        
+        <div class="startHow">
+            
+        <button class="howTo" onclick="howToPlay()">How to play</button>
+        </div> -->
+        
     </div>
 
     <!-- Quiz content in wrapper -->
@@ -44,9 +52,12 @@
     <!-- Timer Container -->
 
         <div class="timercontainer">
-            <h2>Player: <span id="player-name"></span></h2>
-            <h2 id="clock">Time:<span id="timer"></span>s</h2>    
-            <h2>Score: <span id="score">0</span>/10</h2>
+            <h2 id="playerName">Player: <span id="player-name">Test</span></h2>
+            <div class="timeScore">
+                <h2 id="clock">Time:<span id="timer"></span>s</h2>    
+                <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
+            </div>
+            
         </div>
 
     <!-- Landmarks Images -->
@@ -146,7 +157,8 @@
         <div>
             <!-- <span class="displayHowToPlay" onclick="howToPlayDisplay()">x</span> -->
         <div class="howToPlayContainer">
-            <p><span id="bold">Test your knowledge of Geography!</span>
+            <p class="pop-msg">
+                <h2>Test your knowledge of Geography!</h2>
                 <br>
                     The Guess game will feature an image of a landmark and below it, 
                     three countries' names will be displayed. Your goal is to guess the correct

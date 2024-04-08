@@ -53,10 +53,10 @@
 
         <div class="timercontainer">
             <h2 id="playerName">Player: <span id="player-name">Test</span></h2>
-            <div class="timeScore">
+            <!-- <div class="timeScore">
                 <h2 id="clock">Time:<span id="timer"></span>s</h2>    
                 <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
-            </div>
+            </div> -->
             
         </div>
 
@@ -64,6 +64,10 @@
 
         <div>
             <div id="landmark">
+                <div class="timeScore">
+                    <h2 id="clock">Time:<span id="timer"></span>s</h2>    
+                    <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
+                </div>
                 <img id="landmark-img" src="" alt="landmark image">
             </div>
 
@@ -95,11 +99,10 @@
             </div>
             </form>
             
-        </div>
-
-        
+        </div> 
 
     <!-- Footer section -->   
+    
         <div id="footer">
             <ul>
                 <li>
@@ -141,7 +144,9 @@
             </ul>
         </div>
     </div>
+
     <!-- Audios -->
+    
     <audio id="correctAnswer" src="./assets/audio/rightanswer.mp3"></audio>
     <audio id="wrongAnswer" src="./assets/audio/wronganswer.mp3"></audio>
     <audio id="congratulations" src="./assets/audio/congratulations.mp3"></audio>

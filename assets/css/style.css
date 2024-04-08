@@ -5,6 +5,8 @@
   }
 
   body {
+    /* width: 600px; */
+    margin: 0 auto;
     background-image: url(../img/background-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,13 +22,34 @@
 }
 
 .logo {
+    width: 75%;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin: 1.2rem 18rem;
+    /* margin: 1.2rem 18rem;     */
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
-.logo img {
+/* .startButtonContainer{
+  position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(243, 206, 250, 0.9);
+    padding: 5px 20px;
+    box-shadow: 4px 4px 60px rgba(45, 1, 63); 
+    text-align: center;
+} */
+
+.startHow{
+  text-align: center;
+}
+
+.startHow button{
+  margin: 0px!important;
+}
+
+.logo img{
     width: 130px;
     height: auto;
     border: 5px solid #000C66;
@@ -93,9 +116,15 @@
 }
 
 .timercontainer {
+  width: 60%;
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 10rem;
+  justify-content: space-evenly;
+  /* margin: 1rem 10rem; */
+  margin: 0 auto;
+  font-size: 12px;
+  /* added */
+  flex-direction: column;
+  text-align: center;
 }
 
 .timercontainer #clock {
@@ -111,6 +140,11 @@
 #timer {
   font-size: 18px;
   text-align: center;
+}
+
+.timeScore{
+  display: flex;
+  justify-content: space-between;
 }
 
 #landmark{
@@ -133,66 +167,62 @@
 } 
 
 .option {
-  --color: #000C66;
-  padding: 13px 28px;
-  background-color: transparent;
-  border-radius: .3em;
+  --border-width: 5px;
+
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: bold;
-  font-size: 17px;
-  border: 2px solid;
-  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  font-size: 16px;
   text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
+  color: white;
+  background: #231557;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
 }
- 
-.option::before, .option::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--color);
-  transition: 1s ease;
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
 }
- 
-.option::before {
-  top: -1em;
-  left: -1em;
-}
- 
-.option::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
-}
- 
- .option:hover::before, .option:hover::after {
-  height: 410px;
-  width: 410px;
-}
- 
- .option:hover {
-  color: #E7F2F8;
-}
- 
- .option.button:active {
-  filter: brightness(.8);
-}
- 
+
 #game-wrapper {
-  width: 75%;
+  width: 75%;  
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color:#fffdfd89;
+
+  /* margin */
+  /* margin-top: 180px; */
 }
 
 .star-wrapper {
@@ -310,6 +340,50 @@ textarea {
   font-size: 28px;
 }
 
+.howToPlayContainer {
+  background-image: url(../img/train.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.pop-msg h2 {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.howToPlayContainer .pop-msg {
+  background-color: #f8f6f6eb;
+  opacity: 4;
+}
+
+#pop-up-start {
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
 #popupContainer {
   height: 1024px;
   width: 100%;
@@ -325,11 +399,6 @@ textarea {
   /* height: 1024px;
   width: 100%; */
   z-index:990
-}
-
-.howToPlayContainer .pop-msg {
-   padding: 1rem;
-   
 }
 
 #startPopup, #scorePopup, #howToPlayPopup, #usernamePopup, #feedbackPopup {
@@ -353,11 +422,15 @@ textarea {
   position: absolute;
   left: 50%;
   top: 50%;
-  height: auto;
-  width: 350px;
+  height: 400px;
+  width: 40%;
   margin-top: -75px;
   margin-left: -175px;
   background-color:bisque;
+  background-image: url(../img/train.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
   border: 1px solid #ccc;
   box-shadow: 3px 3px 7px #777;
   -webkit-box-shadow: 3px 3px 7px #777;
@@ -367,9 +440,9 @@ textarea {
 }
 
 #startMsgbx, #scoreMsgbx, #howToPlayMsgbx, #feedbackMsgbx {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;    
+  border-radius: 7px;    
 }
     
 .score, .question {
@@ -432,17 +505,20 @@ ul li a span {
   position:absolute;
   transition: transform .5s;
 }
+
 ul li a span:nth-child(1),
 ul li a span:nth-child(3){
   width:100%;
   height:3px;
   background:#404040;
 }
+
 ul li a span:nth-child(1) {
   top:0;
   left:0;
   transform-origin: right;
 }
+
 ul li a:hover span:nth-child(1) {
   transform: scaleX(0);
   transform-origin: left;
@@ -480,12 +556,14 @@ ul li a:hover span:nth-child(2) {
   transform-origin: top;
   transition:transform .5s;
 }
+
 ul li a span:nth-child(4) {
   top:0;
   right:0;
   transform:scale(0);
   transform-origin: top;
 }
+
 ul li a:hover span:nth-child(4) {
   transform: scale(1);
   transform-origin: bottom;
@@ -525,3 +603,47 @@ ul li a:hover:nth-child(3) {
 ul li a:hover:nth-child(4) {
   color: #dd4b39;
 }
+
+#scoreValue, #playerName{
+  padding: 10px;
+}
+
+#scoreValue{
+  background-color: #fff;
+    opacity: 0.7;
+    width: 130px;
+    padding: 7px;
+    border-radius: 25px;
+    font-size: 17px;
+    text-align: center;
+}
+
+@media screen and (max-width:759px)  {
+   /* smartphones, Android phones, landscape iPhone */ 
+  
+
+.animate-character{
+  font-size: 35px;
+}
+
+.timercontainer {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+  
+  }
+
+  @media screen and (max-width:930px){
+    .timercontainer{      
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #scoreValue{
+      padding: 10px;
+    }
+    .timeScore{
+      margin: 14px auto;
+    }
+  }

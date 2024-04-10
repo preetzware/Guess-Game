@@ -340,22 +340,25 @@ textarea {
   font-size: 28px;
 }
 
-.howToPlayContainer {
-  background-image: url(../img/train.JPG);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; 
-}
-
 .pop-msg h2 {
   padding: 1rem;
   font-weight: bold;
   font-size: 12px;
 }
 
-.howToPlayContainer .pop-msg {
+.howToPlayContainer, .pop-msg {
   background-color: #f8f6f6eb;
-  opacity: 4;
+  opacity: 0.6;
+  padding: 12px; 
+}
+
+.gotItBtn{
+  text-align: center;
+}
+
+.modalTitle{
+  text-align: center;
+  font-size: larger;
 }
 
 #pop-up-start {
@@ -377,13 +380,13 @@ textarea {
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
   background: rgb(0,172,238);
-background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
-  border: none;
 }
+
 #popupContainer {
   height: 1024px;
   width: 100%;
@@ -415,6 +418,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   height: auto;
   width: 100%;
   z-index:990;
+  border: 4px solid white; 
 }
 
 #startMsgbx, #scoreMsgbx, #howToPlayMsgbx, #usernameMsgbox, #feedbackMsgbx {
@@ -426,9 +430,9 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   width: 40%;
   margin-top: -75px;
   margin-left: -175px;
-  background-color:bisque;
-  background-image: url(../img/train.JPG);
-  background-size: contain;
+  background-color:rgb(230, 229, 228);
+  background-image: url(../img/modalimg.JPG);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
   border: 1px solid #ccc;

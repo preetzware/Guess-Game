@@ -622,6 +622,10 @@ ul li a:hover:nth-child(4) {
     text-align: center;
 }
 
+@media screen and (min-width:759px){
+  
+}
+
 @media screen and (max-width:759px)  {
    /* smartphones, Android phones, landscape iPhone */ 
   
@@ -634,6 +638,10 @@ ul li a:hover:nth-child(4) {
     width: 75%;
     margin: 0 auto;
     font-size: 12px;
+}
+
+#landmark-img {
+  width:  100%;
 }
   
   }

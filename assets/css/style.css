@@ -4,24 +4,23 @@
     box-sizing: border-box;
   }
 
-  body {
-    /* width: 600px; */
-    margin: 0 auto;
-    background-image: url(../img/background-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+  margin: 0 auto;
+  background-image: url(../img/background-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;   
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;  
 }
 
-.logo {
+.logo, .desktop, .mobile {
     width: 75%;
     display: flex;
     justify-content: space-between;
@@ -49,7 +48,7 @@
   margin: 0px!important;
 }
 
-.logo img{
+.logo img, .desktop img, .mobile img{
     width: 130px;
     height: auto;
     border: 5px solid #000C66;
@@ -150,6 +149,7 @@
 #landmark{
   text-align: center;
   margin-top: 1.5rem;
+  overflow:hidden; 
 }
 
 #landmark-img {
@@ -271,9 +271,6 @@ textarea {
   font-size: 17px;
   font-weight: 800;
   cursor: pointer;
-      
-  /* Button shape & animation */
-  /* border-radius: $border-rounded; */
   margin: 10px;
   padding: .7em 2em;
   background-size: 200% auto;
@@ -622,40 +619,113 @@ ul li a:hover:nth-child(4) {
     text-align: center;
 }
 
-@media screen and (min-width:759px){
-  
+.desktop{
+  display: block;
 }
 
-@media screen and (max-width:759px)  {
-   /* smartphones, Android phones, landscape iPhone */ 
-  
-
-.animate-character{
-  font-size: 35px;
+.mobile{
+  display: none;
 }
 
-.timercontainer {
-    width: 75%;
+@media only screen and (max-width: 768px) {
+  /* Adjustments for tablets */
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    display: block;
+  }
+  .logo, .mobile {
+    width: 90%;
+    flex-direction: column;
     margin: 0 auto;
-    font-size: 12px;
-}
-
-#landmark-img {
-  width:  100%;
-}
-  
   }
 
-  @media screen and (max-width:930px){
-    .timercontainer{      
-      flex-direction: column;
-      text-align: center;
-    }
-
-    #scoreValue{
-      padding: 10px;
-    }
-    .timeScore{
-      margin: 14px auto;
-    }
+  .logo img, .mobile img {
+    width: 120px;
+    margin: 0 auto;
   }
+
+  .logo button, .mobile button{
+    margin: 10px auto;
+  }
+
+  .animate-character {
+    font-size: 8.5vmin;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .option {
+    width: 100%;
+  }
+
+  .timercontainer {
+    width: 90%;
+  }
+
+  #game-wrapper {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .star-wrapper h3 {
+    font-size: 16px;
+  }
+
+  .star-rating {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Adjustments for mobile devices */
+  .logo img {
+    width: 80px;
+  }
+
+  .start,
+  .howTo,
+  .feedbackPopup {
+    width: 130px;
+    font-size: 14px;
+  }
+
+  .options {
+    padding: 20px;
+  }
+
+  .option {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .timercontainer {
+    width: 100%;
+  }
+
+  #game-wrapper {
+    width: 100%;
+  }
+
+  .star-wrapper h3 {
+    font-size: 14px;
+  }
+
+  .star-rating {
+    font-size: 1.3rem;
+  }
+
+  textarea {
+    max-width: 250px;
+    font-size: 14px;
+  }
+}

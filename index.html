@@ -23,14 +23,14 @@
 </head>
 <body>
      <!-- Logo and buttons -->
-    <div class="logo">
-        <div class="desktop">        
+    <div class="">
+        <div id="desktop" class="logo">        
             <button class="start" onclick="start()">Start</button>
             <img src="assets/img/guessing-cat.png" alt="Logo">                    
             <button class="howTo" onclick="howToPlay()">How to play</button>
     
         </div>
-        <div class="mobile">
+        <div id="mobile" class="logo">
         <img src="assets/img/guessing-cat.png" alt="Logo">            
         <button class="start" onclick="start()">Start</button>
         <button class="howTo" onclick="howToPlay()">How to play</button>
@@ -60,7 +60,7 @@
     <!-- Timer Container -->
 
         <div class="timercontainer">
-            <h2 id="playerName">Player: <span id="player-name">Test</span></h2>
+            <h2 id="playerName">Player: <span id="player-name"></span></h2>
             <!-- <div class="timeScore">
                 <h2 id="clock">Time:<span id="timer"></span>s</h2>    
                 <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>

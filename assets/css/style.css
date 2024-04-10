@@ -20,7 +20,7 @@ body {
   padding: 20px;  
 }
 
-.logo, .desktop, .mobile {
+.logo{
     width: 75%;
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@ body {
   margin: 0px!important;
 }
 
-.logo img, .desktop img, .mobile img{
+.logo img{
     width: 130px;
     height: auto;
     border: 5px solid #000C66;
@@ -619,35 +619,36 @@ ul li a:hover:nth-child(4) {
     text-align: center;
 }
 
-.desktop{
-  display: block;
+#desktop{
+  display: flex;
 }
 
-.mobile{
+#mobile{
   display: none;
 }
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
-  .desktop{
+  #desktop{
     display: none;
   }
 
-  .mobile{
-    display: block;
+  #mobile{
+    display: flex;
   }
-  .logo, .mobile {
+  .logo{
     width: 90%;
+    display: flex;
     flex-direction: column;
     margin: 0 auto;
   }
 
-  .logo img, .mobile img {
+  .logo img  {
     width: 120px;
     margin: 0 auto;
   }
 
-  .logo button, .mobile button{
+  .logo button {
     margin: 10px auto;
   }
 

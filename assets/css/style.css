@@ -107,7 +107,7 @@ input[type=text] {
   box-shadow: 0 0 20px #eee;
 }
 
-.howTo{
+.howTo {
   margin-top: 10px;
   height: 40px;
   width: 40%;
@@ -381,16 +381,25 @@ textarea {
 .pop-msg {
   background-color: #f8f6f6eb;
   opacity: 0.6;
-  padding: 12px;
+  padding: 12px;  
 }
+.howToPlayContainer{
+  /* display: contents; */
+}
+
+.howToPlayContainer p{
+  font-size: 15px;
+}
+
 
 .gotItBtn {
   text-align: center;
+  margin-top: 12px;
 }
 
 .modalTitle {
   text-align: center;
-  font-size: larger;
+  font-size: 15px;
 }
 
 #pop-up-start {
@@ -448,7 +457,7 @@ textarea {
   -khtml-opacity: .75;
   -moz-opacity: .75;
   background: #B8B8B8;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   height: auto;
@@ -471,7 +480,8 @@ textarea {
 #howToPlayMsgbx,
 #usernameMsgbox {
   display: none;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   left: 42%;
   top: 50%;
   height: 400px;
@@ -492,7 +502,7 @@ textarea {
   animation-duration: 0.4s;
   transition-timing-function: ease-in;
 
-  z-index: 999
+  z-index: 999;  
 }
 
 #feedbackMsgbx {
@@ -834,12 +844,18 @@ ul li a:hover:nth-child(4) {
     width: 40px;
   }
 
+
+
   #startMsgbx,
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    left: 38%;
-    width: 90%;
+    top: 30%;
+    left: 46%;
+    width: 98%;
+    height: 80%;
+    /* margin-left: 1%;    */
+
   }
 }
 
@@ -886,4 +902,16 @@ ul li a:hover:nth-child(4) {
     max-width: 250px;
     font-size: 14px;
   }
+
+  #startMsgbx,
+  #scoreMsgbx,
+  #howToPlayMsgbx,
+  #usernameMsgbox {
+    top: 30%;
+    left: 46%;
+    width: 98%;
+    height: 60%;
+    /* margin-left: 0.2%; */
+  }
+
 }

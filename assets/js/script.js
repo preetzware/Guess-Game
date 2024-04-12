@@ -110,7 +110,12 @@ function removeBackgroundColor() {
     });
 }
 
+function displayPlayerName(){
+    document.getElementById("playerName").innerHTML = user
+}
+
 function timeUp() {
+    displayPlayerName();
     document.getElementById("gameText").innerHTML = "";
     document.getElementById('message').innerHTML = "Time Up! <br>Better luck next time!";
     document.getElementById('scoreDisplay').innerHTML = score;
@@ -119,8 +124,8 @@ function timeUp() {
     return true;
 }
 
-function disableButton(){
-    document.querySelectorAll('.option').forEach(button => {        
+function disableButton() {
+    document.querySelectorAll('.option').forEach(button => {
         button.disabled = true;
     });
 }
@@ -134,8 +139,8 @@ function startInterval() {
             stopInterval();
             //displayScore();
             // alert("test")
-            let value = timeUp();            
-            if(value){
+            let value = timeUp();
+            if (value) {
                 disableButton();
                 return;
             }
@@ -229,14 +234,18 @@ function checkAnswer(e) {
         console.log("questionNumber", questionNumber, "inside")
 
         if (score === 10) {
+            console.log("user", user)
+            displayPlayerName()
             document.getElementById("message").innerHTML = "Congratulation"
-            document.getElementById("restart").style.display = "none"
+            document.getElementById("restart").style.display = "block"
+            document.getElementById("restart").innerHTML = "Back To Home Page"
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById('scorePopup').style.display = "block";
             document.getElementById('scoreMsgbx').style.display = "block";
             audioCongratulation();
 
         } else {
+            displayPlayerName()
             document.getElementById("message").innerHTML = "Better luck next time do you want to replay"
             // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
             document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
@@ -302,20 +311,24 @@ function start() {
 }
 
 function restart() {
-    window.location.reload();   
+    window.location.reload();
 }
 
 let user;
 
 function getName() {
-    document.getElementById('usernamePopup').style.display = "none";
-    document.getElementById('usernameMsgbox').style.display = "none";
-
     user = document.getElementById("name").value;
-    document.getElementById("player-name").innerHTML = user;
+    if (user) {
+        document.getElementById('usernamePopup').style.display = "none";
+        document.getElementById('usernameMsgbox').style.display = "none";
+        // document.getElementById("player-name").innerHTML = user;
 
-    startGame = true;
-    startInterval();
+        startGame = true;
+        startInterval();
+    }else{
+        document.getElementById("error").innerHTML = "Please Enter Your Name"
+    }
+
 }
 
 //Star rating feedback form
@@ -356,8 +369,15 @@ allStar.forEach((item, idx) => {
 
 function feedback(event) {
     event.preventDefault();
-    document.getElementById("feedbackPopup").style.display = "block";
-    document.getElementById("feedbackMsgbx").style.display = "block";
+    let feedbackText = document.getElementById("feedbackText").value
+    if(feedbackText){
+        document.getElementById("feedbackError").innerHTML = ""
+        document.getElementById("feedbackPopup").style.display = "block";
+        document.getElementById("feedbackMsgbx").style.display = "block";
+    }else{
+        document.getElementById("feedbackError").innerHTML = "Please Enter Feedback"
+    }
+    
 }
 
 function displayFeedback() {

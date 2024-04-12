@@ -135,6 +135,7 @@ input[type=text] {
   }
 }
 
+/* remove */
 .timercontainer {
   width: 60%;
   display: flex;
@@ -453,6 +454,7 @@ textarea {
   overflow-y: auto;
   top: 0;
   left: 0;
+  /* change the background color */
   background-color: rgba(136, 126, 59, 0.553);
 }
 
@@ -622,6 +624,10 @@ textarea {
   text-align: center;
 }
 
+#error, #feedbackError{
+  color: red;
+}
+
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
 
@@ -720,7 +726,7 @@ textarea {
 
   /* Adjustments for mobile devices */
   .logo img {
-    width: 80px;
+    width: 100px;
   }
 
   .start,

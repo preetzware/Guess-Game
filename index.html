@@ -62,14 +62,14 @@
 
         <!-- Timer Container -->
 
-        <div class="timercontainer">
-            <h2 id="playerName">Player: <span id="player-name"></span></h2>
+        <!-- <div class="timercontainer"> -->
+            <!-- <h2 id="playerName">Player: <span id="player-name"></span></h2> -->
             <!-- <div class="timeScore">
                 <h2 id="clock">Time:<span id="timer"></span>s</h2>    
                 <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
             </div> -->
 
-        </div>
+        <!-- </div> -->
 
     <!-- Landmarks Images -->
 
@@ -104,8 +104,8 @@
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
                     <textarea name="opinion" id="feedbackText" cols="30" rows="5"
-                        placeholder="Describe your experience...">
-                    </textarea>
+                        placeholder="Describe your experience..." required></textarea>
+                        <p><span id="feedbackError"></span></p>
                     <div class="btn-group">
                         <button type="submit" class="btn-submit" onclick="feedback(event)">Submit
                         </button>
@@ -191,7 +191,8 @@
                     <div>
                         <p class="readyToPlay">Are you ready to play?</p>
                         <br>
-                        <input type="text" id="name" placeholder="Enter your name">
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                        <p><span id="error"></span></p>
                     </div>
                     <br>
                     <div>
@@ -210,6 +211,7 @@
                     <div>
                         <h4 id="gameText">Game Over!</h4>
                     </div>
+                    <h4>Player: <span id="playerName"></span></h4>
                     <h4 id="message">Thank you for playing. <br>Better luck next time!</h4>
                     <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
                     <!-- <div class="question">Q: 2</div> -->

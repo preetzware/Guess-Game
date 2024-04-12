@@ -71,7 +71,7 @@
 
         </div>
 
-        <!-- Landmarks Images -->
+    <!-- Landmarks Images -->
 
         <div>
             <div id="landmark">
@@ -82,18 +82,18 @@
                 <img id="landmark-img" alt="landmark image">
             </div>
 
-            <!-- Answer Options -->
+    <!-- Answer Options -->
 
-            <div class="options">
-                <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
-                <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
-                <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
-            </div>
+        <div class="options">
+            <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
+            <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
+            <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
+        </div>
 
-            <!-- Star rating feedback form -->
+    <!-- Star rating feedback form -->
 
-            <div class="star-wrapper">
-                <h3>Give us a rating and your feedback!</h3>
+        <div class="star-wrapper">
+            <h3>Give us a rating and your feedback!</h3>
                 <form>
                     <div class="star-rating">
                         <input type="number" name="rating" hidden>
@@ -104,28 +104,27 @@
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
                     <textarea name="opinion" id="feedbackText" cols="30" rows="5"
-                        placeholder="Describe your experience..."></textarea>
+                        placeholder="Describe your experience...">
+                    </textarea>
                     <div class="btn-group">
-                        <button type="submit" class="btn-submit" onclick="feedback(event)">Submit</button>
+                        <button type="submit" class="btn-submit" onclick="feedback(event)">Submit
+                        </button>
                     </div>
                 </form>
+        </div>
 
+    <!-- Footer section -->
+
+        <div id="footer">
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/preety-ramdin-65877a140/" class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/preetzware" class="github-icon"><i class="fa fa-github"></i></a>
+                <a href="https://www.instagram.com/preety_ramdin/" class="instagram-icon"><i class="fa fa-instagram"></i></a>
             </div>
+        </div>
 
-            <!-- Footer section -->
-
-            <div id="footer">
-
-                <div class="social-icons">
-                    <a href="#" class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
-                    <a href="#" class="github-icon"><i class="fa fa-github"></i></a>
-                </div>
-                
-
-
-            </div>
-
-            <!-- Audios -->
+    <!-- Audios -->
 
             <audio id="correctAnswer" src="./assets/audio/rightanswer.mp3"></audio>
             <audio id="wrongAnswer" src="./assets/audio/wronganswer.mp3"></audio>

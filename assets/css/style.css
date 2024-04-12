@@ -163,7 +163,9 @@ input[type=text] {
 
 .timeScore {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 13rem;
+  padding-bottom: 1rem;
 }
 
 #landmark {
@@ -643,7 +645,7 @@ textarea {
 
   .logo img {
     width: 130px;
-    height: auto;
+    height: 140px;
     margin: 0 auto;
   }
 
@@ -653,8 +655,8 @@ textarea {
   }
 
   .start, .howToPlay {
-    width: 130px;
-    height: 60px;
+    width: 120px;
+    height: 50px;
   }
 
   .animate-character {
@@ -685,11 +687,12 @@ textarea {
   }
 
   .star-rating {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   textarea {
-    max-width: 300px;
+    max-width: 400px;
+    height: 200px;
   }
 
   ul li {

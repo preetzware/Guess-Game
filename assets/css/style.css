@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .container {
@@ -35,16 +34,6 @@ body {
   padding-bottom: 10px;
 }
 
-/* .startButtonContainer{
-  position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(243, 206, 250, 0.9);
-    padding: 5px 20px;
-    box-shadow: 4px 4px 60px rgba(45, 1, 63); 
-    text-align: center;
-} */
-
 .usernameContainer {
   text-align: center;
   padding-top: 25%;
@@ -53,7 +42,6 @@ body {
 input[type=text] {
   width: 40%;
   padding: 12px 20px;
-  /* margin: 10px 0; */
   margin-top: 16px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -154,7 +142,6 @@ input[type=text] {
   /* margin: 1rem 10rem; */
   margin: 0 auto;
   font-size: 12px;
-  /* added */
   flex-direction: column;
   text-align: center;
 }
@@ -201,7 +188,6 @@ input[type=text] {
 
 .option {
   --border-width: 5px;
-
   position: relative;
   display: flex;
   justify-content: center;
@@ -251,9 +237,6 @@ input[type=text] {
   flex-direction: column;
   justify-content: center;
   background-color: #fffdfd89;
-
-  /* margin */
-  /* margin-top: 180px; */
 }
 
 .star-wrapper {
@@ -383,14 +366,14 @@ textarea {
   opacity: 0.6;
   padding: 12px;  
 }
-.howToPlayContainer{
+
+.howToPlayContainer {
   /* display: contents; */
 }
 
-.howToPlayContainer p{
+.howToPlayContainer p {
   font-size: 15px;
 }
-
 
 .gotItBtn {
   text-align: center;
@@ -470,7 +453,6 @@ textarea {
   overflow-y: auto;
   top: 0;
   left: 0;
-  /* z-index: 1; */
   background-color: rgba(136, 126, 59, 0.553);
 }
 
@@ -480,7 +462,6 @@ textarea {
 #howToPlayMsgbx,
 #usernameMsgbox {
   display: none;
-  /* position: fixed; */
   position: absolute;
   left: 42%;
   top: 50%;
@@ -501,7 +482,6 @@ textarea {
   animation-name: popup;
   animation-duration: 0.4s;
   transition-timing-function: ease-in;
-
   z-index: 999;  
 }
 
@@ -535,7 +515,6 @@ textarea {
   animation-name: popup;
   animation-duration: 0.4s;
   transition-timing-function: ease-in;
-
 }
 
 /* add animation to the popup */
@@ -587,7 +566,6 @@ textarea {
 #footer {
   display: flex;
   margin-top: 40px;
-
 }
 
 #footer ul {

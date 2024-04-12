@@ -111,7 +111,8 @@ function removeBackgroundColor() {
 }
 
 function timeUp() {
-    document.getElementById('message').innerHTML = "Time Up!";
+    document.getElementById("gameText").innerHTML = "";
+    document.getElementById('message').innerHTML = "Time Up! <br>Better luck next time!";
     document.getElementById('scoreDisplay').innerHTML = score;
     document.getElementById('scorePopup').style.display = "block";
     document.getElementById('scoreMsgbx').style.display = "block";
@@ -314,7 +315,7 @@ function start() {
 }
 
 function restart() {
-    window.location.reload();
+    window.location.reload();   
 }
 
 let user;

@@ -236,9 +236,9 @@ function checkAnswer(e) {
         if (score === 10) {
             console.log("user", user)
             displayPlayerName()
-            document.getElementById("message").innerHTML = "Congratulation"
+            document.getElementById("message").innerHTML = "Congratulations!"
             document.getElementById("restart").style.display = "block"
-            document.getElementById("restart").innerHTML = "Back To Home Page"
+            document.getElementById("restart").innerHTML = "Back to Home Page"
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById('scorePopup').style.display = "block";
             document.getElementById('scoreMsgbx').style.display = "block";

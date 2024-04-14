@@ -452,9 +452,8 @@ textarea {
   background-position: center;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 7px #777;
-  -webkit-box-shadow: 3px 3px 7px #777;
-  -moz-border-radius: 22px;
-  -webkit-border-radius: 22px;
+  box-shadow: 3px 3px 7px #777;
+  border-radius: 22px;
   animation-name: popup;
   animation-duration: 0.4s;
   transition-timing-function: ease-in;
@@ -476,11 +475,8 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* border: 1px solid #ccc;
-  box-shadow: 3px 3px 7px #777; */
-  -webkit-box-shadow: 3px 3px 7px #777;
-  -moz-border-radius: 22px;
-  -webkit-border-radius: 22px;
+  box-shadow: 3px 3px 7px #777;
+  border-radius: 22px;
   z-index: 999;
 
   padding: 8%;
@@ -617,16 +613,18 @@ textarea {
     display: flex;
   }
 
-  .logo {
-    width: 90%;
-    display: flex;
-    margin-top: 0.5rem;
-  }
+.logo img {
+  max-width: 80%; 
+  margin: 0 70px; 
+}
 
-  .logo img {
-    width: 130px;
-    height: 140px;
-    margin: 0 auto;
+.logo button {
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+  .logo {
+    margin-top: 0.5rem;
   }
 
   .logo .start .howToPlay {
@@ -699,8 +697,18 @@ textarea {
 @media only screen and (max-width: 576px) {
 
   /* Adjustments for mobile devices */
+ .logo {
+  padding: 0 20px;
+ }
   .logo img {
-    width: 100px;
+    max-width: 60%;
+    margin: 0; 
+  }
+
+  .logo button {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
   }
 
   .start,

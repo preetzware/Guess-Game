@@ -27,7 +27,7 @@
     <!-- Logo and buttons -->
     <div class="logo">
         <button class="start" onclick="start()">Start</button>
-        <img src="assets/img/guessing-cat.png" alt="catGuessing">
+        <img src="assets/img/guessing-cat.png" alt="image of guessing cat">
         <button class="howToPlay" onclick="howToPlay()">How to play</button>
     </div>
   
@@ -62,7 +62,7 @@
                     <h2 id="clock">Time:<span id="timer"></span>s</h2>
                     <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
                 </div>
-                <img id="landmark-img" alt="landmark image">
+                <img id="landmark-img" alt="image of a country's landmark">
             </div>
 
     <!-- Answer Options -->
@@ -79,14 +79,14 @@
             <h3>Give us a rating and your feedback!</h3>
                 <form>
                     <div class="star-rating">
-                        <input type="number" name="rating" hidden>
+                        <input type="number" aria-label="five stars for giving rates" name="rating" hidden>
                         <i class='bx bx-star star' style="--i: 0;"></i>
                         <i class='bx bx-star star' style="--i: 1;"></i>
                         <i class='bx bx-star star' style="--i: 2;"></i>
                         <i class='bx bx-star star' style="--i: 3;"></i>
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
-                    <textarea name="opinion" id="feedbackText" cols="30" rows="5"
+                    <textarea name="opinion" aria-label="teaxt area for writing comments about the game" id="feedbackText" cols="30" rows="5"
                         placeholder="Describe your experience..." required></textarea>
                         <p><span id="feedbackError"></span></p>
                     <div class="btn-group">
@@ -109,13 +109,11 @@
 
     <!-- Audios and description -->
 
-            <audio id="correctAnswer" src="./assets/audio/rightanswer.mp3"></audio>
-            <p id="audioDescription">This audio clip provides the correct answer.</p>            
-            <audio id="wrongAnswer" src="./assets/audio/wronganswer.mp3"></audio>
-            <p id="audioDescription">This audio clip provides the correct answer.</p>            
-            <audio id="congratulations" src="./assets/audio/congratulations.mp3"></audio>
-            <p id="audioDescription">This audio clip is for congratulating the highest scorer.</p>            
-
+    <audio id="correctAnswer" aria-label="Plays audio sound for correct answer" src="./assets/audio/rightanswer.mp3" type="audio/mpeg"></audio>     
+    <audio id="wrongAnswer" aria-label="Plays audio sound for wrong answer" src="./assets/audio/wronganswer.mp3" type="audio/mpeg"></audio>
+    <audio id="congratulations" aria-label="Plays audio sound for for congratulating the highest 
+    scorer" src="./assets/audio/congratulations.mp3" type="audio/mpeg"></audio>
+            
             <div class="scoreboard"></div>
             <div id="win-display"></div>
         </div>

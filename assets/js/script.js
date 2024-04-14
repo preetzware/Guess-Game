@@ -70,7 +70,7 @@ let startGame = false;
 //create variable landmarkElement to get img element in index.html
 
 const landmarkElement = document.getElementById('landmark-img');
-landmarkElement.src = pictureArray[questionNumber].img;
+landmarkElement.src = pictureArray[questionNumber].webp;
 landmarkElement.alt = pictureArray[questionNumber].picture;
 
 let allOptions = document.getElementsByClassName("option");
@@ -193,6 +193,7 @@ function audioWrongAnswer() {
     wrongAnswer.play();
 }
 
+//Audio for congratulations to best scorer
 function audioCongratulation() {
     let congratulation = document.getElementById("congratulations");
     congratulation.play();

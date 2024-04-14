@@ -1,43 +1,43 @@
 //Create array of objects for image and answers
 const pictureArray = [{
         picture: 'Mount Fuji',
-        img: 'assets/img/q1.jpeg',
+        img: 'assets/img/q1.webp',
         answer: 'Japan',
         options: ['South Korea', 'Japan', 'China']
     },
     {
         picture: 'Iguazufalls',
-        img: 'assets/img/q2.jpg',
+        img: 'assets/img/q2.webp',
         answer: 'Argentina',
         options: ['USA', 'Chile', 'Argentina']
     },
     {
         picture: 'Gap-of-Dunloe',
-        img: 'assets/img/q3.jpg',
+        img: 'assets/img/q3.webp',
         answer: 'Ireland',
         options: ['England', 'Scotland', 'Ireland']
     },
     {
         picture: 'Golden Temple',
-        img: 'assets/img/q4.png',
+        img: 'assets/img/q4.webp',
         answer: 'India',
         options: ['India', 'Thailand', 'Bali']
     },
     {
         picture: 'Mombasa Tusk',
-        img: 'assets/img/q5.jpg',
+        img: 'assets/img/q5.webp',
         answer: 'Kenya',
         options: ['Tanzania', 'Kuwait', 'Kenya']
     },
     {
         picture: 'machu-pichu',
-        img: 'assets/img/q6.png',
+        img: 'assets/img/q6.webp',
         answer: 'Peru',
-        options: ['Mexico', 'Brazil', 'Peru']
+        options: ['Mexico', 'Peru', 'Brazil']
     },
     {
         picture: 'under sea waterfall',
-        img: 'assets/img/q7.jpg',
+        img: 'assets/img/q7.webp',
         answer: 'Mauritius',
         options: ['Seychelles', 'Maldives Island', 'Mauritius']
     },
@@ -49,13 +49,13 @@ const pictureArray = [{
     },
     {
         picture: 'Skogafoss-waterfall',
-        img: 'assets/img/q9.jpg',
+        img: 'assets/img/q9.webp',
         answer: 'Iceland',
-        options: ['Greenland', 'USA', 'Iceland']
+        options: ['Greenland', 'Iceland', 'USA']
     },
     {
         picture: 'Twelve-Apostles',
-        img: 'assets/img/q10.jpeg',
+        img: 'assets/img/q10.webp',
         answer: 'Australia',
         options: ['USA', 'New Zealand', 'Australia']
     }
@@ -117,7 +117,7 @@ function displayPlayerName(){
 function timeUp() {
     displayPlayerName();
     document.getElementById("gameText").innerHTML = "";
-    document.getElementById('message').innerHTML = "Time Up! <br>Better luck next time!";
+    document.getElementById('message').innerHTML = "Oops...Time Up! <br>Try your luck again!";
     document.getElementById('scoreDisplay').innerHTML = score;
     document.getElementById('scorePopup').style.display = "block";
     document.getElementById('scoreMsgbx').style.display = "block";

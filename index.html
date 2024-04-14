@@ -29,25 +29,8 @@
         <button class="start" onclick="start()">Start</button>
         <img src="assets/img/guessing-cat.png" alt="catGuessing">
         <button class="howToPlay" onclick="howToPlay()">How to play</button>
-        <!-- <div id="desktop" class="logo">        
-            <button class="start" onclick="start()">Start</button>
-            <img src="assets/img/guessing-cat.png" alt="Logo">                    
-            <button class="howTo" onclick="howToPlay()">How to play</button>
-    
-        </div>
-        <div id="mobile" class="logo">
-        <img src="assets/img/guessing-cat.png" alt="Logo">            
-        <button class="start" onclick="start()">Start</button>
-        <button class="howTo" onclick="howToPlay()">How to play</button>
-    </div> -->
     </div>
-    <!-- <div class="startButtonContainer">
-        <img src="assets/img/guessing-cat.png" alt="Logo">        
-        <div class="startHow">
-            
-        <button class="howTo" onclick="howToPlay()">How to play</button>
-        </div> -->
-
+  
     <!-- Quiz content in wrapper -->
 
     <div id="game-wrapper">
@@ -124,15 +107,14 @@
             </div>
         </div>
 
-    <!-- Audios -->
+    <!-- Audios and description -->
 
             <audio id="correctAnswer" src="./assets/audio/rightanswer.mp3"></audio>
-            <!-- Description Element -->
-             <p id="audioDescription">This audio clip provides the correct answer.</p>            
+            <p id="audioDescription">This audio clip provides the correct answer.</p>            
             <audio id="wrongAnswer" src="./assets/audio/wronganswer.mp3"></audio>
             <p id="audioDescription">This audio clip provides the correct answer.</p>            
             <audio id="congratulations" src="./assets/audio/congratulations.mp3"></audio>
-            <p id="audioDescription">This audio clip provides the correct answer.</p>            
+            <p id="audioDescription">This audio clip is for congratulating the highest scorer.</p>            
 
             <div class="scoreboard"></div>
             <div id="win-display"></div>
@@ -216,10 +198,10 @@
                         <h4 id="gameText">Game Over!</h4>
                     </div>
                     <h4>Player: <span id="playerName"></span></h4>
-                    <h4 id="message">Thank you for playing. <br>Better luck next time!</h4>
+                    <h4 id="message">Nice try! <br> Thank you for playing. <br>Better luck next time!</h4>
                     <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
                     <!-- <div class="question">Q: 2</div> -->
-                    <button id="restart" onclick="restart()">Try Again</button>
+                    <button id="restart" onclick="restart()">Go Back</button>
                 </div>
             </div>
 
@@ -240,5 +222,4 @@
         </div>
         <script src="assets/js/script.js"></script>
 </body>
-
 </html>

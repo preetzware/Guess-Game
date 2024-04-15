@@ -73,7 +73,7 @@ let setTimer;
 
 let timer = 0;
 
-let user;
+const user;
 
 //create variable landmarkElement to get img element in index.html
 

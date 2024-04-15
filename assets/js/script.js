@@ -73,7 +73,7 @@ let setTimer;
 
 let timer = 0;
 
-const user;
+let user;
 
 //create variable landmarkElement to get img element in index.html
 
@@ -114,6 +114,31 @@ function displayPlayerName() {
     document.getElementById("playerName").innerHTML = user
 }
 
+
+// mute and unmute sound
+document.addEventListener('DOMContentLoaded', function() {
+    var audioElements = document.querySelectorAll('audio');
+    var muteButton = document.getElementById('muteButton');
+    var isMuted = false;
+
+    muteButton.addEventListener('click', function() {
+        isMuted = !isMuted; // Toggle mute state
+        if(isMuted){
+            document.getElementById("mute").style.display = "block";
+            document.getElementById("unmute").style.display = "none";
+        }else{
+            document.getElementById("mute").style.display = "none";
+            document.getElementById("unmute").style.display = "block";
+        }
+        
+        audioElements.forEach(function(audio) {
+            audio.muted = isMuted; // Set muted property of all audio elements
+        });
+    });
+});
+
+
+
 function timeUp() {
     displayPlayerName();
     document.getElementById("gameText").innerHTML = "";
@@ -132,6 +157,7 @@ function disableButton() {
 
 function startInterval() {
     setTimer = setInterval(function () {
+        //increment timer
         timer = timer + 1;
         displayTimer.innerHTML = timer;
         if (timer === 30) {
@@ -175,19 +201,19 @@ function nextQuestion() {
 
 //Audio for correct Answer
 function audioCorrectAnswer() {
-    let correctAnswer = document.getElementById("correctAnswer");
+    const correctAnswer = document.getElementById("correctAnswer");
     correctAnswer.play();
 }
 
 //Audio for wrong Answer
 function audioWrongAnswer() {
-    let wrongAnswer = document.getElementById("wrongAnswer");
+    const wrongAnswer = document.getElementById("wrongAnswer");
     wrongAnswer.play();
 }
 
 //Audio for congratulations to best scorer
 function audioCongratulation() {
-    let congratulation = document.getElementById("congratulations");
+    const congratulation = document.getElementById("congratulations");
     congratulation.play();
 }
 
@@ -197,10 +223,18 @@ function checkAnswer(e) {
         return;
     }
 
+    //e.innerHTML will get the clicked element text of option
     let answer = e.innerHTML;
     //when any of the options is clicked setTimeOut will be activated
+    //questionNumber is passed as array index of pictureArray and the corresponding
+    //object is checked
     const current = pictureArray[questionNumber];
+    // buttonId is used change the color of the button
+    //correct answer turns green else wrong answer red
     let buttonId = e.id;
+    //check whether clicked answer is correct with respect the current object
+    //in pictureArray
+    //answer is the clicked value from the given option
     if (answer === current.answer) {
         document.getElementById(buttonId).style.backgroundColor = '#04D010';
         audioCorrectAnswer();
@@ -218,8 +252,9 @@ function checkAnswer(e) {
     }
 
 
+    //if all quetions were answered
     if (questionNumber == 9) {
-
+        //check score if 10
         if (score === 10) {
             displayPlayerName()
             document.getElementById("message").innerHTML = "Congratulations!"
@@ -232,10 +267,8 @@ function checkAnswer(e) {
 
         } else {
             displayPlayerName()
-            document.getElementById("message").innerHTML = "Better luck next time do you want to replay"
-            // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
-            document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
-            // document.getElementById('popupContainer').style.display = "block";
+            document.getElementById("message").innerHTML = "Better luck next time do you want to replay"            
+            document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";            
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById("restart").style.display = 'block';
         }
@@ -245,8 +278,7 @@ function checkAnswer(e) {
         return;
     } else {
         setTimeout(function () {
-            stopInterval();
-            //displayScore();
+            stopInterval();            
             nextQuestion();
             removeBackgroundColor();
             timer = 0;
@@ -280,10 +312,12 @@ function howToPlayDisplay() {
 }
 
 function start() {
-
+    //we are displaying usernamePopup and usernameMsgbox
     document.getElementById('usernamePopup').style.display = "block";
     document.getElementById('usernameMsgbox').style.display = "block";
 
+    //we are hiding startPopup and startMsgbx, howToPlayPopup, howToPlayMsgbx
+    //scorePopup, scoreMsgbx
     document.getElementById('startPopup').style.display = "none";
     document.getElementById('startMsgbx').style.display = "none";
     document.getElementById('howToPlayPopup').style.display = "none";
@@ -301,8 +335,7 @@ function getName() {
     user = document.getElementById("name").value;
     if (user) {
         document.getElementById('usernamePopup').style.display = "none";
-        document.getElementById('usernameMsgbox').style.display = "none";
-        // document.getElementById("player-name").innerHTML = user;
+        document.getElementById('usernameMsgbox').style.display = "none";        
 
         startGame = true;
         startInterval();

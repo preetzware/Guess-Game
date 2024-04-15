@@ -164,7 +164,7 @@ input[type=text] {
 .timeScore {
   display: flex;
   justify-content: center;
-  gap: 13rem;
+  gap: 5rem;
   padding-bottom: 1rem;
 }
 
@@ -596,6 +596,35 @@ textarea {
 #error, #feedbackError{
   color: red;
 }
+
+/* Hide mute icon by default */
+#mute {
+  display: none;
+}
+
+/* Style the volume icon */
+#unmute {
+  /* Add your styles for the volume icon */
+  font-size: 30px!important;
+  color: black; /* Example: set color to green */
+}
+
+/* Style the mute icon */
+.fa-volume-mute {
+  /* Add your styles for the mute icon */
+  font-size: 30px!important;
+  color: black; /* Example: set color to red */
+}
+
+/* Style the button */
+#muteButton {
+  /* Add your styles for the button */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */

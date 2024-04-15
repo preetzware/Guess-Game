@@ -21,6 +21,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Icon link from Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
@@ -30,8 +32,7 @@
         <button class="start" onclick="start()">Start</button>
         <img src="assets/img/guessing-cat.png" alt="image of guessing cat">
         <button class="howToPlay" onclick="howToPlay()">How to play</button>
-    </div>
-  
+    </div>    
     <!-- Quiz content in wrapper -->
 
     <div id="game-wrapper">
@@ -44,29 +45,35 @@
             </div>
         </div>
 
-    <!-- Landmarks Images -->
+        <!-- Landmarks Images -->
 
         <div>
             <div id="landmark">
-                <div class="timeScore">
+                <div class="timeScore">                   
+                        <button id="muteButton">
+                            <!-- Volume icon -->
+                            <i id="unmute" class="fa fa-volume-up volume-btn"></i>           
+                            <i id="mute" class='fas fa-volume-mute'></i>
+                        </button>
+                   
                     <h2 id="clock">Time:<span id="timer"></span>s</h2>
                     <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
                 </div>
                 <img id="landmark-img" alt="image of a country's landmark">
             </div>
 
-    <!-- Answer Options -->
+            <!-- Answer Options -->
 
-        <div class="options">
-            <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
-            <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
-            <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
-        </div>
+            <div class="options">
+                <button class="option" id="q1a1" onclick="checkAnswer(this)"></button>
+                <button class="option" id="q1a2" onclick="checkAnswer(this)"></button>
+                <button class="option" id="q1a3" onclick="checkAnswer(this)"></button>
+            </div>
 
-    <!-- Star rating feedback form -->
+            <!-- Star rating feedback form -->
 
-        <div class="star-wrapper">
-            <h3>Give us a rating and your feedback!</h3>
+            <div class="star-wrapper">
+                <h3>Give us a rating and your feedback!</h3>
                 <form>
                     <div class="star-rating">
                         <input type="number" aria-label="five stars for giving rates" name="rating" hidden>
@@ -76,34 +83,40 @@
                         <i class='bx bx-star star' style="--i: 3;"></i>
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
-                    <textarea name="opinion" aria-label="teaxt area for writing comments about the game" id="feedbackText" cols="30" rows="5"
-                        placeholder="Describe your experience..." required></textarea>
-                        <p><span id="feedbackError"></span></p>
+                    <textarea name="opinion" aria-label="teaxt area for writing comments about the game"
+                        id="feedbackText" cols="30" rows="5" placeholder="Describe your experience..."
+                        required></textarea>
+                    <p><span id="feedbackError"></span></p>
                     <div class="btn-group">
                         <button type="submit" class="btn-submit" onclick="feedback(event)">Submit
                         </button>
                     </div>
                 </form>
-        </div>
-
-    <!-- Footer section -->
-
-        <div id="footer">
-
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/preety-ramdin-65877a140/" aria-label="Go to linkedin profile" class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/preetzware" aria-label="Go to github profile" class="github-icon"><i class="fa fa-github"></i></a>
-                <a href="https://www.instagram.com/preety_ramdin/" aria-label="Go to instagram profile" class="instagram-icon"><i class="fa fa-instagram"></i></a>
             </div>
-        </div>
 
-    <!-- Audios and description -->
+            <!-- Footer section -->
 
-    <audio id="correctAnswer" aria-label="Plays audio sound for correct answer" src="./assets/audio/rightanswer.mp3" type="audio/mpeg"></audio>     
-    <audio id="wrongAnswer" aria-label="Plays audio sound for wrong answer" src="./assets/audio/wronganswer.mp3" type="audio/mpeg"></audio>
-    <audio id="congratulations" aria-label="Plays audio sound for for congratulating the highest 
+            <div id="footer">
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/preety-ramdin-65877a140/" aria-label="Go to linkedin profile"
+                        class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/preetzware" aria-label="Go to github profile" class="github-icon"><i
+                            class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/preety_ramdin/" aria-label="Go to instagram profile"
+                        class="instagram-icon"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Audios and description -->
+
+            <audio id="correctAnswer" aria-label="Plays audio sound for correct answer"
+                src="./assets/audio/rightanswer.mp3" type="audio/mpeg"></audio>
+            <audio id="wrongAnswer" aria-label="Plays audio sound for wrong answer" src="./assets/audio/wronganswer.mp3"
+                type="audio/mpeg"></audio>
+            <audio id="congratulations" aria-label="Plays audio sound for for congratulating the highest 
     scorer" src="./assets/audio/congratulations.mp3" type="audio/mpeg"></audio>
-            
+
             <div class="scoreboard"></div>
             <div id="win-display"></div>
         </div>
@@ -210,4 +223,5 @@
         </div>
         <script src="assets/js/script.js"></script>
 </body>
+
 </html>

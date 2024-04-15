@@ -79,7 +79,7 @@ input[type=text] {
 .feedbackPopup,
 .howToPlay {
   width: 160px;
-  font-size: 17px;
+  /* font-size: 17px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
   font-weight: 600;
@@ -275,7 +275,7 @@ textarea {
   background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
   box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
   transition: 0.5s;
-  
+
 }
 
 .star-rating .star {
@@ -339,7 +339,8 @@ textarea {
   font-size: 12px;
 }
 
-.howToPlayContainer, #startbtn-container,
+.howToPlayContainer,
+#startbtn-container,
 .pop-msg {
   /* background-color: #f8f6f6eb;
   opacity: 1; */
@@ -463,13 +464,15 @@ textarea {
   /* height: 65vh; */
   height: auto;
   width: 40%;
-  max-width: 400px; /* Set a maximum width if necessary */
+  max-width: 400px;
+  /* Set a maximum width if necessary */
   background-color: #189AB4;
   border: 1px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
-  padding: 20px; /* Add padding as needed */
+  padding: 20px;
+  /* Add padding as needed */
   overflow-y: auto;
 }
 
@@ -479,15 +482,18 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Set a maximum width if necessary */
+  width: 80%;
+  /* Adjust width as needed */
+  max-width: 600px;
+  /* Set a maximum width if necessary */
   height: auto;
   background-color: #189AB4;
   border: 1px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
-  padding: 20px; /* Add padding as needed */
+  padding: 20px;
+  /* Add padding as needed */
   overflow-y: auto;
   text-align: center
 }
@@ -582,9 +588,10 @@ textarea {
   padding: 1rem 0;
 }
 
-.linkedin-icon i, .instagram-icon i,
+.linkedin-icon i,
+.instagram-icon i,
 .github-icon i {
-  font-size: 30px; 
+  font-size: 30px;
   padding: 0 8px;
 }
 
@@ -623,11 +630,13 @@ textarea {
   text-align: center;
 }
 
-#message{
+#message {
   text-align: center;
 }
 
-#error, #feedbackError, #ratingError{
+#error,
+#feedbackError,
+#ratingError {
   color: red;
 }
 
@@ -639,15 +648,17 @@ textarea {
 /* Style the volume icon */
 #unmute {
   /* Add your styles for the volume icon */
-  font-size: 30px!important;
-  color: black; /* Example: set color to green */
+  font-size: 30px !important;
+  color: black;
+  /* Example: set color to green */
 }
 
 /* Style the mute icon */
 .fa-volume-mute {
   /* Add your styles for the mute icon */
-  font-size: 30px!important;
-  color: black; /* Example: set color to red */
+  font-size: 30px !important;
+  color: black;
+  /* Example: set color to red */
 }
 
 /* Style the button */
@@ -660,11 +671,14 @@ textarea {
   outline: none;
 }
 
-.gameScore h4{
+.gameScore h4 {
   padding: 2%;
   line-height: 26px;
 }
 
+.logoMobile {
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
@@ -681,15 +695,15 @@ textarea {
     display: flex;
   }
 
-.logo img {
-  max-width: 80%; 
-  margin: 0 70px; 
-}
+  .logo img {
+    max-width: 80%;
+    margin: 0 70px;
+  }
 
-.logo button {
-  width: 100%;
-  margin-bottom: 10px; 
-}
+  .logo button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
   .logo {
     width: 100%;
@@ -701,7 +715,8 @@ textarea {
     padding-top: 2rem;
   }
 
-  .start, .howToPlay {
+  .start,
+  .howToPlay {
     width: 120px;
     height: 50px;
   }
@@ -715,10 +730,10 @@ textarea {
   }
 
   .option {
-    width: 100%;    
+    width: 100%;
   }
 
-  
+
   .timercontainer {
     width: 90%;
   }
@@ -773,7 +788,7 @@ textarea {
     display: flex;
     align-items: center;
   }
-  
+
   .logo img {
     width: 120px;
     max-width: 100%;
@@ -832,4 +847,37 @@ textarea {
     /* margin-left: 0.2%; */
   }
 
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    display: none;
+  }
+
+  .logoMobile {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .logoMobile img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .mobileBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .start, .howTo, .feedbackPopup, .howToPlay{
+    margin-top: 0.8rem;
+  }
+  
 }

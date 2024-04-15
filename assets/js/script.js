@@ -111,9 +111,8 @@ function removeBackgroundColor() {
 }
 
 function displayPlayerName() {
-    document.getElementById("playerName").innerHTML = user
+    document.getElementById("playerName").innerHTML = user;
 }
-
 
 // mute and unmute sound
 document.addEventListener('DOMContentLoaded', function() {
@@ -136,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
 
 function timeUp() {
     displayPlayerName();
@@ -256,17 +253,17 @@ function checkAnswer(e) {
     if (questionNumber == 9) {
         //check score if 10
         if (score === 10) {
-            displayPlayerName()
-            document.getElementById("message").innerHTML = "Congratulations!"
-            document.getElementById("restart").style.display = "block"
-            document.getElementById("restart").innerHTML = "Back to Home Page"
+            displayPlayerName();
+            document.getElementById("message").innerHTML = "Congratulations!";
+            document.getElementById("restart").style.display = "block";
+            document.getElementById("restart").innerHTML = "Back to Home Page";
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById('scorePopup').style.display = "block";
             document.getElementById('scoreMsgbx').style.display = "block";
             audioCongratulation();
 
         } else {
-            displayPlayerName()
+            displayPlayerName();
             document.getElementById("message").innerHTML = "Better luck next time do you want to replay"            
             document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";            
             document.getElementById('scoreDisplay').innerHTML = score;
@@ -347,37 +344,37 @@ function getName() {
 
 //Star rating feedback form
 
-const allStar = document.querySelectorAll('.star-rating .star')
-const ratingValue = document.querySelector('.star-rating input')
+const allStar = document.querySelectorAll('.star-rating .star');
+const ratingValue = document.querySelector('.star-rating input');
 allStar.forEach((item, idx) => {
     item.addEventListener('click', function () {
-        let click = 0
-        ratingValue.value = idx + 1
+        let click = 0;
+        ratingValue.value = idx + 1;
 
         //if idx is 0 and first star is highlighted and previous is 1 then remove the star
         if (idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1) {
             allStar[idx].classList.replace('bxs-star', 'bx-star');
-            ratingValue.prev = "undefined"
+            ratingValue.prev = "undefined";
             return;
         }
 
         allStar.forEach(i => {
-            i.classList.replace('bxs-star', 'bx-star')
-            i.classList.remove('active')
-        })
+            i.classList.replace('bxs-star', 'bx-star');
+            i.classList.remove('active');
+        });
         for (let i = 0; i < allStar.length; i++) {
             if (i <= idx) {
-                allStar[i].classList.replace('bx-star', 'bxs-star')
-                allStar[i].classList.add('active')
+                allStar[i].classList.replace('bx-star', 'bxs-star');
+                allStar[i].classList.add('active');
             } else {
-                allStar[i].style.setProperty('--i', click)
-                click++
+                allStar[i].style.setProperty('--i', click);
+                click++;
             }
         }
-        ratingValue.prev = idx + 1
-    })
+        ratingValue.prev = idx + 1;
+    });
 
-})
+});
 
 function removeRatingError(){
     document.getElementById("ratingError").innerHTML = "";
@@ -385,7 +382,7 @@ function removeRatingError(){
 
 function feedback(event) {
     event.preventDefault();
-    let feedbackText = document.getElementById("feedbackText").value
+    let feedbackText = document.getElementById("feedbackText").value;
     if(typeof ratingValue.prev == "undefined" || ratingValue.prev == "undefined"){
         document.getElementById("ratingError").innerHTML = "Please give us a rating";
         return;

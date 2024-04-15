@@ -39,7 +39,7 @@ body {
 }
 
 input[type=text] {
-  width: 40%;
+  width: 50%;
   padding: 12px 20px;
   margin-top: 16px;
   display: inline-block;
@@ -95,6 +95,7 @@ input[type=text] {
 }
 
 .howTo {
+  background-color: #231557;
   margin-top: 10px;
   height: 40px;
   width: 40%;
@@ -362,8 +363,8 @@ textarea {
 #pop-up-start,
 #restart {
   text-align: center;
-  width: 130px;
-  height: 40px;
+  /* width: 130px;
+  height: 40px; */
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -378,12 +379,13 @@ textarea {
     7px 7px 20px 0px rgba(0, 0, 0, .1),
     4px 4px 5px 0px rgba(0, 0, 0, .1);
   outline: none;
-  background: rgb(0, 172, 238);
-  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+  background: #231557;
+  /* background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%); */
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
+  margin-top: 2rem;
 }
 
 #popupContainer {
@@ -408,6 +410,23 @@ textarea {
 #howToPlayPopup,
 #usernamePopup,
 #feedbackPopup {
+  /* display: none;
+  opacity: .75;
+  filter: alpha(opacity=75);
+  -ms-filter: "alpha(opacity=75)";
+  -khtml-opacity: .75;
+  -moz-opacity: .75;
+  background: #B8B8B8;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+  border: 4px solid white; */
+  /* width: 80%;
+  max-width: 600px;
+  padding: 20px; 
+  overflow-y: auto; */
   display: none;
   opacity: .75;
   filter: alpha(opacity=75);
@@ -416,15 +435,20 @@ textarea {
   -moz-opacity: .75;
   background: #B8B8B8;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0px;
+  top: 0px;
+  height: auto;
+  width: 100%;
   z-index: 990;
   border: 4px solid white;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Set a maximum width if necessary */
-  padding: 20px; /* Add padding as needed */
+  width: 100%;
+  height: 100%;
+  position: fixed;
   overflow-y: auto;
+  top: 0;
+  left: 0;
+  /* change the background color */
+  background-color: rgba(136, 126, 59, 0.553);
 }
 
 #startMsgbx,
@@ -436,11 +460,12 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 65vh;
+  /* height: 65vh; */
+  height: auto;
   width: 40%;
   max-width: 400px; /* Set a maximum width if necessary */
-  background-color: rgb(230, 229, 228);
-  border: 1px solid #ccc;
+  background-color: #189AB4;
+  border: 1px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
@@ -457,17 +482,18 @@ textarea {
   width: 80%; /* Adjust width as needed */
   max-width: 600px; /* Set a maximum width if necessary */
   height: auto;
-  background-color: rgb(230, 229, 228);
-  border: 1px solid #ccc;
+  background-color: #189AB4;
+  border: 1px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
   padding: 20px; /* Add padding as needed */
   overflow-y: auto;
+  text-align: center
 }
 
 
-#feedbackMsgbx {
+/* #feedbackMsgbx {
   display: none;
   width: 50%;
   height: 50%;
@@ -494,7 +520,7 @@ textarea {
   animation-name: popup;
   animation-duration: 0.4s;
   transition-timing-function: ease-in;
-}
+} */
 
 /* add animation to the popup */
 @keyframes popup {
@@ -525,7 +551,7 @@ textarea {
 
 .score {
   font-weight: bold;
-  color: #007bff;
+  color: white;
 }
 
 .question {
@@ -634,6 +660,11 @@ textarea {
   outline: none;
 }
 
+.gameScore h4{
+  padding: 2%;
+  line-height: 26px;
+}
+
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
@@ -723,11 +754,12 @@ textarea {
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    top: 30%;
-    left: 46%;
+    /* top: 30%;
+    left: 46%; */
     width: 98%;
     /* height: 80%; */
-    height: 65vh;
+    /* height: 65vh; */
+    height: auto;
     /* margin-left: 1%;    */
   }
 }
@@ -789,10 +821,11 @@ textarea {
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    top: 30%;
-    left: 46%;
+    /* top: 30%;
+    left: 46%; */
     width: 98%;
-    height: 65vh;
+    /* height: 65vh;  */
+    height: auto;
     /* margin-left: 0.2%; */
   }
 

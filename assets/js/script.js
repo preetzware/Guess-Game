@@ -1,3 +1,4 @@
+
 //Create array of objects for image and answers
 const pictureArray = [{
         picture: 'Mount Fuji',
@@ -70,11 +71,10 @@ let startGame = false;
 //create variable landmarkElement to get img element in index.html
 
 const landmarkElement = document.getElementById('landmark-img');
-landmarkElement.src = pictureArray[questionNumber].webp;
+landmarkElement.src = pictureArray[questionNumber].img;
 landmarkElement.alt = pictureArray[questionNumber].picture;
 
 let allOptions = document.getElementsByClassName("option");
-console.log("allOptions", allOptions);
 for (let i = 0; i < allOptions.length; i++) {
     allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
 }

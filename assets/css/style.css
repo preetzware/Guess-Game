@@ -31,7 +31,7 @@ body {
   text-align: center;
   /* margin: 1.2rem 18rem;     */
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .usernameContainer {
@@ -67,7 +67,7 @@ input[type=text] {
   width: 130px;
   height: auto;
   border: 5px solid #000C66;
-  border-radius: 30px;
+  border-radius: 35px;
   transition: transform 0.3s ease;
 }
 

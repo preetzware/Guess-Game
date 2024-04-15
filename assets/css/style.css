@@ -498,36 +498,6 @@ textarea {
   text-align: center
 }
 
-
-/* #feedbackMsgbx {
-  display: none;
-  width: 50%;
-  height: 50%;
-  position: fixed;
-  overflow-y: auto;
-  top: 75px;
-  left: 25%;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(230, 229, 228);
-  background-image: url(../img/modalimg.JPG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 3px 3px 7px #777;
-  border-radius: 22px;
-  z-index: 999;
-
-  padding: 8%;
-  text-align: center;
-  overflow: hidden;
-  border: 10px solid #167D7F;
-  box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.39);
-  animation-name: popup;
-  animation-duration: 0.4s;
-  transition-timing-function: ease-in;
-} */
-
 /* add animation to the popup */
 @keyframes popup {
   from {
@@ -577,15 +547,19 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
   width: 100%;
   height: auto;
   background-color: #00A8A8;
+  padding: 0.7rem 0;
 }
 
 .social-icons a {
-  margin: 0 10px;
-  padding: 1rem 0;
+  margin: 0 10px; 
+}
+
+.social-icons a:hover {
+background-color: #FFFFFF;
+transform: scale(1.2);
 }
 
 .linkedin-icon i,
@@ -733,7 +707,6 @@ textarea {
     width: 100%;
   }
 
-
   .timercontainer {
     width: 90%;
   }
@@ -855,19 +828,20 @@ textarea {
   }
 
   .logoMobile {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .logoMobile img {
-    width: 120px;
+    width: 90px;
     max-width: 100%;
-    height: auto;
+    height: 90px;
     margin-top: 1rem;
+    border: 5px solid #000C66;
+    border-radius: 30px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
   }
 
   .mobileBtn {
@@ -876,8 +850,33 @@ textarea {
     justify-content: space-around;
     margin-bottom: 10px;
   }
+
+  .mobileBtn .start {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1.5px solid #231557;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 110px;
+    color: #231557;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+  }
+
+  .mobileBtn .howToPlay {
+    height: 40px;
+    width: 110px;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+  }
+
   .start, .howTo, .feedbackPopup, .howToPlay{
     margin-top: 0.8rem;
+  }
+
+  .animate-character {
+    font-size: 8vmin;
   }
   
 }

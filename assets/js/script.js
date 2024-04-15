@@ -1,62 +1,61 @@
-
-//Create array of objects for image and answers
+//Create array of objects for image questions and answers
 const pictureArray = [{
         picture: 'Mount Fuji',
-        img: 'assets/img/q1.webp',
+        img: 'assets/img/q-one.webp',
         answer: 'Japan',
         options: ['South Korea', 'Japan', 'China']
     },
     {
         picture: 'Iguazufalls',
-        img: 'assets/img/q2.webp',
+        img: 'assets/img/q-two.webp',
         answer: 'Argentina',
         options: ['USA', 'Chile', 'Argentina']
     },
     {
         picture: 'Gap-of-Dunloe',
-        img: 'assets/img/q3.webp',
+        img: 'assets/img/q-three.webp',
         answer: 'Ireland',
         options: ['England', 'Scotland', 'Ireland']
     },
     {
         picture: 'Golden Temple',
-        img: 'assets/img/q4.webp',
+        img: 'assets/img/q-four.webp',
         answer: 'India',
         options: ['India', 'Thailand', 'Bali']
     },
     {
         picture: 'Mombasa Tusk',
-        img: 'assets/img/q5.webp',
+        img: 'assets/img/q-five.webp',
         answer: 'Kenya',
         options: ['Tanzania', 'Kuwait', 'Kenya']
     },
     {
         picture: 'machu-pichu',
-        img: 'assets/img/q6.webp',
+        img: 'assets/img/q-six.webp',
         answer: 'Peru',
         options: ['Mexico', 'Peru', 'Brazil']
     },
     {
         picture: 'under sea waterfall',
-        img: 'assets/img/q7.webp',
+        img: 'assets/img/q-seven.webp',
         answer: 'Mauritius',
         options: ['Seychelles', 'Maldives Island', 'Mauritius']
     },
     {
         picture: 'Sénanque-Abbey',
-        img: 'assets/img/q8.webp',
+        img: 'assets/img/q-eight.webp',
         answer: 'France',
         options: ['France', 'Spain', 'Italy']
     },
     {
         picture: 'Skogafoss-waterfall',
-        img: 'assets/img/q9.webp',
+        img: 'assets/img/q-nine.webp',
         answer: 'Iceland',
         options: ['Greenland', 'Iceland', 'USA']
     },
     {
         picture: 'Twelve-Apostles',
-        img: 'assets/img/q10.webp',
+        img: 'assets/img/q-ten.webp',
         answer: 'Australia',
         options: ['USA', 'New Zealand', 'Australia']
     }
@@ -68,35 +67,36 @@ let questionNumber = 0;
 
 let startGame = false;
 
+let score = 0;
+
+let setTimer;
+
+let timer = 0;
+
+let user;
+
 //create variable landmarkElement to get img element in index.html
 
 const landmarkElement = document.getElementById('landmark-img');
 landmarkElement.src = pictureArray[questionNumber].img;
 landmarkElement.alt = pictureArray[questionNumber].picture;
 
-let allOptions = document.getElementsByClassName("option");
-for (let i = 0; i < allOptions.length; i++) {
-    allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
-}
-
 //initial score is 0
-let score = 0;
 
 let scoreValue = document.getElementById('score');
 scoreValue.innerHTML = score;
 
 //initial timer is 0
-let timer = 0;
 let displayTimer = document.getElementById("timer");
 displayTimer.innerHTML = 0;
 
-//to increment the timer value from 0 to 30 use javascript internal function called setInverval
 
-function displayScore() {
-    console.log("test");
+let allOptions = document.getElementsByClassName("option");
+for (let i = 0; i < allOptions.length; i++) {
+    allOptions[i].innerHTML = pictureArray[questionNumber].options[i];
 }
 
-let setTimer;
+//to increment the timer value from 0 to 30 use javascript internal function called setInverval
 
 function stopInterval() {
     clearInterval(setTimer);
@@ -110,7 +110,7 @@ function removeBackgroundColor() {
     });
 }
 
-function displayPlayerName(){
+function displayPlayerName() {
     document.getElementById("playerName").innerHTML = user
 }
 
@@ -133,12 +133,9 @@ function disableButton() {
 function startInterval() {
     setTimer = setInterval(function () {
         timer = timer + 1;
-        // console.log("timer", timer)
         displayTimer.innerHTML = timer;
         if (timer === 30) {
             stopInterval();
-            //displayScore();
-            // alert("test")
             let value = timeUp();
             if (value) {
                 disableButton();
@@ -148,9 +145,7 @@ function startInterval() {
             removeBackgroundColor();
             timer = 0;
             if (questionNumber === 9) {
-                // document.getElementById('startPopup').style.display=document.getElementById('startMsgbx').style.display ="block";
                 document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
-                // document.getElementById('popupContainer').style.display = "block";
                 document.getElementById('scoreDisplay').innerHTML = score;
                 return;
             }
@@ -164,13 +159,11 @@ function startInterval() {
 function nextQuestion() {
     //if all the questions were answered return
     if (questionNumber === 9) {
-        // alert("test");     
         return;
     }
 
     //if questions are in between 1 to 10 these lines will be executed
     questionNumber = questionNumber + 1;
-    console.log("questionNumber", questionNumber);
     landmarkElement.src = pictureArray[questionNumber].img;
     landmarkElement.alt = pictureArray[questionNumber].picture;
 
@@ -182,7 +175,6 @@ function nextQuestion() {
 
 //Audio for correct Answer
 function audioCorrectAnswer() {
-    console.log("audio correct answer");
     let correctAnswer = document.getElementById("correctAnswer");
     correctAnswer.play();
 }
@@ -200,7 +192,6 @@ function audioCongratulation() {
 }
 
 function checkAnswer(e) {
-    console.log("check answer clicked", e.innerHTML, questionNumber);
     if (startGame === false) {
         alert("Click start button to start");
         return;
@@ -210,7 +201,6 @@ function checkAnswer(e) {
     //when any of the options is clicked setTimeOut will be activated
     const current = pictureArray[questionNumber];
     let buttonId = e.id;
-    console.log("buttonId", buttonId);
     if (answer === current.answer) {
         document.getElementById(buttonId).style.backgroundColor = '#04D010';
         audioCorrectAnswer();
@@ -219,8 +209,6 @@ function checkAnswer(e) {
     } else {
         document.getElementById(buttonId).style.backgroundColor = '#FF0F39';
         document.querySelectorAll('.option').forEach(button => {
-            console.log("button.innerText", button.innerText.toLowerCase())
-            console.log("current.answer", current.answer.toLowerCase())
             if (button.innerText.toLowerCase() === current.answer.toLowerCase()) {
                 button.style.backgroundColor = '#04D010';
             }
@@ -229,13 +217,10 @@ function checkAnswer(e) {
         audioWrongAnswer();
     }
 
-    console.log("questionNumber", questionNumber);
 
     if (questionNumber == 9) {
-        console.log("questionNumber", questionNumber, "inside")
 
         if (score === 10) {
-            console.log("user", user)
             displayPlayerName()
             document.getElementById("message").innerHTML = "Congratulations!"
             document.getElementById("restart").style.display = "block"
@@ -271,7 +256,6 @@ function checkAnswer(e) {
 }
 
 //Access pop-up elements and hide display
-console.log("document.getElementById('startPopup')", document.getElementById('startPopup'));
 
 function displayPop() {
     document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "none";
@@ -286,19 +270,16 @@ function displayHow() {
 }
 
 function howToPlay() {
-    console.log("how to play");
     document.getElementById('howToPlayPopup').style.display = "block";
     document.getElementById('howToPlayMsgbx').style.display = "block";
 }
 
 function howToPlayDisplay() {
-    console.log("how to play text");
     document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
     document.getElementById('howToPlayPoup').style.display = document.getElementById('howToPlayMsgbx').style.display = "none";
 }
 
 function start() {
-    console.log("start");
 
     document.getElementById('usernamePopup').style.display = "block";
     document.getElementById('usernameMsgbox').style.display = "block";
@@ -315,7 +296,6 @@ function restart() {
     window.location.reload();
 }
 
-let user;
 
 function getName() {
     user = document.getElementById("name").value;
@@ -326,7 +306,7 @@ function getName() {
 
         startGame = true;
         startInterval();
-    }else{
+    } else {
         document.getElementById("error").innerHTML = "Please Enter Your Name"
     }
 
@@ -339,12 +319,10 @@ const ratingValue = document.querySelector('.star-rating input')
 allStar.forEach((item, idx) => {
     item.addEventListener('click', function () {
         let click = 0
-        // console.log("idx", idx)
         ratingValue.value = idx + 1
 
         //if idx is 0 and first star is highlighted and previous is 1 then remove the star
         if (idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1) {
-            console.log("test");
             allStar[idx].classList.replace('bxs-star', 'bx-star');
             return;
         }
@@ -363,7 +341,6 @@ allStar.forEach((item, idx) => {
             }
         }
         ratingValue.prev = idx + 1
-        console.log("ratingValue.prev", ratingValue.prev)
     })
 
 })
@@ -371,14 +348,14 @@ allStar.forEach((item, idx) => {
 function feedback(event) {
     event.preventDefault();
     let feedbackText = document.getElementById("feedbackText").value
-    if(feedbackText){
+    if (feedbackText) {
         document.getElementById("feedbackError").innerHTML = ""
         document.getElementById("feedbackPopup").style.display = "block";
         document.getElementById("feedbackMsgbx").style.display = "block";
-    }else{
+    } else {
         document.getElementById("feedbackError").innerHTML = "Please Enter Feedback"
     }
-    
+
 }
 
 function displayFeedback() {

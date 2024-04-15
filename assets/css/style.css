@@ -29,7 +29,6 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  /* margin: 1.2rem 18rem;     */
   margin: 0 auto;
   padding: 10px 0;
 }
@@ -338,10 +337,10 @@ textarea {
   font-size: 12px;
 }
 
-.howToPlayContainer,
+.howToPlayContainer, #startbtn-container,
 .pop-msg {
   background-color: #f8f6f6eb;
-  opacity: 0.8;
+  opacity: 1;
   padding: 15px 12px;
 }
 
@@ -694,15 +693,17 @@ textarea {
   }
 }
 
+/* Media Queries - Adjustments for mobile devices */
 @media only screen and (max-width: 576px) {
 
-  /* Adjustments for mobile devices */
  .logo {
-  padding: 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
  }
   .logo img {
-    max-width: 60%;
-    margin: 0; 
+    max-width: 40%;
+      margin: 0 25px; 
   }
 
   .logo button {
@@ -714,8 +715,9 @@ textarea {
   .start,
   .howTo,
   .feedbackPopup {
-    width: 130px;
-    font-size: 14px;
+    width: 100%;
+    max-width: 150px;
+    font-size: 12px;
   }
 
   .options {

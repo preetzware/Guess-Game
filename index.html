@@ -20,8 +20,9 @@
     <!-- Icon link from BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Icon link from Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
 </head>
 
@@ -83,6 +84,7 @@
                         <i class='bx bx-star star' style="--i: 3;"></i>
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
+                    <p><span id="ratingError"></span></p>
                     <textarea name="opinion" aria-label="teaxt area for writing comments about the game"
                         id="feedbackText" cols="30" rows="5" placeholder="Describe your experience..."
                         required></textarea>
@@ -99,23 +101,23 @@
             <div id="footer">
 
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/preety-ramdin-65877a140/" aria-label="Go to linkedin profile"
-                        class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://github.com/preetzware" aria-label="Go to github profile" class="github-icon"><i
-                            class="fa fa-github"></i></a>
-                    <a href="https://www.instagram.com/preety_ramdin/" aria-label="Go to instagram profile"
-                        class="instagram-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/preety-ramdin-65877a140/" aria-label=
+                    "Go to linkedin profile" class="linkedin-icon"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/preetzware" aria-label="Go to github profile" 
+                    class="github-icon"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/preety_ramdin/" aria-label="Go to instagram
+                     profile" class="instagram-icon"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
 
             <!-- Audios and description -->
 
             <audio id="correctAnswer" aria-label="Plays audio sound for correct answer"
-                src="./assets/audio/rightanswer.mp3" type="audio/mpeg"></audio>
-            <audio id="wrongAnswer" aria-label="Plays audio sound for wrong answer" src="./assets/audio/wronganswer.mp3"
-                type="audio/mpeg"></audio>
-            <audio id="congratulations" aria-label="Plays audio sound for for congratulating the highest 
-    scorer" src="./assets/audio/congratulations.mp3" type="audio/mpeg"></audio>
+            src="./assets/audio/rightanswer.mp3" type="audio/mpeg"></audio>
+            <audio id="wrongAnswer" aria-label="Plays audio sound for wrong answer" 
+            src="./assets/audio/wronganswer.mp3" type="audio/mpeg"></audio>
+            <audio id="congratulations" aria-label="Plays audio sound for for congratulating the 
+            highest scorer" src="./assets/audio/congratulations.mp3" type="audio/mpeg"></audio>
 
             <div class="scoreboard"></div>
             <div id="win-display"></div>
@@ -134,10 +136,10 @@
                     <h2 class="modalTitle">Test your knowledge of Geography!</h2><br>
                     <p> The Guess game will feature an image of a landmark and below it,
                         three countries' names will be displayed. Your goal is to guess the correct
-                        country name corresponding to the landmark. The correct answer will be displayed
-                        in green if clicked and the wrong answer will be displayed in red. There are
-                        ten picture to guess in total. Once game is over, your score will be displayed
-                        in the pop up window.</p>
+                        country name corresponding to the landmark. The correct answer will be
+                        displayed in green if clicked and the wrong answer will be displayed in red. 
+                        There are ten picture to guess in total. Once game is over, your score will
+                        be displayed in the pop up window.</p>
                     <p> Time limit to answer each question: 30 seconds.</p><br>
                     <p> Click on the Start button to play. All the best!</p>
 
@@ -178,7 +180,8 @@
                     <div id="startbtn-container">
                         <p class="readyToPlay">Are you ready to play?</p>
                         <br>
-                        <input type="text" id="name" aria-label="Type your name" placeholder="Enter your name" required>
+                        <input type="text" id="name" aria-label="Type your name" 
+                        placeholder="Enter your name" required>
                         <p><span id="error"></span></p>
                     </div>
                     <br>

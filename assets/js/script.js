@@ -357,6 +357,7 @@ allStar.forEach((item, idx) => {
         //if idx is 0 and first star is highlighted and previous is 1 then remove the star
         if (idx === 0 && allStar[idx].classList.contains('bxs-star') && ratingValue.prev == 1) {
             allStar[idx].classList.replace('bxs-star', 'bx-star');
+            ratingValue.prev = "undefined"
             return;
         }
 
@@ -378,16 +379,30 @@ allStar.forEach((item, idx) => {
 
 })
 
+function removeRatingError(){
+    document.getElementById("ratingError").innerHTML = "";
+}
+
 function feedback(event) {
     event.preventDefault();
     let feedbackText = document.getElementById("feedbackText").value
+    if(typeof ratingValue.prev == "undefined" || ratingValue.prev == "undefined"){
+        document.getElementById("ratingError").innerHTML = "Please give us a rating";
+        return;
+    }
     if (feedbackText) {
+        removeRatingError();
         document.getElementById("feedbackError").innerHTML = ""
         document.getElementById("feedbackPopup").style.display = "block";
-        document.getElementById("feedbackMsgbx").style.display = "block";
+        document.getElementById("feedbackMsgbx").style.display = "block";        
     } else {
+        removeRatingError();
         document.getElementById("feedbackError").innerHTML = "Please Enter Feedback"
     }
+
+    console.log("ratingValue", ratingValue.value)
+    console.log("ratingValue.prev", ratingValue.prev)
+    
 
 }
 

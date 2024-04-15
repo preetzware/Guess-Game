@@ -35,7 +35,7 @@ body {
 
 .usernameContainer {
   text-align: center;
-  padding-top: 25%;
+  padding-top: 16%;
 }
 
 input[type=text] {
@@ -49,8 +49,8 @@ input[type=text] {
 }
 
 .readyToPlay {
-  background: rgba(201, 201, 201, 0.29);
-  opacity: 1.2;
+  /* background: rgba(201, 201, 201, 0.29);
+  opacity: 1.2; */
   font-weight: bold;
 }
 
@@ -201,6 +201,7 @@ input[type=text] {
   color: white;
   background: #231557;
   border-radius: var(--border-width);
+  cursor: pointer;
 }
 
 @keyframes moveGradient {
@@ -339,8 +340,8 @@ textarea {
 
 .howToPlayContainer, #startbtn-container,
 .pop-msg {
-  background-color: #f8f6f6eb;
-  opacity: 1;
+  /* background-color: #f8f6f6eb;
+  opacity: 1; */
   padding: 15px 12px;
 }
 
@@ -415,49 +416,56 @@ textarea {
   -moz-opacity: .75;
   background: #B8B8B8;
   position: fixed;
-  left: 0px;
-  top: 0px;
-  height: auto;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 990;
   border: 4px solid white;
-  width: 100%;
-  height: 100%;
-  position: fixed;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Set a maximum width if necessary */
+  padding: 20px; /* Add padding as needed */
   overflow-y: auto;
-  top: 0;
-  left: 0;
-  /* change the background color */
-  background-color: rgba(136, 126, 59, 0.553);
 }
 
-/* #feedbackMsgbx  */
 #startMsgbx,
 #scoreMsgbx,
 #howToPlayMsgbx,
 #usernameMsgbox {
   display: none;
-  position: absolute;
-  left: 42%;
+  position: fixed;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 65vh;
   width: 40%;
-  margin-top: -75px;
-  margin-left: -175px;
+  max-width: 400px; /* Set a maximum width if necessary */
   background-color: rgb(230, 229, 228);
-  background-image: url(../img/modalimg.JPG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 7px #777;
+  border-radius: 22px;
+  z-index: 999;
+  padding: 20px; /* Add padding as needed */
+  overflow-y: auto;
+}
+
+#feedbackMsgbx {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Set a maximum width if necessary */
+  height: auto;
+  background-color: rgb(230, 229, 228);
+  border: 1px solid #ccc;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
-  animation-name: popup;
-  animation-duration: 0.4s;
-  transition-timing-function: ease-in;
   z-index: 999;
+  padding: 20px; /* Add padding as needed */
+  overflow-y: auto;
 }
+
 
 #feedbackMsgbx {
   display: none;
@@ -593,7 +601,7 @@ textarea {
   text-align: center;
 }
 
-#error, #feedbackError{
+#error, #feedbackError, #ratingError{
   color: red;
 }
 
@@ -619,6 +627,7 @@ textarea {
 /* Style the button */
 #muteButton {
   /* Add your styles for the button */
+  width: 10%;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -674,9 +683,10 @@ textarea {
   }
 
   .option {
-    width: 100%;
+    width: 100%;    
   }
 
+  
   .timercontainer {
     width: 90%;
   }

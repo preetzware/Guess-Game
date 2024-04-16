@@ -97,8 +97,9 @@ input[type=text] {
 }
 
 #feedbackMsgbx h4 {
- padding-top: 2rem;
+  padding-top: 2rem;
 }
+
 .howTo {
   background-color: #231557;
   margin-top: 10px;
@@ -544,6 +545,12 @@ textarea {
 
 /* Footer Section */
 
+#footer {
+  width: 75%;
+  margin: auto;
+  height: 42px;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -555,12 +562,12 @@ textarea {
 }
 
 .social-icons a {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .social-icons a:hover {
-background-color: #FFFFFF;
-transform: scale(1.2);
+  background-color: #FFFFFF;
+  transform: scale(1.2);
 }
 
 .linkedin-icon i,
@@ -608,6 +615,8 @@ transform: scale(1.2);
 .logoMobile {
   display: none;
 }
+
+
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
@@ -657,17 +666,17 @@ transform: scale(1.2);
   .timercontainer {
     width: 90%;
   }
-  
+
   .options {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
+  }
 
-.option {
+  .option {
     margin: 10px 0;
     width: 60%;
-}
+  }
 
   #game-wrapper {
     width: 100%;
@@ -694,6 +703,10 @@ transform: scale(1.2);
   #usernameMsgbox {
     width: 90%;
     height: auto;
+  }
+
+  #footer{
+    width: 100%;
   }
 }
 
@@ -730,16 +743,17 @@ transform: scale(1.2);
   #landmark-img {
     width: 400px;
     height: 300px;
+  }
 
   .options {
     flex-direction: column;
     align-items: center;
-    gap: 8px;   
+    gap: 8px;
   }
-  
+
   .option {
-      margin: 5px 0;
-      width: 75%;
+    margin: 5px 0;
+    width: 75%;
   }
 
   .timercontainer {
@@ -788,7 +802,7 @@ transform: scale(1.2);
     margin-top: 1rem;
     border: 5px solid #000C66;
     border-radius: 30px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
   }
 
   .timeScore {
@@ -812,7 +826,7 @@ transform: scale(1.2);
     height: 50px;
     width: 120px;
     color: #231557;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
   }
 
   .mobileBtn .howToPlay {
@@ -820,13 +834,15 @@ transform: scale(1.2);
     width: 120px;
     font-size: 12px;
     font-weight: bold;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
   }
 
-  .start, .howTo, .howToPlay {
+  .start,
+  .howTo,
+  .howToPlay {
     margin-top: 0.8rem;
   }
- 
+
   .animate-character {
     font-size: 8vmin;
   }

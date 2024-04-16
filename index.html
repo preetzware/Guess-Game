@@ -22,8 +22,6 @@
     <!-- Icon link from Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 </head>
 
 <body>
@@ -45,8 +43,8 @@
             <button class="start" onclick="start()">Start</button>
             <button class="howToPlay" onclick="howToPlay()">How to play</button>
         </div>
-
     </div>
+
     <!-- Quiz content in wrapper -->
 
     <div id="game-wrapper">
@@ -59,7 +57,7 @@
             </div>
         </div>
 
-        <!-- Landmarks Images -->
+        <!-- Buttons & Landmarks Images -->
 
         <div>
             <div id="landmark">
@@ -69,10 +67,12 @@
                         <i id="unmute" class="fa fa-volume-up volume-btn"></i>
                         <i id="mute" class='fas fa-volume-mute'></i>
                     </button>
-
+                    <!-- Timer -->
                     <h2 id="clock">Time:<span id="timer"></span>s</h2>
+                    <!-- Score -->
                     <h2 id="scoreValue">Score: <span id="score">0</span>/10</h2>
                 </div>
+                <!-- Landmarks Images -->
                 <img id="landmark-img" alt="image of a country's landmark">
             </div>
 
@@ -133,19 +133,16 @@
 
             <div class="scoreboard"></div>
             <div id="win-display"></div>
-        </div>
+    </div>
 
         <!-- All modals section -->
 
         <!-- How to play popup -->
 
         <div id="howToPlayPopup"></div>
-        <div id="howToPlayMsgbx">
-            <div>
-                <!-- <span class="displayHowToPlay" onclick="howToPlayDisplay()">x</span> -->
-                <div class="howToPlayContainer">
-                    <!-- <p class="pop-msg"> -->
-                    <h2 class="modalTitle">Test your knowledge of Geography!</h2><br>
+        <div id="howToPlayMsgbx"><div>
+            <div class="howToPlayContainer">
+                <h2 class="modalTitle">Test your knowledge of Geography!</h2><br>
                     <p> The Guess game will feature an image of a landmark and below it,
                         three countries' names will be displayed. Your goal is to guess the correct
                         country name corresponding to the landmark. The correct answer will be
@@ -154,9 +151,7 @@
                         be displayed in the pop up window.</p>
                     <p> Time limit to answer each question: 30 seconds.</p><br>
                     <p> Click on the Start button to play. All the best!</p>
-
-                    <!-- </p> -->
-                </div>
+            </div>
                 <div class="gotItBtn">
                     <button id="pop-up-start" onclick="displayHow()">Got it!</button>
                 </div>
@@ -180,24 +175,20 @@
             </div>
         </div>
 
-
         <!-- User name pop-up -->
 
         <div id="usernamePopup"></div>
-        <div id="usernameMsgbox">
-            <div>
-
-                <!-- <span class="displayPop" onclick="startDisplayPopup()">x</span> -->
-                <div class="usernameContainer">
-                    <div id="startbtn-container">
-                        <p class="readyToPlay">Are you ready to play?</p>
-                        <br>
-                        <input type="text" id="name" aria-label="Type your name" placeholder="Enter your name" required>
-                        <p><span id="error"></span></p>
-                    </div>
+        <div id="usernameMsgbox"><div>
+            <div class="usernameContainer">
+                <div id="startbtn-container">
+                    <p class="readyToPlay">Are you ready to play?</p>
                     <br>
-                    <div>
-                        <button class="howTo" onclick="getName()">OK</button>
+                    <input type="text" id="name" aria-label="Type your name" placeholder="Enter your name" required>
+                    <p><span id="error"></span></p>
+                </div>
+                    <br>
+            <div>
+                <button class="howTo" onclick="getName()">OK</button>
                     </div>
                 </div>
             </div>
@@ -205,21 +196,18 @@
 
         <!-- score board -->
         <div id="scorePopup"></div>
-        <div id="scoreMsgbx">
-            <div>
-                <!-- <span class="displayPop" onclick="displayPop()">x</span> -->
-                <div class="gameScore">
+        <div id="scoreMsgbx"><div>
+            
+            <div class="gameScore">
                     <div>
                         <h4 id="gameText">Game Over!</h4>
                     </div>
                     <h4>Player: <span id="playerName"></span></h4>
                     <h4 id="message">Nice try! <br> Thank you for playing. <br>Better luck next time!</h4>
                     <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
-                    <!-- <div class="question">Q: 2</div> -->
                     <button id="restart" onclick="restart()">Go Back</button>
                 </div>
             </div>
-
         </div>
 
         <!-- feedback board -->
@@ -233,7 +221,6 @@
                     <button class="feedbackPopup" onclick="displayFeedback()">Close</button>
                 </div>
             </div>
-
         </div>
         <script src="assets/js/script.js"></script>
 </body>

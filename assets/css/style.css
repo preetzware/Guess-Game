@@ -49,8 +49,6 @@ input[type=text] {
 }
 
 .readyToPlay {
-  /* background: rgba(201, 201, 201, 0.29);
-  opacity: 1.2; */
   font-weight: bold;
 }
 
@@ -79,7 +77,6 @@ input[type=text] {
 .feedbackPopup,
 .howToPlay {
   width: 160px;
-  /* font-size: 17px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
   font-weight: 600;
@@ -135,28 +132,6 @@ input[type=text] {
   }
 }
 
-/* remove */
-.timercontainer {
-  width: 60%;
-  display: flex;
-  justify-content: space-evenly;
-  /* margin: 1rem 10rem; */
-  margin: 0 auto;
-  font-size: 12px;
-  flex-direction: column;
-  text-align: center;
-}
-
-.timercontainer #clock {
-  background-color: #fff;
-  opacity: 0.7;
-  width: 130px;
-  padding: 4px;
-  border-radius: 25px;
-  font-size: 17px;
-  text-align: center;
-}
-
 #timer {
   font-size: 18px;
   text-align: center;
@@ -165,9 +140,50 @@ input[type=text] {
 .timeScore {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
   padding-bottom: 1rem;
 }
+
+#clock {
+  background-color: white;
+  opacity: 0.7;
+  padding: 0.4rem 0.7rem;
+  border-radius: 1em;
+}
+
+#scoreValue {
+  width: 130px;
+  padding: 4px;
+  border-radius: 25px;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* Mute/Unmute Button */
+
+#mute {
+  display: none;
+}
+
+#unmute {
+  font-size: 30px !important;
+  color: black;
+}
+
+.fa-volume-mute {
+  font-size: 30px !important;
+  color: black;
+}
+
+#muteButton {
+  width: 10%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 
 #landmark {
   text-align: center;
@@ -278,6 +294,8 @@ textarea {
 
 }
 
+/* Star rating & Feedback section */
+
 .star-rating .star {
   cursor: pointer;
 }
@@ -342,8 +360,6 @@ textarea {
 .howToPlayContainer,
 #startbtn-container,
 .pop-msg {
-  /* background-color: #f8f6f6eb;
-  opacity: 1; */
   padding: 15px 12px;
 }
 
@@ -364,8 +380,6 @@ textarea {
 #pop-up-start,
 #restart {
   text-align: center;
-  /* width: 130px;
-  height: 40px; */
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -381,7 +395,6 @@ textarea {
     4px 4px 5px 0px rgba(0, 0, 0, .1);
   outline: none;
   background: #231557;
-  /* background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%); */
   width: 130px;
   height: 40px;
   line-height: 42px;
@@ -401,8 +414,6 @@ textarea {
   position: absolute;
   left: 0px;
   top: 0px;
-  /* height: 1024px;
-  width: 100%; */
   z-index: 990
 }
 
@@ -411,23 +422,6 @@ textarea {
 #howToPlayPopup,
 #usernamePopup,
 #feedbackPopup {
-  /* display: none;
-  opacity: .75;
-  filter: alpha(opacity=75);
-  -ms-filter: "alpha(opacity=75)";
-  -khtml-opacity: .75;
-  -moz-opacity: .75;
-  background: #B8B8B8;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  z-index: 990;
-  border: 4px solid white; */
-  /* width: 80%;
-  max-width: 600px;
-  padding: 20px; 
-  overflow-y: auto; */
   display: none;
   opacity: .75;
   filter: alpha(opacity=75);
@@ -461,18 +455,15 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* height: 65vh; */
   height: auto;
   width: 40%;
   max-width: 400px;
-  /* Set a maximum width if necessary */
   background-color: #189AB4;
   border: 1px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
   padding: 20px;
-  /* Add padding as needed */
   overflow-y: auto;
 }
 
@@ -483,9 +474,7 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  /* Adjust width as needed */
   max-width: 600px;
-  /* Set a maximum width if necessary */
   height: auto;
   background-color: #189AB4;
   border: 1px solid #D4F1F4;
@@ -493,7 +482,6 @@ textarea {
   border-radius: 22px;
   z-index: 999;
   padding: 20px;
-  /* Add padding as needed */
   overflow-y: auto;
   text-align: center
 }
@@ -543,6 +531,8 @@ textarea {
   color: red;
 }
 
+/* Footer Section */
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -550,7 +540,7 @@ textarea {
   width: 100%;
   height: auto;
   background-color: #00A8A8;
-  padding: 0.7rem 0;
+  padding: 1rem 0;
 }
 
 .social-icons a {
@@ -567,21 +557,6 @@ transform: scale(1.2);
 .github-icon i {
   font-size: 30px;
   padding: 0 8px;
-}
-
-#scoreValue,
-#playerName {
-  padding: 10px;
-}
-
-#scoreValue {
-  background-color: #fff;
-  opacity: 0.7;
-  width: 130px;
-  padding: 7px;
-  border-radius: 25px;
-  font-size: 17px;
-  text-align: center;
 }
 
 #desktop {
@@ -614,37 +589,6 @@ transform: scale(1.2);
   color: red;
 }
 
-/* Hide mute icon by default */
-#mute {
-  display: none;
-}
-
-/* Style the volume icon */
-#unmute {
-  /* Add your styles for the volume icon */
-  font-size: 30px !important;
-  color: black;
-  /* Example: set color to green */
-}
-
-/* Style the mute icon */
-.fa-volume-mute {
-  /* Add your styles for the mute icon */
-  font-size: 30px !important;
-  color: black;
-  /* Example: set color to red */
-}
-
-/* Style the button */
-#muteButton {
-  /* Add your styles for the button */
-  width: 10%;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
 .gameScore h4 {
   padding: 2%;
   line-height: 26px;
@@ -671,27 +615,27 @@ transform: scale(1.2);
 
   .logo img {
     max-width: 80%;
-    margin: 0 70px;
+    margin: 0 60px;
   }
 
   .logo button {
-    width: 100%;
+    width: 150px;
     margin-bottom: 10px;
   }
 
   .logo {
-    width: 100%;
+    width: 94%;
     margin-top: 0.5rem;
   }
 
   .logo .start .howToPlay {
-    margin: 10px auto;
+    margin: 5px auto;
     padding-top: 2rem;
   }
 
   .start,
   .howToPlay {
-    width: 120px;
+    width: 100px;
     height: 50px;
   }
 
@@ -699,17 +643,20 @@ transform: scale(1.2);
     font-size: 8.5vmin;
   }
 
-  .options {
-    flex-direction: column;
-  }
-
-  .option {
-    width: 100%;
-  }
-
   .timercontainer {
     width: 90%;
   }
+  
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.option {
+    margin: 10px 0;
+    width: 60%;
+}
 
   #game-wrapper {
     /* width: 90%; */
@@ -731,63 +678,55 @@ transform: scale(1.2);
     height: 200px;
   }
 
-  ul li {
-    width: 90px;
-  }
-
-  ul li a {
-    width: 40px;
-  }
-
   #startMsgbx,
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    /* top: 30%;
-    left: 46%; */
     width: 98%;
-    /* height: 80%; */
-    /* height: 65vh; */
     height: auto;
-    /* margin-left: 1%;    */
   }
 }
 
 /* Media Queries - Adjustments for mobile devices */
+
 @media only screen and (max-width: 576px) {
 
   .logo {
-    width: 100%;
+    width: 94%;
     display: flex;
     align-items: center;
   }
 
   .logo img {
-    width: 120px;
-    max-width: 100%;
+    width: 110px;
+    max-width: 95%;
+    margin: 0 30px;
     height: auto;
   }
 
   .logo button {
     max-width: 100%;
-    width: 175px;
+    width: 225px;
     height: 50;
   }
 
   .start,
-  .howTo,
+  .howToPlay,
   .feedbackPopup {
     width: 100%;
     max-width: 150px;
     font-size: 12px;
   }
 
+  #landmark-img {
+    width: 400px;
+    height: 300px;
+
   .options {
-    padding: 20px;
+    padding: 10px 20px;
   }
 
   .option {
-    /* width: 150px; */
     font-size: 14px;
   }
 
@@ -844,6 +783,11 @@ transform: scale(1.2);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
   }
 
+  .timeScore {
+    justify-content: space-evenly;
+    gap: 2.5rem;
+  }
+
   .mobileBtn {
     width: 100%;
     display: flex;
@@ -871,12 +815,20 @@ transform: scale(1.2);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
   }
 
-  .start, .howTo, .feedbackPopup, .howToPlay{
+  .start, .howTo, .feedbackPopup, .howToPlay {
     margin-top: 0.8rem;
   }
 
   .animate-character {
     font-size: 8vmin;
   }
-  
+
+  #landmark-img {
+    width: 300px;
+    height: 300px;
+
+  .option {
+    margin: 10px 0;
+    width: 85%;
+  }
 }

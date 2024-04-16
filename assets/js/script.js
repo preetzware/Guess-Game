@@ -214,9 +214,29 @@ function audioCongratulation() {
     congratulation.play();
 }
 
+function disableButtons(current){
+    document.querySelectorAll('.option').forEach(button => {
+        if (button.innerText.toLowerCase() === current.answer.toLowerCase()) {
+            button.style.backgroundColor = '#04D010';
+        }
+        button.disabled = true;
+    });
+}
+
+function displayAlertPopup(){
+    document.getElementById("alertPopup").style.display = "block"
+    document.getElementById("alertMsgbx").style.display = "block"
+}
+
+function hideDisplayAlert(){
+    document.getElementById("alertPopup").style.display = "none"
+    document.getElementById("alertMsgbx").style.display = "none"
+}
+
 function checkAnswer(e) {
     if (startGame === false) {
-        alert("Click start button to start");
+        // alert("Click start button to start");
+        displayAlertPopup()
         return;
     }
 
@@ -234,17 +254,13 @@ function checkAnswer(e) {
     //answer is the clicked value from the given option
     if (answer === current.answer) {
         document.getElementById(buttonId).style.backgroundColor = '#04D010';
+        disableButtons(current);
         audioCorrectAnswer();
         score = score + 1;
         scoreValue.innerHTML = score;
     } else {
         document.getElementById(buttonId).style.backgroundColor = '#FF0F39';
-        document.querySelectorAll('.option').forEach(button => {
-            if (button.innerText.toLowerCase() === current.answer.toLowerCase()) {
-                button.style.backgroundColor = '#04D010';
-            }
-            button.disabled = true;
-        });
+        disableButtons(current);
         audioWrongAnswer();
     }
 
@@ -406,4 +422,5 @@ function feedback(event) {
 function displayFeedback() {
     document.getElementById("feedbackPopup").style.display = "none";
     document.getElementById("feedbackMsgbx").style.display = "none";
+    document.getElementById("feedbackText").value = "";
 }

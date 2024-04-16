@@ -91,12 +91,12 @@ input[type=text] {
   box-shadow: 0 0 20px #eee;
 }
 
-.feedbackPopup {
+.feedbackPopup  {
   margin-top: 3rem;
   width: 120px;
 }
 
-#feedbackMsgbx h4 {
+#feedbackMsgbx h4, #alertMsgbx h4 {
   padding-top: 2rem;
 }
 
@@ -443,7 +443,9 @@ textarea {
 #scorePopup,
 #howToPlayPopup,
 #usernamePopup,
-#feedbackPopup {
+#feedbackPopup,
+#alertPopup
+ {
   display: none;
   opacity: .75;
   filter: alpha(opacity=75);
@@ -488,7 +490,7 @@ textarea {
   overflow-y: auto;
 }
 
-#feedbackMsgbx {
+#feedbackMsgbx, #alertMsgbx {
   display: none;
   position: fixed;
   top: 50%;

@@ -35,11 +35,11 @@ body {
 
 .usernameContainer {
   text-align: center;
-  padding-top: 16%;
+  margin-bottom: 1rem;
 }
 
 input[type=text] {
-  width: 50%;
+  width: 60%;
   padding: 12px 20px;
   margin-top: 16px;
   display: inline-block;
@@ -91,6 +91,14 @@ input[type=text] {
   box-shadow: 0 0 20px #eee;
 }
 
+.feedbackPopup {
+  margin-top: 3rem;
+  width: 120px;
+}
+
+#feedbackMsgbx h4 {
+ padding-top: 2rem;
+}
 .howTo {
   background-color: #231557;
   margin-top: 10px;
@@ -102,6 +110,15 @@ input[type=text] {
 .howToPlay:hover {
   background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 55%, #895cf2 100%);
   background-position: right center;
+}
+
+#game-wrapper {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fffdfd89;
 }
 
 .heading {
@@ -149,12 +166,12 @@ input[type=text] {
   opacity: 0.7;
   padding: 0.4rem 0.7rem;
   border-radius: 1em;
+  font-size: 17px;
 }
 
 #scoreValue {
-  width: 130px;
+  width: 100px;
   padding: 4px;
-  border-radius: 25px;
   font-size: 17px;
   text-align: center;
 }
@@ -176,7 +193,7 @@ input[type=text] {
 }
 
 #muteButton {
-  width: 10%;
+  width: 60px;
   padding: 10px;
   background-color: transparent;
   border: none;
@@ -184,6 +201,7 @@ input[type=text] {
   outline: none;
 }
 
+/* Landmark Images */
 
 #landmark {
   text-align: center;
@@ -197,12 +215,14 @@ input[type=text] {
   border: solid #231557;
 }
 
+/* Answer Options */
+
 .options {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .option {
@@ -227,14 +247,7 @@ input[type=text] {
   }
 }
 
-#game-wrapper {
-  width: 75%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fffdfd89;
-}
+/* Star rating & Feedback section */
 
 .star-wrapper {
   display: flex;
@@ -294,8 +307,6 @@ textarea {
 
 }
 
-/* Star rating & Feedback section */
-
 .star-rating .star {
   cursor: pointer;
 }
@@ -325,6 +336,8 @@ textarea {
 .star-rating .star:hover {
   transform: scale(1.1);
 }
+
+/* Modals & pop-ups styling */
 
 #nextBtn {
   padding: 10px 20px;
@@ -365,11 +378,13 @@ textarea {
 
 .howToPlayContainer p {
   font-size: 15px;
+  text-align: justify;
+  align-content: center;
 }
 
 .gotItBtn {
   text-align: center;
-  margin-top: 12px;
+  padding-bottom: 1.5rem;
 }
 
 .modalTitle {
@@ -382,9 +397,11 @@ textarea {
   text-align: center;
   color: #fff;
   border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
+  padding: 5px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -400,6 +417,10 @@ textarea {
   line-height: 42px;
   padding: 0;
   margin-top: 2rem;
+}
+
+#restart {
+  margin: 1.3rem 0;
 }
 
 #popupContainer {
@@ -442,8 +463,7 @@ textarea {
   overflow-y: auto;
   top: 0;
   left: 0;
-  /* change the background color */
-  background-color: rgba(136, 126, 59, 0.553);
+  background-color: rgba(130, 53, 129, 0.553);
 }
 
 #startMsgbx,
@@ -457,13 +477,13 @@ textarea {
   transform: translate(-50%, -50%);
   height: auto;
   width: 40%;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #189AB4;
-  border: 1px solid #D4F1F4;
+  border: 2px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
-  border-radius: 22px;
+  border-radius: 20px;
   z-index: 999;
-  padding: 20px;
+  padding: 12px;
   overflow-y: auto;
 }
 
@@ -474,10 +494,10 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  max-width: 600px;
-  height: auto;
+  max-width: 500px;
+  height: 200px;
   background-color: #189AB4;
-  border: 1px solid #D4F1F4;
+  border: 2px solid #D4F1F4;
   box-shadow: 3px 3px 7px #777;
   border-radius: 22px;
   z-index: 999;
@@ -497,15 +517,6 @@ textarea {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-/* #feedbackMsgbx  */
-#startMsgbx,
-#scoreMsgbx,
-#howToPlayMsgbx {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
 }
 
 .score,
@@ -659,7 +670,6 @@ transform: scale(1.2);
 }
 
   #game-wrapper {
-    /* width: 90%; */
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -682,7 +692,7 @@ transform: scale(1.2);
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    width: 98%;
+    width: 90%;
     height: auto;
   }
 }
@@ -711,8 +721,7 @@ transform: scale(1.2);
   }
 
   .start,
-  .howToPlay,
-  .feedbackPopup {
+  .howToPlay {
     width: 100%;
     max-width: 150px;
     font-size: 12px;
@@ -723,11 +732,14 @@ transform: scale(1.2);
     height: 300px;
 
   .options {
-    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;   
   }
-
+  
   .option {
-    font-size: 14px;
+      margin: 5px 0;
+      width: 75%;
   }
 
   .timercontainer {
@@ -751,12 +763,8 @@ transform: scale(1.2);
   #scoreMsgbx,
   #howToPlayMsgbx,
   #usernameMsgbox {
-    /* top: 30%;
-    left: 46%; */
-    width: 98%;
-    /* height: 65vh;  */
+    width: 95%;
     height: auto;
-    /* margin-left: 0.2%; */
   }
 
 }
@@ -774,9 +782,9 @@ transform: scale(1.2);
   }
 
   .logoMobile img {
-    width: 90px;
+    width: 95px;
     max-width: 100%;
-    height: 90px;
+    height: 95px;
     margin-top: 1rem;
     border: 5px solid #000C66;
     border-radius: 30px;
@@ -801,34 +809,30 @@ transform: scale(1.2);
     cursor: pointer;
     border: 1.5px solid #231557;
     background-color: rgb(255, 255, 255);
-    height: 40px;
-    width: 110px;
+    height: 50px;
+    width: 120px;
     color: #231557;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
   }
 
   .mobileBtn .howToPlay {
-    height: 40px;
-    width: 110px;
-    font-size: 11px;
+    height: 50px;
+    width: 120px;
+    font-size: 12px;
     font-weight: bold;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
   }
 
-  .start, .howTo, .feedbackPopup, .howToPlay {
+  .start, .howTo, .howToPlay {
     margin-top: 0.8rem;
   }
-
+ 
   .animate-character {
     font-size: 8vmin;
   }
 
-  #landmark-img {
-    width: 300px;
-    height: 300px;
-
-  .option {
-    margin: 10px 0;
-    width: 85%;
+  #feedbackText {
+    width: 255px;
+    height: 200px;
   }
 }

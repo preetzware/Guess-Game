@@ -254,9 +254,9 @@ function checkAnswer(e) {
         //check score if 10
         if (score === 10) {
             displayPlayerName();
-            document.getElementById("message").innerHTML = "Congratulations!";
+            document.getElementById("message").innerHTML = "Congratulations! <br>You nailed it!";
             document.getElementById("restart").style.display = "block";
-            document.getElementById("restart").innerHTML = "Back to Home Page";
+            document.getElementById("restart").innerHTML = "Go Back";
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById('scorePopup').style.display = "block";
             document.getElementById('scoreMsgbx').style.display = "block";
@@ -264,7 +264,7 @@ function checkAnswer(e) {
 
         } else {
             displayPlayerName();
-            document.getElementById("message").innerHTML = "Better luck next time do you want to replay"            
+            document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!"            
             document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";            
             document.getElementById('scoreDisplay').innerHTML = score;
             document.getElementById("restart").style.display = 'block';

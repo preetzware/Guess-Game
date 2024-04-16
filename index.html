@@ -98,7 +98,7 @@
                         <i class='bx bx-star star' style="--i: 4;"></i>
                     </div>
                     <p><span id="ratingError"></span></p>
-                    <textarea name="opinion" aria-label="teaxt area for writing comments about the game"
+                    <textarea name="opinion" aria-label="text area for writing comments about the game"
                         id="feedbackText" cols="30" rows="5" placeholder="Describe your experience..."
                         required></textarea>
                     <p><span id="feedbackError"></span></p>
@@ -148,8 +148,8 @@
                         country name corresponding to the landmark. The correct answer will be
                         displayed in green if clicked and the wrong answer will be displayed in red.
                         There are ten picture to guess in total. Once game is over, your score will
-                        be displayed in the pop up window.</p>
-                    <p> Time limit to answer each question: 30 seconds.</p><br>
+                        be displayed in the pop up window. Time limit to answer each question:
+                         30 seconds.</p><br>
                     <p> Click on the Start button to play. All the best!</p>
             </div>
                 <div class="gotItBtn">
@@ -166,10 +166,10 @@
                 <span class="displayPop" onclick="startDisplayPopup()">x</span>
                 <div class="startContainer">
                     <div>
-                        <button class="start" onclick="start()">Start</button>
+                        <button class="start" onclick="start()">START</button>
                     </div>
                     <div>
-                        <button class="howTo" onclick="howToPlay()">How to play</button>
+                        <button class="howTo" onclick="howToPlay()">How to Play</button>
                     </div>
                 </div>
             </div>
@@ -181,8 +181,9 @@
         <div id="usernameMsgbox"><div>
             <div class="usernameContainer">
                 <div id="startbtn-container">
-                    <p class="readyToPlay">Are you ready to play?</p>
-                    <br>
+                    <p class="readyToPlay">Are you ready to play?<br>
+                        <br>
+                        Please enter your name and click on OK button. </p>
                     <input type="text" id="name" aria-label="Type your name" placeholder="Enter your name" required>
                     <p><span id="error"></span></p>
                 </div>
@@ -202,7 +203,7 @@
                     <div>
                         <h4 id="gameText">Game Over!</h4>
                     </div>
-                    <h4>Player: <span id="playerName"></span></h4>
+                    <h4>Hey <span id="playerName"></span></h4>
                     <h4 id="message">Nice try! <br> Thank you for playing. <br>Better luck next time!</h4>
                     <div class="score">Score: <span id="scoreDisplay"></span>/10</div>
                     <button id="restart" onclick="restart()">Go Back</button>

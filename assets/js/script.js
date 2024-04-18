@@ -416,7 +416,6 @@ function feedback(event) {
     console.log("ratingValue", ratingValue.value)
     console.log("ratingValue.prev", ratingValue.prev)
     
-
 }
 
 function displayFeedback() {

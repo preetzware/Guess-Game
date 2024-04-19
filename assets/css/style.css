@@ -16,13 +16,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
+/*  logo and start/How to play buttons */
 
 .logo {
   width: 75%;
@@ -31,33 +25,6 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 10px 0;
-}
-
-.usernameContainer {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-input[type=text] {
-  width: 60%;
-  padding: 12px 20px;
-  margin-top: 16px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.readyToPlay {
-  font-weight: bold;
-}
-
-.startHow {
-  text-align: center;
-}
-
-.startHow button {
-  margin: 0px !important;
 }
 
 .logo img {
@@ -91,13 +58,33 @@ input[type=text] {
   box-shadow: 0 0 20px #eee;
 }
 
-.feedbackPopup  {
-  margin-top: 3rem;
-  width: 120px;
+/* Start button and how to play modals styling */
+
+.usernameContainer {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-#feedbackMsgbx h4, #alertMsgbx h4 {
-  padding-top: 2rem;
+input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-top: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.readyToPlay {
+  font-weight: bold;
+}
+
+.startHow {
+  text-align: center;
+}
+
+.startHow button {
+  margin: 0px !important;
 }
 
 .howTo {
@@ -113,6 +100,8 @@ input[type=text] {
   background-position: right center;
 }
 
+/* Layover background and Heading */
+
 #game-wrapper {
   width: 75%;
   margin: auto;
@@ -122,36 +111,48 @@ input[type=text] {
   background-color: #fffdfd89;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 .heading {
   margin-bottom: 20px;
 }
 
+/* Credit to https://alvarotrigo.com/blog/css-text-animations/ for this text animation */
+
 .animate-character {
-  background-image: linear-gradient(-225deg,
-      #231557 0%,
-      #44107a 32%,
-      #ff1361 67%,
-      #fff800 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 80% auto;
+  background-size: 200% auto;
   color: #fff;
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 3s linear infinite;
+  animation: textclip 4s linear infinite;
   display: inline-block;
   font-size: 50px;
 }
 
 @keyframes textclip {
-  0% {
-    background-position: 0% center;
+  to {
+    background-position: 200% center;
   }
-  100% {
-    background-position: 100% center;
 }
-}
+
+/* Time and Score section */
 
 #timer {
   font-size: 18px;
@@ -238,12 +239,17 @@ input[type=text] {
   height: 60px;
   font-size: 16px;
   font-weight: normal;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
   background: #231557;
   border: 2px solid transparent;
   border-radius: 18px;
   cursor: pointer;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
  .option:hover {
   font-weight: bold;
@@ -279,36 +285,6 @@ input[type=text] {
   padding: 1rem 0;
 }
 
-textarea {
-  width: 100%;
-  max-width: 400px;
-  height: 200px;
-  background-color: #c3bfbff7;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.btn-group .btn-submit {
-  padding: 1.5rem;
-  border-radius: .5rem;
-  border: 3px solid #FF4500;
-  outline: none;
-  font-size: 17px;
-  font-weight: 800;
-  cursor: pointer;
-  margin: 10px;
-  padding: .7em 2em;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
-  transition: 0.5s;
-}
-
 .star-rating .star {
   cursor: pointer;
 }
@@ -337,6 +313,50 @@ textarea {
 
 .star-rating .star:hover {
   transform: scale(1.1);
+}
+
+
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  background-color: #c3bfbff7;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.btn-group .btn-submit {
+  padding: 1.5rem;
+  border-radius: .5rem;
+  border: 4px solid #000C66;
+  outline: none;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 10px;
+  padding: .7em 2em;
+  background-size: 200% auto;
+  background-position: 100% 0;
+  transition: background-position .5s;
+  color: white;
+  background-image: linear-gradient(100deg, darkmagenta, crimson, orange);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-group .btn-submit:hover {
+  background-position: 0 0;
+}
+
+.feedbackPopup  {
+  margin-top: 3rem;
+  width: 120px;
+}
+
+#feedbackMsgbx h4, #alertMsgbx h4 {
+  padding-top: 2rem;
 }
 
 /* Modals & pop-ups styling */
@@ -579,6 +599,7 @@ textarea {
   font-size: 30px;
   padding: 0 8px;
 }
+ /* Mobile Styles */
 
 #desktop {
   display: flex;
@@ -618,8 +639,6 @@ textarea {
 .logoMobile {
   display: none;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   /* Adjustments for tablets */
@@ -663,7 +682,7 @@ textarea {
   }
 
   .animate-character {
-    font-size: 8.5vmin;
+    font-size: 9vmin;
   }
 
   .timercontainer {
@@ -734,6 +753,10 @@ textarea {
     max-width: 100%;
     width: 225px;
     height: 50;
+  }
+
+  .animate-character {
+    font-size: 8vmin;
   }
 
   .start,

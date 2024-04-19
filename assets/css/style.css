@@ -331,7 +331,7 @@ textarea {
 .btn-group .btn-submit {
   padding: 1.5rem;
   border-radius: .5rem;
-  border: 4px solid #000C66;
+  border: 4px solid #050A61;
   outline: none;
   font-size: 17px;
   font-weight: 800;
@@ -450,9 +450,9 @@ textarea {
   width: 100%;
   opacity: .75;
   filter: alpha(opacity=75);
-  -ms-filter: "alpha(opacity=75)";
-  -khtml-opacity: .75;
-  -moz-opacity: .75;
+  filter: "alpha(opacity=75)";
+  opacity: .75;
+  opacity: .75;
   background: #B8B8B8;
   position: absolute;
   left: 0px;
@@ -470,9 +470,9 @@ textarea {
   display: none;
   opacity: .75;
   filter: alpha(opacity=75);
-  -ms-filter: "alpha(opacity=75)";
-  -khtml-opacity: .75;
-  -moz-opacity: .75;
+  filter: "alpha(opacity=75)";
+  opacity: .75;
+  opacity: .75;
   background: #B8B8B8;
   position: fixed;
   left: 0px;

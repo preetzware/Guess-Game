@@ -396,6 +396,12 @@ function removeRatingError(){
     document.getElementById("ratingError").innerHTML = "";
 }
 
+function removeStarRating(){
+    allStar.forEach(i => {        
+        i.classList.replace('bxs-star', 'bx-star');       
+    });
+}
+
 function feedback(event) {
     event.preventDefault();
     let feedbackText = document.getElementById("feedbackText").value;
@@ -407,15 +413,13 @@ function feedback(event) {
         removeRatingError();
         document.getElementById("feedbackError").innerHTML = ""
         document.getElementById("feedbackPopup").style.display = "block";
-        document.getElementById("feedbackMsgbx").style.display = "block";        
+        document.getElementById("feedbackMsgbx").style.display = "block";                
+        removeStarRating();
     } else {
         removeRatingError();
         document.getElementById("feedbackError").innerHTML = "Please Enter Feedback"
     }
-
-    console.log("ratingValue", ratingValue.value)
-    console.log("ratingValue.prev", ratingValue.prev)
-    
+        
 }
 
 function displayFeedback() {

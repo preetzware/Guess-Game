@@ -296,7 +296,7 @@ function checkAnswer(e) {
             removeBackgroundColor();
             timer = 0;
             startInterval();
-        }, 2000)
+        }, 3000)
     }
 }
 

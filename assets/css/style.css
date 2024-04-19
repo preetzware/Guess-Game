@@ -145,9 +145,12 @@ input[type=text] {
 }
 
 @keyframes textclip {
-  to {
-    background-position: 200% center;
+  0% {
+    background-position: 0% center;
   }
+  100% {
+    background-position: 100% center;
+}
 }
 
 #timer {
@@ -304,7 +307,6 @@ textarea {
   background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
   box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
   transition: 0.5s;
-
 }
 
 .star-rating .star {

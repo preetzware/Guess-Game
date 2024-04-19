@@ -30,7 +30,7 @@
     <div class="logo">
         <button class="start" onclick="start()">START</button>
         <img src="assets/img/guessing-cat.png" alt="image of guessing cat">
-        <button class="howToPlay" onclick="howToPlay()">How to Play</button>
+        <button class="howToPlay" onclick="displayHowToPlay()">How to Play</button>
     </div>
 
     <!-- Logo and buttons for mobile screen size -->
@@ -41,7 +41,7 @@
         </div>
         <div class="mobileBtn">
             <button class="start" onclick="start()">START</button>
-            <button class="howToPlay" onclick="howToPlay()">How to Play</button>
+            <button class="howToPlay" onclick="displayHowToPlay()">How to Play</button>
         </div>
     </div>
 
@@ -154,7 +154,7 @@
                     <p> Click on the Start button to play. All the best!</p>
             </div>
                 <div class="gotItBtn">
-                    <button id="pop-up-start" onclick="displayHow()">Got it!</button>
+                    <button id="pop-up-start" onclick="hideHowToPlay()">Got it!</button>
                 </div>
             </div>
         </div>
@@ -164,13 +164,13 @@
         <div id="startPopup"></div>
         <div id="startMsgbx">
             <div>
-                <span class="displayPop" onclick="startDisplayPopup()">x</span>
+                <span class="displayPop" onclick="hideStartPopup()">x</span>
                 <div class="startContainer">
                     <div>
                         <button class="start" onclick="start()">START</button>
                     </div>
                     <div>
-                        <button class="howTo" onclick="howToPlay()">How to Play</button>
+                        <button class="howTo" onclick="displayHowToPlay()">How to Play</button>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                     <div>
                         <h4>Thank you for your feedback!</h4>
                     </div>
-                    <button class="feedbackPopup" onclick="displayFeedback()">Close</button>
+                    <button class="feedbackPopup" onclick="closeDisplayFeedback()">Close</button>
                 </div>
             </div>
         </div>

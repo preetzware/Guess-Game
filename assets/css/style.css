@@ -256,6 +256,11 @@ input[type=text] {
   border-color: white;
  }
 
+ .option:focus {
+  outline: none; 
+  box-shadow: none;
+} 
+
 /* Star rating & Feedback section */
 
 .star-wrapper {
@@ -591,6 +596,11 @@ textarea {
 .social-icons a:hover {
   background-color: #FFFFFF;
   transform: scale(1.2);
+}
+
+.social-icons:focus {
+  outline: none; 
+  box-shadow: none;
 }
 
 .linkedin-icon i,

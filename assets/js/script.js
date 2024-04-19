@@ -6,7 +6,7 @@ const pictureArray = [{
         options: ['South Korea', 'Japan', 'China']
     },
     {
-        picture: 'Iguazufalls',
+        picture: 'Perito Moreno Glacier',
         img: 'assets/img/q-two.webp',
         answer: 'Argentina',
         options: ['USA', 'Chile', 'Argentina']
@@ -48,7 +48,7 @@ const pictureArray = [{
         options: ['France', 'Spain', 'Italy']
     },
     {
-        picture: 'Skogafoss-waterfall',
+        picture: 'Reynisfjara black sand Beaches',
         img: 'assets/img/q-nine.webp',
         answer: 'Iceland',
         options: ['Greenland', 'Iceland', 'USA']
@@ -114,35 +114,59 @@ function displayPlayerName() {
     document.getElementById("playerName").innerHTML = user;
 }
 
-// mute and unmute sound
-document.addEventListener('DOMContentLoaded', function() {
-    var audioElements = document.querySelectorAll('audio');
-    var muteButton = document.getElementById('muteButton');
-    var isMuted = false;
 
-    muteButton.addEventListener('click', function() {
+function displayMuteIcon(){
+    document.getElementById("mute").style.display = "block";
+}
+
+function displayUnMuteIcon(){
+    document.getElementById("unmute").style.display = "block";
+}
+
+function hideMuteIcon(){
+    document.getElementById("mute").style.display = "none";
+}
+
+function hideUnMuteIcon(){
+    document.getElementById("unmute").style.display = "none";
+}
+// mute and unmute sound
+document.addEventListener('DOMContentLoaded', function () {
+    let audioElements = document.querySelectorAll('audio');
+    let muteButton = document.getElementById('muteButton');
+    let isMuted = false;
+
+    muteButton.addEventListener('click', function () {
         isMuted = !isMuted; // Toggle mute state
-        if(isMuted){
-            document.getElementById("mute").style.display = "block";
-            document.getElementById("unmute").style.display = "none";
-        }else{
-            document.getElementById("mute").style.display = "none";
-            document.getElementById("unmute").style.display = "block";
+        if (isMuted) {
+            displayMuteIcon();
+            hideUnMuteIcon();
+        } else {
+            hideMuteIcon();
+            displayUnMuteIcon();
         }
-        
-        audioElements.forEach(function(audio) {
+
+        audioElements.forEach(function (audio) {
             audio.muted = isMuted; // Set muted property of all audio elements
         });
     });
 });
 
+function displayScorePopup(){
+    document.getElementById('scorePopup').style.display = "block";
+    document.getElementById('scoreMsgbx').style.display = "block";
+}
+
+function displayScore(){
+    document.getElementById('scoreDisplay').innerHTML = score;
+}
+
 function timeUp() {
     displayPlayerName();
     document.getElementById("gameText").innerHTML = "";
     document.getElementById('message').innerHTML = "Oops...Time Up! <br>Try your luck again!";
-    document.getElementById('scoreDisplay').innerHTML = score;
-    document.getElementById('scorePopup').style.display = "block";
-    document.getElementById('scoreMsgbx').style.display = "block";
+    displayScore();
+    displayScorePopup();
     return true;
 }
 
@@ -168,8 +192,11 @@ function startInterval() {
             removeBackgroundColor();
             timer = 0;
             if (questionNumber === 9) {
-                document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";
-                document.getElementById('scoreDisplay').innerHTML = score;
+                // document.getElementById('scorePopup').style.display = "block"
+                // document.getElementById('scoreMsgbx').style.display = "block";
+                displayScorePopup();
+                // document.getElementById('scoreDisplay').innerHTML = score;
+                displayScore();
                 return;
             }
             startInterval();
@@ -214,7 +241,7 @@ function audioCongratulation() {
     congratulation.play();
 }
 
-function disableButtons(current){
+function disableButtons(current) {
     document.querySelectorAll('.option').forEach(button => {
         if (button.innerText.toLowerCase() === current.answer.toLowerCase()) {
             button.style.backgroundColor = '#04D010';
@@ -223,14 +250,18 @@ function disableButtons(current){
     });
 }
 
-function displayAlertPopup(){
+function displayAlertPopup() {
     document.getElementById("alertPopup").style.display = "block"
     document.getElementById("alertMsgbx").style.display = "block"
 }
 
-function hideDisplayAlert(){
+function hideDisplayAlert() {
     document.getElementById("alertPopup").style.display = "none"
     document.getElementById("alertMsgbx").style.display = "none"
+}
+
+function displayRestart(){
+    document.getElementById("restart").style.display = "block";
 }
 
 function checkAnswer(e) {
@@ -271,19 +302,26 @@ function checkAnswer(e) {
         if (score === 10) {
             displayPlayerName();
             document.getElementById("message").innerHTML = "Congratulations! <br>You nailed it!";
-            document.getElementById("restart").style.display = "block";
+            // document.getElementById("restart").style.display = "block";
+            displayRestart();
             document.getElementById("restart").innerHTML = "Go Back";
-            document.getElementById('scoreDisplay').innerHTML = score;
-            document.getElementById('scorePopup').style.display = "block";
-            document.getElementById('scoreMsgbx').style.display = "block";
+            // document.getElementById('scoreDisplay').innerHTML = score;
+            displayScore();
+            // document.getElementById('scorePopup').style.display = "block";
+            // document.getElementById('scoreMsgbx').style.display = "block";
+            displayScorePopup()
             audioCongratulation();
 
         } else {
             displayPlayerName();
-            document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!"            
-            document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "block";            
-            document.getElementById('scoreDisplay').innerHTML = score;
-            document.getElementById("restart").style.display = 'block';
+            document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!"
+            // document.getElementById('scorePopup').style.display = "block";
+            // document.getElementById('scoreMsgbx').style.display = "block";
+            displayScorePopup();
+            // document.getElementById('scoreDisplay').innerHTML = score;
+            displayScore();
+            // document.getElementById("restart").style.display = 'block';
+            displayRestart();
         }
 
         stopInterval();
@@ -291,7 +329,7 @@ function checkAnswer(e) {
         return;
     } else {
         setTimeout(function () {
-            stopInterval();            
+            stopInterval();
             nextQuestion();
             removeBackgroundColor();
             timer = 0;
@@ -302,58 +340,76 @@ function checkAnswer(e) {
 
 //Access pop-up elements and hide display
 
-function displayPop() {
-    document.getElementById('scorePopup').style.display = document.getElementById('scoreMsgbx').style.display = "none";
+// function displayPop() {
+//     document.getElementById('scorePopup').style.display = "none";
+//     document.getElementById('scoreMsgbx').style.display = "none";
+// }
+
+function hideStartPopup() {
+    document.getElementById('startPopup').style.display = "none";
+    document.getElementById('startMsgbx').style.display = "none";
 }
 
-function startDisplayPopup() {
-    document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
+function hideHowToPlay() {
+    document.getElementById('howToPlayPopup').style.display = "none";
+    document.getElementById('howToPlayMsgbx').style.display = "none";
 }
 
-function displayHow() {
-    document.getElementById('howToPlayPopup').style.display = document.getElementById('howToPlayMsgbx').style.display = "none";
-}
-
-function howToPlay() {
+function displayHowToPlay() {
     document.getElementById('howToPlayPopup').style.display = "block";
     document.getElementById('howToPlayMsgbx').style.display = "block";
 }
 
-function howToPlayDisplay() {
-    document.getElementById('startPopup').style.display = document.getElementById('startMsgbx').style.display = "none";
-    document.getElementById('howToPlayPoup').style.display = document.getElementById('howToPlayMsgbx').style.display = "none";
-}
+// function howToPlayDisplay() {
+//     document.getElementById('startPopup').style.display = "none";
+//     document.getElementById('startMsgbx').style.display = "none";
+//     document.getElementById('howToPlayPoup').style.display = "none";
+//     document.getElementById('howToPlayMsgbx').style.display = "none";
+// }
 
-function start() {
-    //we are displaying usernamePopup and usernameMsgbox
+function displayUserNamePopup(){
     document.getElementById('usernamePopup').style.display = "block";
     document.getElementById('usernameMsgbox').style.display = "block";
+}
+function start() {
+    //we are displaying usernamePopup and usernameMsgbox
+    // document.getElementById('usernamePopup').style.display = "block";
+    // document.getElementById('usernameMsgbox').style.display = "block";
+    displayUserNamePopup();
 
     //we are hiding startPopup and startMsgbx, howToPlayPopup, howToPlayMsgbx
     //scorePopup, scoreMsgbx
-    document.getElementById('startPopup').style.display = "none";
-    document.getElementById('startMsgbx').style.display = "none";
-    document.getElementById('howToPlayPopup').style.display = "none";
-    document.getElementById('howToPlayMsgbx').style.display = "none";
-    document.getElementById('scorePopup').style.display = "none";
-    document.getElementById('scoreMsgbx').style.display = "none";
+    
+    // check this code       
+    // document.getElementById('startPopup').style.display = "none";
+    // document.getElementById('startMsgbx').style.display = "none";
+    // document.getElementById('howToPlayPopup').style.display = "none";
+    // document.getElementById('howToPlayMsgbx').style.display = "none";
+    // document.getElementById('scorePopup').style.display = "none";
+    // document.getElementById('scoreMsgbx').style.display = "none";
 }
 
 function restart() {
     window.location.reload();
 }
 
+function hideUserNamePopup(){
+    document.getElementById('usernamePopup').style.display = "none";
+    document.getElementById('usernameMsgbox').style.display = "none";
+}
+
+function enterUserName(){
+    document.getElementById("error").innerHTML = "Please Enter Your Name";
+}
 
 function getName() {
     user = document.getElementById("name").value;
     if (user) {
-        document.getElementById('usernamePopup').style.display = "none";
-        document.getElementById('usernameMsgbox').style.display = "none";        
-
+       hideUserNamePopup();
         startGame = true;
         startInterval();
     } else {
-        document.getElementById("error").innerHTML = "Please Enter Your Name"
+        enterUserName();
     }
 
 }
@@ -392,38 +448,58 @@ allStar.forEach((item, idx) => {
 
 });
 
-function removeRatingError(){
+function removeRatingError() {
     document.getElementById("ratingError").innerHTML = "";
 }
 
-function removeStarRating(){
-    allStar.forEach(i => {        
-        i.classList.replace('bxs-star', 'bx-star');       
+function removeStarRating() {
+    allStar.forEach(i => {
+        i.classList.replace('bxs-star', 'bx-star');
     });
+}
+
+function removeFeedbackError() {
+    document.getElementById("feedbackError").innerHTML = "";
+}
+
+function displayFeedbackPopup() {
+    document.getElementById("feedbackPopup").style.display = "block";
+    document.getElementById("feedbackMsgbx").style.display = "block";
+}
+
+function displayFeedbackErrorMessage(){
+    document.getElementById("feedbackError").innerHTML = "Please Enter Feedback";
 }
 
 function feedback(event) {
     event.preventDefault();
     let feedbackText = document.getElementById("feedbackText").value;
-    if(typeof ratingValue.prev == "undefined" || ratingValue.prev == "undefined"){
+    if (typeof ratingValue.prev == "undefined" || ratingValue.prev == "undefined") {
         document.getElementById("ratingError").innerHTML = "Please give us a rating";
         return;
     }
     if (feedbackText) {
         removeRatingError();
-        document.getElementById("feedbackError").innerHTML = ""
-        document.getElementById("feedbackPopup").style.display = "block";
-        document.getElementById("feedbackMsgbx").style.display = "block";                
+        removeFeedbackError();
+        displayFeedbackPopup();
         removeStarRating();
     } else {
         removeRatingError();
-        document.getElementById("feedbackError").innerHTML = "Please Enter Feedback"
+        displayFeedbackErrorMessage();
     }
-        
+
 }
 
-function displayFeedback() {
+function hideFeedbackPopup(){
     document.getElementById("feedbackPopup").style.display = "none";
     document.getElementById("feedbackMsgbx").style.display = "none";
+}
+
+function removeFeedbackText(){
     document.getElementById("feedbackText").value = "";
+}
+
+function closeDisplayFeedback() {
+    hideFeedbackPopup();
+    removeFeedbackText();
 }

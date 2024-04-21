@@ -114,7 +114,6 @@ function displayPlayerName() {
     document.getElementById("playerName").innerHTML = user;
 }
 
-
 function displayMuteIcon(){
     document.getElementById("mute").style.display = "block";
 }
@@ -130,6 +129,7 @@ function hideMuteIcon(){
 function hideUnMuteIcon(){
     document.getElementById("unmute").style.display = "none";
 }
+
 // mute and unmute sound
 document.addEventListener('DOMContentLoaded', function () {
     let audioElements = document.querySelectorAll('audio');
@@ -200,7 +200,6 @@ function startInterval() {
                 return;
             }
             startInterval();
-
         }
     }, 1000);
 }

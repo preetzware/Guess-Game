@@ -1,110 +1,279 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Guess the Country
 
-Welcome Preety Ramdin,
+![AmIResponsiveImage](assets/img/amresponsive.webp)
+[View the live website here.] <a href="https://preetzware.github.io/guess-the-country/" target="_blank">Guess the Country</a>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Introduction
 
-## Gitpod Reminders
+- Guess the Country is a free multi-landmark guessing game where a landmark image is shown and three options or hints are given to the player to guess the exact country name corresponding to the landmark within the 30 seconds alloted time. The main objective of this website is to create a fully functional guessing game that will help increase general knowledge about geography, the world and its amazing places, and help improve deductive reasoning, social skills and memory recognition.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience
 
-`python3 -m http.server`
+###  Business Goals
 
-A blue button should appear to click: _Make Public_,
+1. To provide easy access to the store's products and facilities to any online visitor.
+2. To feature all the weekly special offers for members who sign-up and concurrently to lure customers to register so that they can avail of all the promotional products.
+3. To showcase our products via the website and social media links; style the bubble teas and promote them for special occasions to be able encourage people to visit the store and share precious moments together with their loved ones around a table sipping the Bubble tea in a relax mode.
 
-Another blue button should appear to click: _Open Browser_.
+###  User Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+1. To be able to easily access the website and nagivate through the pages to view the store, our products and get a clear idea of what we do and how we do it.
+2. To be able to learn about the store's exact location, opening days and hours of operation. 
+3. To easily reach the store's admin via the contacts provided on the website - email, phone, and even connect with and interact on the store's social media platforms via the links provided in the footer section of each page.
+4. To be able to easily register themselves on the sign-up page to receive our marketing emails about all weekly offers and discounts.
+5. To be able to acknowledge how bubble tea has become the hip beverage of this era and is embraced by diverse cultures by viewing the gallery section and relating to it.
 
-A blue button should appear to click: _Make Public_,
+## Design
 
-Another blue button should appear to click: _Open Browser_.
+### Color Scheme
+The color scheme for this website was greatly inspired by an existing store's logo. It is made up of a triadic color scheme that not only creates a classy and dynamic effect but also a good contrast throughout. By uploading the logo on the Coolors palette generator, the following color combinations were created in hex value: 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Coolers palette generator results](assets/img/coolors.jpg)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Dominant colors used in the project](assets/img/colors-used.jpg)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Typography
 
-------
+Three fonts imported from Google fonts were largely used throughout this website, namely 'Barriecito' for the hero image text overlay, 'Charm'(Bold 700) for the headings and 'Inter'(Regular 400) for the rest parts. Fallback fonts such as Sans-serif, Cursive and System-sui were also added as suggested by Google fonts on the 'How to use' section.
 
-## Release History
+![Fonts used in the project](assets/img/fonts-used.JPG)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Imagery
+Pinterest was mainly used to search, save and organize the images in a board to be used for the project, with exception to some images bearing the 'Bobo tea' logo which were downloaded from the Instagram page of the Bobo tea shop with the permission of the owner. The quality of the images were tested on (https://fineartprinting.com.sg/image-analyser/#).
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Wireframes
+The first and foremost wireframes for this website were made on paper and thereafter modified slightly when it was created digitally using Balsamiq.com. The website consists of five pages in total - the Home page, Menu page, Gallery page, Sign Up page and a Thank You page where subscribers are redirected to upon signing-up. 
+1. *Homepage Wireframe*
+![Wireframe used for Homepage](assets/img/Wireframe1.jpeg)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+2. *Menu Page Wireframe*
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Wireframe used for Menu page](assets/img/Wireframe2.jpeg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+3. *Gallery Page Wireframe*
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Wireframe used for gallery page](assets/img/Wireframe3.jpeg)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+4. *Sign-Up Page Wireframe*
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Wireframe used for sign-up page](assets/img/Wireframe4.jpeg)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+5. *Thank You Page Wireframe*
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Wireframe used for Thank you page](assets/img/Wireframe5.jpeg)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- ### Navigation Bar
+The navigation bar for this website is featured on each page, with the business logo positioned on the left side and all the other navigational links situated to the right side. This style is set for devices with max screen size 950px and 1200px and this is how it looks:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Navigation bar for website](assets/img/Navbar.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+For small screen sizes such as screen size max 768px and max 594px and down, the navigation bar collapses into a hamburger menu on the right corner while the logo hangs still on the left side. Upon clicking on the hamburger menu, it will drop down to feature the rest pages which are highlighted into a box shadow upon hovering.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Hamburger menu bar for website](assets/img/Hamburger.jpg)
 
-------
+- ### Footer
+The footer sits at the bottom of each page, adding spotlight to the operating days and hours of business, the contact information of the business such as email, address and phone number, and the social media links like Facebook, Instagram, Twitter and Yelp to connect to the business.
+ 
+ ![Footer for website](assets/img/Footer.png)
 
-## FAQ about the uptime script
+- ## Home page
+The home page features the hero image which showcases a variety of captivating and mouthwatering in-house prepared bubble teas, with a text overlayed on it that triggers the desire for the drinks. Below it, an image and some information about the store are included, together with a ‘View Menu’ button in case the visitor can’t wait to see the menu in the next page. Another section below, features the weekly promotional items for registered members only, including a sign up offer link that will direct those interested to the Sign-Up page. And last but not least, Boba section gives a visitor who’s new to bubble tea an idea of what kind of drink it is, where does it originates from and how good it is.
 
-**Why have you added this script?**
+![Home page](assets/img/Homepage.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- ## Menu page
+The menu page is actually the icing on the cherry! First of all. Provides a step to step guide about how to order bubble tea so that time is saved and service will be faster at the counter. The order section provides a wide range of vibrant bubble teas highlighting so many flavours and their prices. 
 
-**How will this affect me?**
+![Menu page for website](assets/img/Menu-page.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- ## Gallery page
+The gallery page showcases how bubble tea is embraced by all cultures, all generations and how it has become the hip beverage of all parties and get-togethers nowadays. Visitors can relate to it and can be inspired to order some for their parties and get-togethers. These page has been designed in a responsive manner with three columns of imagery in laptops and two on smaller size tablets and one column for mobile devices.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Gallery page](assets/img/Gallery-page.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- ## Sign Up page
 
-**So….?**
+The sign up page contains a background image with a partly overlaid form featuring first name, last name, email adress and date of birth fields that users will fill in upon registration in order to avail of the weekly deals, promotions and offers.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Sign Up page](assets/img/Signup-page.png)
 
-**Can I opt out?**
+- ## Thank You page
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Eventually, when clicking on the sign up button in the registration form, the user will land on the thank you page where they will also find their 15% discount code for their first purchase in store.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Thank you page](assets/img/Thankyou-page.png)
 
-**Anything more?**
+## Future Implementations
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+At some point in the future, I would like to add an order button in the navbar and 
+link it to a page which will be designed accordingly for online delivery orders or click and collect orders which will be beneficial to the business and will also meet the users' purpose.
 
----
+## Accessibility
 
-Happy coding!
+Generally, aria labels have been placed in all the pages as well as alt text on images to make it more accessible for users with low vision, users with mobility disabilities and users with memory loss. 
+
+## Technologies Used
+
+1. **Github** - used for version control, site storage and for deploying my project.
+2. **Gitpod** - the IDE I have used to write, edit, commit and push my code to Github.
+3. **HTML 5** - language used to build the core of my website.
+4. **CSS** - the style sheet language I have used to style all the elements of my website.
+5. **DevTools** - used to test the responsiveness of my website and check for bugs.
+6. **Google Fonts** - used to import the fonts for my website.
+7. **Font Awesome** - used to import social media and other icons.
+8. **Pinterest** - used to source website's imageries.
+9. **MYBOBOTEA.com** - used to source website's imageries.
+10. **TinyPNG** - used to compress my website's imageries.
+11. **Favicon.io** - used to create favicon for my website.
+12. **Balsamiq** - used to create the wireframes for the initial design process of my website.
+13. **Am I Responsive?** - used to test the responsiveness of the website.
+
+## Languages Used
+HTML 5, CSS
+
+## Libraries and programmes
+Github was used for version control, site storage and for deploying my project to Github pages. Gitpod is the IDE I used to write, edit, commit and push my code to Github.
+
+## Deployment
+The website was deployed on Github pages. The steps are as follows:
+
+1. Go to Github repository and open the repository
+2. Click on the settings option in the repository 
+3. Select the branch from where you want to host your project 
+4. Click on the save option and the link will be available in some time
+5. Open the project in any browser 
+
+### Local Deployment 
+
+**Steps to clone:**
+
+1. Navigate to GitHub repository.
+2. Go to the repository of this project https://github.com/preetzware/Bubble-Tea-Project.git
+3. Click on the code button, and copy your preferred clone link.
+4. Open the repo in Gitpod by prefixing the URL with: gitpod.io/#.
+5. Confirm the workspace creation.
+
+## Testing
+
+### Manual Testing
+**Jigsaw CSS Validator was used to validate the CSS codes written for my website**
+
+![CSS Validator results](assets/img/ValidatedCSS.png)
+
+**W3C Validator was used to validate the HTML 5 code written on all pages for my website**
+
+![W3C Overall HTML Validator results](assets/img/HTMLchecker.png)
+
+![W3C HTML Checker results for Homepage](assets/img/index.png)
+
+![W3C HTML Checker results for Menu page](assets/img/Menu-checker.png)
+
+![W3C HTML Checker results for Gallery page](assets/img/Gallery-checker.png)
+
+![W3C HTML Checker results for Sign Up page](assets/img/Form-checker.png)
+
+![W3C HTML Checker results for Thank You page](assets/img/Thankyou-checker.png)
+
+### PSI Testing
+Google PageSpeed Insights (PSI), a free tool was utilized for gauging the performance and accessibility measures of the website. Initially, the performance and speed was not so highly rated generally because of the large images and lack of aria labels. I tried to compress and convert many of the images from jpeg format to png, and I added missing aria labels to elements for better accessibility which significantly improved the performance of my website. Below are the final PSI results:
+
+![PSI results for Desktop](assets/img/PSI-1.png)
+
+![PSI results for Mobile Device](assets/img/PSI-2.png)
+
+### Device Testing ###
+The website was tested on the following devices:
+
+iPhone 12 Pro
+
+iPhone 14
+
+iPhone 15 Pro
+
+iPad Air 11"
+
+Macbook Pro 13"
+
+The website was tested on the following browsers:
+
+Google Chrome
+
+Safari
+
+Microsoft Edge
+
+**Additional testing was done on a variety of devices and screen sizes.**
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| `Navigation bar` |
+|  |  |  |  |  |
+| Bobo tea Logo | When clicked the user will be redirected to the Home page. | Clicked logo | Redirected to the Home page. | Pass |
+| Home Link | When clicked the user will be redirected to the Home page.| Clicked link | Redirected to the Home page. | Pass |
+| Menu Link | When clicked the user will be redirected to the Menu page. | Clicked link | Redirected to the About page. | Pass |
+| Gallery Link | When clicked the user will be redirected to the Gallery page. | Clicked link | Redirected to the Portfolio page. | Pass |
+| Sign Up Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Contact page. | Pass |
+| --- | --- | --- | --- | --- |
+| `Footer` |
+|  |  |  |  |  |
+| Social Media Icons | When clicked the user will be redirected to the appropriate social media pages in a new window. | Clicked icon | Redirected to the social media page in a new window. | Pass |
+| Address Link | When clicked the user will be directed to the external link in Google maps.| Clicked link | directed to the Google maps exact location. | Pass |
+| --- | --- | --- | --- | --- |
+| `Home Page` |
+|   |   |   |   |
+| Menu button | When clicked the user will be redirected to the Menu page. | Clicked button | Redirected to the Menu page. | Pass |
+| Offers Link | When clicked the user will be redirected to the Menu page.| Clicked link | Redirected to the Menu page. | Pass |
+| 15% Discount Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Sign Up page. | Pass |
+| --- | --- | --- | --- | --- |
+| `Menu Page` |
+|   |   |   |   |
+| 15% Discount Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Sign Up page. | Pass |
+| --- | --- | --- | --- | --- |
+| `Sign Up Page` |
+|   |   |   |   |
+| Sign Up form | Required fields and correct email address format needed in order to submit.| Clicked submit while leaving form unfillled | Form will not submit without a name, a last name and a correctly formatted email address. | Pass |
+| Sign Up button | Upon filling the form correctly and clicking on the Sign Up button, the user is redirected to the Thank You page. | Form completed, sign up button clicked | User redirected to Thank You page. | Pass |
+|   |   |   |   |
+
+
+## Known Bugs
+
+When scrolling on mobile devices, the menu page was displaying white space on the right side and I took tutor support to resolve that. It has now been removed.
+
+There was an issue with the responsiveness of the Menu page as well. The images would not wrap when adjusting them in media queries for screen max-size 594px. With tutor's assistance, that was fixed as well. 
+
+At the initial stage of the project there were issues with Codeanywhere not loading up for hours and that was so frustrating because it was time wasting. I then decided to work on VS Code but at a later stage when I got stuck with few sections in my project, I needed tutor support, and then I was advised to shift to Gitpod cloud IDE. Hence, I copied my progress to Gitpod and worked from there to have a workspace that I knew would load for me every time, and also make use of the tutoring facility. 
+
+However, just few days before I complete my project, there was an unusual change with Gitpod - I could not see the changes I made in the browser in realtime, even though I was clearing the cache. This was again so frustrating because I was very close to the finish. I had to use Gitpod from another laptop to be able to complete my work and I had student care support as well.
+
+I came across semantic errors after validating my HTML and CSS codes, and all of them were fixed.
+
+## Credits
+
+YouTube video tutorials:
+ - About creating a responsive navbar using flexbox: 
+ <https://www.youtube.com/watch?v=PwWHL3RyQgk&t=533s> 
+ - Creating a hamburger menu without javascript:
+ <https://www.youtube.com/watch?v=XM7sEpl0f7c>
+
+- The admin team of MYBOBOTEA.com for the logo and some images.
+- Pinterest, for all the other images.
+- My tutor Joanne Lee for her direction and assistance with Media Queries.
+- Tutor Sean for the assistance with fixing the white space.
+- Tutor Holly for her assistance with the resizing of images on Menu page and tips on how to avoid stretching.
+- Love Running project, as a template for the comment box, and for the the favicon html.
+- My mentor, for the Readme template.
+- Brian McConway, for sharing tips and tricks throughout the project.
+
+## Acknowledgements
+
+- Friends, family and colleagues, for testing my project at every stage, and also for their feedback.
+- My Mentor for constructive feedback and direction.
+- My tutors from Code Institute, for their valuable assistance throughout the project.
+- Student Care for their valuable support.
+- The Code Institute, for all the facilities and support.

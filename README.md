@@ -1,28 +1,64 @@
-# Guess the Country
+# Portfolio Project 2
+##  Guess the Country
+Guess the Country is a free multi-landmark guessing game where a landmark image is shown and three options or hints are given to the player to guess the exact country name corresponding to the landmark within the 30 seconds alloted time. The main objective of this website is to create a fully functional guessing game that will help increase general knowledge about geography, the world and its amazing places, and help improve deductive reasoning, social skills and memory recognition.
 
 ![AmIResponsiveImage](assets/img/amresponsive.webp)
 [View the live website here.] <a href="https://preetzware.github.io/guess-the-country/" target="_blank">Guess the Country</a>
 
 
-## Introduction
+## Table Of Content
+- [User Experience](#user-experience)
+  - [Target Audience](#target-audience)
+  - [User Stories](#user-stories)
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Images](#images)
+  - [Wireframes](#wireframes)
+  - [Mockups](#mockups)
+- [Features](#features)
+  - [Welcome Screen](#Welcome-Screen)
+  - [Game Screen](#Game-Screen)
+  - [End Game Screen](#End-Game-Screen)
+  - [Scoreboard](#Scoreboard)
+  - [404 Page](#404-page)
+- [Future Features](#future-features)
+- [Testing](#testing)
+- [Technologies And Languages](#technologies-and-languages)
+- [Deployment](#deployment)
+  - [Creating A Fork](#creating-a-fork)
+  - [Cloning Repository](#cloning-repository)
+- [Credits](#credits)
+  - [Media](#media)
+  - [Code](#code)
+  - [Acknowledgements](#acknowledgements)
+  - [Comments](#comments)
 
-- Guess the Country is a free multi-landmark guessing game where a landmark image is shown and three options or hints are given to the player to guess the exact country name corresponding to the landmark within the 30 seconds alloted time. The main objective of this website is to create a fully functional guessing game that will help increase general knowledge about geography, the world and its amazing places, and help improve deductive reasoning, social skills and memory recognition.
 
 ## User Experience
+###  Target Audience
+- People who like geography and are fascinated by stunning places and the wonders of the world.
+- People who love travelling and might come across places they have visited already or might discover their next travel destination through this game.
+- Children who want to play an interesting game that increases their geographical knowledge about countries and places.
+- Visually impaired people who can also enjoy this guessing game.
+- This game can inspire and motivate any audience to travel and witness the beauty of the world.
 
-###  Business Goals
+###  User Stories
 
-1. To provide easy access to the store's products and facilities to any online visitor.
-2. To feature all the weekly special offers for members who sign-up and concurrently to lure customers to register so that they can avail of all the promotional products.
-3. To showcase our products via the website and social media links; style the bubble teas and promote them for special occasions to be able encourage people to visit the store and share precious moments together with their loved ones around a table sipping the Bubble tea in a relax mode.
+As a first time user, my aim is to:
 
-###  User Goals
+1. Be able to easily access the website and understand the purpose of its existence.
+2. Be able to learn how to play the game and understand the rules or instructions set for guiding me through. 
+3. Find good quality images to be able to better see the landmark and better guess the answer through legible options provided.
+4. Be able to acknowledge if I answered the correct/wrong answer when clicking on the option buttons.
+5. Be able to see the timer to know how much time I have left to guess the answer.
+6. Be able to acknowledge my actual score.
+7. Be able to acknowledge my final score when the game is over.
+8. Be able to provide my experience about the game and my feedback to improve certain features in the game.
+9. Be able to rate the game as per my liking.
+10. Be able to turn off the game sound.
+10. Be able to navigate through the links provided.
 
-1. To be able to easily access the website and nagivate through the pages to view the store, our products and get a clear idea of what we do and how we do it.
-2. To be able to learn about the store's exact location, opening days and hours of operation. 
-3. To easily reach the store's admin via the contacts provided on the website - email, phone, and even connect with and interact on the store's social media platforms via the links provided in the footer section of each page.
-4. To be able to easily register themselves on the sign-up page to receive our marketing emails about all weekly offers and discounts.
-5. To be able to acknowledge how bubble tea has become the hip beverage of this era and is embraced by diverse cultures by viewing the gallery section and relating to it.
 
 ## Design
 

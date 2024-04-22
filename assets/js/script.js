@@ -265,7 +265,7 @@ function displayRestart(){
 
 function checkAnswer(e) {
     if (startGame === false) {
-        // alert("Click start button to start");
+        // add alert("Click start button to start");
         displayAlertPopup();
         return;
     }
@@ -301,25 +301,23 @@ function checkAnswer(e) {
         if (score === 10) {
             displayPlayerName();
             document.getElementById("message").innerHTML = "Congratulations! <br>You nailed it!";
-            // document.getElementById("restart").style.display = "block";
+            
             displayRestart();
             document.getElementById("restart").innerHTML = "Go Back";
-            // document.getElementById('scoreDisplay').innerHTML = score;
+           
             displayScore();
-            // document.getElementById('scorePopup').style.display = "block";
-            // document.getElementById('scoreMsgbx').style.display = "block";
+        
             displayScorePopup();
             audioCongratulation();
 
         } else {
             displayPlayerName();
             document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!";
-            // document.getElementById('scorePopup').style.display = "block";
-            // document.getElementById('scoreMsgbx').style.display = "block";
+            
             displayScorePopup();
-            // document.getElementById('scoreDisplay').innerHTML = score;
+            
             displayScore();
-            // document.getElementById("restart").style.display = 'block';
+            
             displayRestart();
         }
 
@@ -339,11 +337,6 @@ function checkAnswer(e) {
 
 //Access pop-up elements and hide display
 
-// function displayPop() {
-//     document.getElementById('scorePopup').style.display = "none";
-//     document.getElementById('scoreMsgbx').style.display = "none";
-// }
-
 function hideStartPopup() {
     document.getElementById('startPopup').style.display = "none";
     document.getElementById('startMsgbx').style.display = "none";
@@ -359,33 +352,13 @@ function displayHowToPlay() {
     document.getElementById('howToPlayMsgbx').style.display = "block";
 }
 
-// function howToPlayDisplay() {
-//     document.getElementById('startPopup').style.display = "none";
-//     document.getElementById('startMsgbx').style.display = "none";
-//     document.getElementById('howToPlayPoup').style.display = "none";
-//     document.getElementById('howToPlayMsgbx').style.display = "none";
-// }
-
 function displayUserNamePopup(){
     document.getElementById('usernamePopup').style.display = "block";
     document.getElementById('usernameMsgbox').style.display = "block";
 }
 function start() {
-    //we are displaying usernamePopup and usernameMsgbox
-    // document.getElementById('usernamePopup').style.display = "block";
-    // document.getElementById('usernameMsgbox').style.display = "block";
+    //displaying usernamePopup and usernameMsgbox
     displayUserNamePopup();
-
-    //we are hiding startPopup and startMsgbx, howToPlayPopup, howToPlayMsgbx
-    //scorePopup, scoreMsgbx
-    
-    // check this code       
-    // document.getElementById('startPopup').style.display = "none";
-    // document.getElementById('startMsgbx').style.display = "none";
-    // document.getElementById('howToPlayPopup').style.display = "none";
-    // document.getElementById('howToPlayMsgbx').style.display = "none";
-    // document.getElementById('scorePopup').style.display = "none";
-    // document.getElementById('scoreMsgbx').style.display = "none";
 }
 
 function restart() {

@@ -1,6 +1,6 @@
 # Portfolio Project 2
 ##  Guess the Country
-Guess the Country is a free multi-landmark guessing game where a landmark image is shown and three options or hints are given to the player to guess the exact country name corresponding to the landmark within the 30 seconds alloted time. The main objective of this website is to create a fully functional guessing game that will help increase general knowledge about geography, the world and its amazing places, and help improve deductive reasoning, social skills and memory recognition.
+Guess the Country is a free multi-landmark guessing game where a landmark image is shown and three options or hints are given to the player to guess the exact country name corresponding to the landmark within a 30 seconds alloted time. The main objective of this website is to create a fully functional guessing game that will help increase general knowledge about geography, the world and its amazing places, and help improve deductive reasoning, social skills and memory recognition.
 
 ![AmIResponsiveImage](assets/img/amresponsive.webp)
 [View the live website here.] <a href="https://preetzware.github.io/guess-the-country/" target="_blank">Guess the Country</a>
@@ -17,10 +17,8 @@ Guess the Country is a free multi-landmark guessing game where a landmark image 
   - [Wireframes](#wireframes)
   - [Mockups](#mockups)
 - [Features](#features)
-  - [Welcome Screen](#Welcome-Screen)
   - [Game Screen](#Game-Screen)
-  - [End Game Screen](#End-Game-Screen)
-  - [Scoreboard](#Scoreboard)
+  - [Modals](#Modals)
   - [404 Page](#404-page)
 - [Future Features](#future-features)
 - [Testing](#testing)
@@ -100,42 +98,43 @@ The first and foremost wireframes for this website were made using paper and pen
 
 ## Features
 
-- ### Navigation Bar
-The navigation bar for this website is featured on each page, with the business logo positioned on the left side and all the other navigational links situated to the right side. This style is set for devices with max screen size 950px and 1200px and this is how it looks:
+### Game Screen Components
 
-![Navigation bar for website](assets/img/Navbar.png)
+**1.** <u>**Logo and Buttons**</u>
 
-For small screen sizes such as screen size max 768px and max 594px and down, the navigation bar collapses into a hamburger menu on the right corner while the logo hangs still on the left side. Upon clicking on the hamburger menu, it will drop down to feature the rest pages which are highlighted into a box shadow upon hovering.
+Guess the Country is a one page website designed simply, with some amount of interactivity and a touch of elegance. The desktop game screen features the 'guessing cat' logo in the top-center and two buttons on its either side - a start button and a 'How to Play' button. While the mobile game screen features the logo on the very top and the same two buttons below it, styled differently.
 
-![Hamburger menu bar for website](assets/img/Hamburger.jpg)
+![Logo and buttons component](assets/img/Navbar.png)
+
+**2.** <u>**Title**</u>
+
+The title has been styled into a gorgeous text animation effect. Credit goes to <a href="https://alvarotrigo.com/blog/css-text-animations/" target="_blank">alvarotrigo.com</a>
+
+![Title](assets/img/Hamburger.jpg)
+
+**3.** <u>**Sound/Timer/Score Components**</u>
+
+A mute and unmute icon from frontawesome website can be found on left below the title. Special sound effects from Pixabay have been added in addition to the color transform effect on option buttons when clicked. An enthusiastic sound can be heard when the right answer is clicked and if the sound is on unmute mode, else if wrong answer is clicked, a disappointing tune can be heard. The sound can be muted or unmuted as per the visitor's preference.
+
+The Score is positioned on the right side below the title and it will keep updating when the game is on. 
+
+The timer is placed in the middle of the mute/unmute button and the score so that all three major components are visible on the user's screen when playing the game. 
+
+**4.** <u>**Landmark Images**</u>
+Landmark images situated below the sound/timer/score components will appear back-to-back when the game will be on.
+
+**5.** <u>**Option Buttons**</u>
+Three option buttons are featured below each landmark image.
+
+**4.** <u>**Star Rating and form**</u>
 
 - ### Footer
 The footer sits at the bottom of each page, adding spotlight to the operating days and hours of business, the contact information of the business such as email, address and phone number, and the social media links like Facebook, Instagram, Twitter and Yelp to connect to the business.
  
  ![Footer for website](assets/img/Footer.png)
 
-- ## Home page
-The home page features the hero image which showcases a variety of captivating and mouthwatering in-house prepared bubble teas, with a text overlayed on it that triggers the desire for the drinks. Below it, an image and some information about the store are included, together with a ‘View Menu’ button in case the visitor can’t wait to see the menu in the next page. Another section below, features the weekly promotional items for registered members only, including a sign up offer link that will direct those interested to the Sign-Up page. And last but not least, Boba section gives a visitor who’s new to bubble tea an idea of what kind of drink it is, where does it originates from and how good it is.
 
-![Home page](assets/img/Homepage.png)
-
-- ## Menu page
-The menu page is actually the icing on the cherry! First of all. Provides a step to step guide about how to order bubble tea so that time is saved and service will be faster at the counter. The order section provides a wide range of vibrant bubble teas highlighting so many flavours and their prices. 
-
-![Menu page for website](assets/img/Menu-page.png)
-
-- ## Gallery page
-The gallery page showcases how bubble tea is embraced by all cultures, all generations and how it has become the hip beverage of all parties and get-togethers nowadays. Visitors can relate to it and can be inspired to order some for their parties and get-togethers. These page has been designed in a responsive manner with three columns of imagery in laptops and two on smaller size tablets and one column for mobile devices.
-
-![Gallery page](assets/img/Gallery-page.png)
-
-- ## Sign Up page
-
-The sign up page contains a background image with a partly overlaid form featuring first name, last name, email adress and date of birth fields that users will fill in upon registration in order to avail of the weekly deals, promotions and offers.
-
-![Sign Up page](assets/img/Signup-page.png)
-
-- ## Thank You page
+- ## 404 page
 
 Eventually, when clicking on the sign up button in the registration form, the user will land on the thank you page where they will also find their 15% discount code for their first purchase in store.
 
@@ -143,8 +142,7 @@ Eventually, when clicking on the sign up button in the registration form, the us
 
 ## Future Implementations
 
-At some point in the future, I would like to add an order button in the navbar and 
-link it to a page which will be designed accordingly for online delivery orders or click and collect orders which will be beneficial to the business and will also meet the users' purpose.
+At some point in the future, I would like to add a welcome page that will feature two more topics aside landmarks like 'People' and 'Food' so when the user will click in one of these category, the game screen will open up displaying related images and options with all the rest components. I will also add a score track and a star rating track to render the game more interesting.
 
 ## Accessibility
 
@@ -156,18 +154,18 @@ Generally, aria labels have been placed in all the pages as well as alt text on 
 2. **Gitpod** - the IDE I have used to write, edit, commit and push my code to Github.
 3. **HTML 5** - language used to build the core of my website.
 4. **CSS** - the style sheet language I have used to style all the elements of my website.
-5. **DevTools** - used to test the responsiveness of my website and check for bugs.
-6. **Google Fonts** - used to import the fonts for my website.
-7. **Font Awesome** - used to import social media and other icons.
+5. **JavaScript** - used to add interactivity in the website.
+5. **DevTools** - used for Lighthouse testing, to test the responsiveness of my website and to check for bugs.
+7.  **PageSpeed Insights** - used to test the performance of the website.
+6. **Font Awesome** - used to import social media and other icons.
 8. **Pinterest** - used to source website's imageries.
-9. **MYBOBOTEA.com** - used to source website's imageries.
 10. **TinyPNG** - used to compress my website's imageries.
 11. **Favicon.io** - used to create favicon for my website.
 12. **Balsamiq** - used to create the wireframes for the initial design process of my website.
 13. **Am I Responsive?** - used to test the responsiveness of the website.
 
 ## Languages Used
-HTML 5, CSS
+HTML 5, CSS, JavaScript
 
 ## Libraries and programmes
 Github was used for version control, site storage and for deploying my project to Github pages. Gitpod is the IDE I used to write, edit, commit and push my code to Github.
@@ -288,25 +286,18 @@ I came across semantic errors after validating my HTML and CSS codes, and all of
 
 ## Credits
 
-YouTube video tutorials:
- - About creating a responsive navbar using flexbox: 
- <https://www.youtube.com/watch?v=PwWHL3RyQgk&t=533s> 
- - Creating a hamburger menu without javascript:
- <https://www.youtube.com/watch?v=XM7sEpl0f7c>
-
-- The admin team of MYBOBOTEA.com for the logo and some images.
-- Pinterest, for all the other images.
-- My tutor Joanne Lee for her direction and assistance with Media Queries.
-- Tutor Sean for the assistance with fixing the white space.
-- Tutor Holly for her assistance with the resizing of images on Menu page and tips on how to avoid stretching.
-- Love Running project, as a template for the comment box, and for the the favicon html.
-- My mentor, for the Readme template.
+- YouTube video tutorials:
+ - How to create Star Rating form: 
+ <https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s> 
+ - Creating page title CSS animation:
+ <https://alvarotrigo.com/blog/css-text-animations/>
+- My mentor, 
 - Brian McConway, for sharing tips and tricks throughout the project.
 
 ## Acknowledgements
 
 - Friends, family and colleagues, for testing my project at every stage, and also for their feedback.
 - My Mentor for constructive feedback and direction.
-- My tutors from Code Institute, for their valuable assistance throughout the project.
+- My tutors from Code Institute, for their valuable assistance.
 - Student Care for their valuable support.
 - The Code Institute, for all the facilities and support.

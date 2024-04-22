@@ -250,13 +250,13 @@ function disableButtons(current) {
 }
 
 function displayAlertPopup() {
-    document.getElementById("alertPopup").style.display = "block"
-    document.getElementById("alertMsgbx").style.display = "block"
+    document.getElementById("alertPopup").style.display = "block";
+    document.getElementById("alertMsgbx").style.display = "block";
 }
 
 function hideDisplayAlert() {
-    document.getElementById("alertPopup").style.display = "none"
-    document.getElementById("alertMsgbx").style.display = "none"
+    document.getElementById("alertPopup").style.display = "none";
+    document.getElementById("alertMsgbx").style.display = "none";
 }
 
 function displayRestart(){
@@ -266,7 +266,7 @@ function displayRestart(){
 function checkAnswer(e) {
     if (startGame === false) {
         // alert("Click start button to start");
-        displayAlertPopup()
+        displayAlertPopup();
         return;
     }
 
@@ -308,12 +308,12 @@ function checkAnswer(e) {
             displayScore();
             // document.getElementById('scorePopup').style.display = "block";
             // document.getElementById('scoreMsgbx').style.display = "block";
-            displayScorePopup()
+            displayScorePopup();
             audioCongratulation();
 
         } else {
             displayPlayerName();
-            document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!"
+            document.getElementById("message").innerHTML = "Nice try! <br>Better luck next time!";
             // document.getElementById('scorePopup').style.display = "block";
             // document.getElementById('scoreMsgbx').style.display = "block";
             displayScorePopup();
@@ -333,7 +333,7 @@ function checkAnswer(e) {
             removeBackgroundColor();
             timer = 0;
             startInterval();
-        }, 3000)
+        }, 3000);
     }
 }
 

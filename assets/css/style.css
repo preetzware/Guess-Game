@@ -137,10 +137,7 @@ input[type=text] {
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
-  background-clip: text;
   color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
   display: inline-block;
   font-size: 50px;
@@ -454,10 +451,6 @@ textarea {
   height: 1024px;
   width: 100%;
   opacity: .75;
-  filter: alpha(opacity=75);
-  filter: "alpha(opacity=75)";
-  opacity: .75;
-  opacity: .75;
   background: #B8B8B8;
   position: absolute;
   left: 0px;
@@ -474,10 +467,6 @@ textarea {
  {
   display: none;
   opacity: .75;
-  filter: alpha(opacity=75);
-  filter: "alpha(opacity=75)";
-  opacity: .75;
-  opacity: .75;
   background: #B8B8B8;
   position: fixed;
   left: 0px;
@@ -486,9 +475,6 @@ textarea {
   width: 100%;
   z-index: 990;
   border: 4px solid white;
-  width: 100%;
-  height: 100%;
-  position: fixed;
   overflow-y: auto;
   top: 0;
   left: 0;
@@ -785,7 +771,7 @@ textarea {
   .logo button {
     max-width: 100%;
     width: 225px;
-    height: 50;
+    height: 50px;
   }
 
   .animate-character {

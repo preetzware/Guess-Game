@@ -63,12 +63,12 @@ As a first time user, my aim is to:
 ## Design
 
 ### Color Scheme
-The color scheme for this website was greatly inspired by an existing store's logo. It is made up of a triadic color scheme that not only creates a classy and dynamic effect but also a good contrast throughout. By uploading the logo on the Coolors palette generator, the following color combinations were created in hex value: 
+The color scheme for this website was greatly inspired by the background image that was downloaded from unsplash.com website and the logo that was downloaded from ios icon gallery. From background color, the other colors were chosen to create a good contrast and a dynamic effect. throughout the website. The remaining colors were generated from Coolors palette generator, the following color combinations were created in hex value: 
 
-![Coolers palette generator results](assets/img/coolors.jpg)
+![Coolers palette generator results](assets/img/coolers.webp)
 
 
-![Dominant colors used in the project](assets/img/colors-used.jpg)
+![Dominant colors used in the project]()
 
 ### Typography
 
@@ -247,10 +247,10 @@ Microsoft Edge
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| `Navigation bar` |
+| `Buttons` |
 |  |  |  |  |  |
-| Bobo tea Logo | When clicked the user will be redirected to the Home page. | Clicked logo | Redirected to the Home page. | Pass |
-| Home Link | When clicked the user will be redirected to the Home page.| Clicked link | Redirected to the Home page. | Pass |
+| START | When clicked a pop-up window will appear requesting the user to enter their name which is required and upon doing so and clicking on **OK** button, pop-up closes and game starts with time ticking. | Clicked START | Pop-up window show up, input added, OK clicked, game starts, timer ticking starts. | Pass |
+| How to Play | When clicked a pop-up window will show up in the center of the screen, containing step by step instruction on how to play the game with information on the allocated time to play. Clicking on **GOT IT!** button will close the modal window.| Clicked How to Play | Pop-up window opens, GOT IT! clicked, window closed | Pass |
 | Menu Link | When clicked the user will be redirected to the Menu page. | Clicked link | Redirected to the About page. | Pass |
 | Gallery Link | When clicked the user will be redirected to the Gallery page. | Clicked link | Redirected to the Portfolio page. | Pass |
 | Sign Up Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Contact page. | Pass |

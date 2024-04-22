@@ -13,7 +13,7 @@ body {
   background-image: url(../img/background.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 /*  logo and start/How to play buttons */
@@ -137,8 +137,11 @@ input[type=text] {
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
+  background-clip: text;
   color: transparent;
-  animation: textclip 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
   display: inline-block;
   font-size: 50px;
 }

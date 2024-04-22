@@ -63,25 +63,22 @@ As a first time user, my aim is to:
 ## Design
 
 ### Color Scheme
-The color scheme for this website was greatly inspired by the background image that was downloaded from unsplash.com website and the logo that was downloaded from ios icon gallery. From background color, the other colors were chosen to create a good contrast and a dynamic effect. throughout the website. The remaining colors were generated from Coolors palette generator, the following color combinations were created in hex value: 
+The color scheme for this website was greatly inspired by the background image that was downloaded from unsplash.com website and the logo that was downloaded from ios icon gallery. From background color, the other colors were chosen to create a good contrast and a dynamic effect throughout the website. The rest colors were generated from Coolors palette generator and the following pleasing color combinations were created in hex value: 
 
 ![Coolers palette generator results](assets/img/coolers.webp)
 
 
-![Dominant colors used in the project]()
-
 ### Typography
 
-Three fonts imported from Google fonts were largely used throughout this website, namely 'Barriecito' for the hero image text overlay, 'Charm'(Bold 700) for the headings and 'Inter'(Regular 400) for the rest parts. Fallback fonts such as Sans-serif, Cursive and System-sui were also added as suggested by Google fonts on the 'How to use' section.
+Built-in font family Verdana was used throughout this website, with fallback fonts such as Sans-serif and Tahoma. 
 
-![Fonts used in the project](assets/img/fonts-used.JPG)
+![Fonts used in the project](assets/img/verdana.webp)
 
 ## Imagery
-Pinterest was mainly used to search, save and organize the images in a board to be used for the project, with exception to some images bearing the 'Bobo tea' logo which were downloaded from the Instagram page of the Bobo tea shop with the permission of the owner. The quality of the images were tested on (https://fineartprinting.com.sg/image-analyser/#).
-
+The background image was downloaded from <a href="https://unsplash.com/photos/assorted-color-hot-air-balloons-during-daytime-DuBNA1QMpPA" target="_blank">unsplash.com</a> and the logo was taken from <a href="https://www.iosicongallery.com/" target="_blank">ios icon gallery</a> while the landmark images were wisely chosen from Pinterest with the exception of Sénanque Abbey (France) imagery which was taken from Shutterstock website. After Lighthouse testing, all images were converted into webp format to improve the website's performance.
 
 ## Wireframes
-The first and foremost wireframes for this website were made on paper and thereafter modified slightly when it was created digitally using Balsamiq.com. The website consists of five pages in total - the Home page, Menu page, Gallery page, Sign Up page and a Thank You page where subscribers are redirected to upon signing-up. 
+The first and foremost wireframes for this website were made using paper and pencil. Thereafter they were digitally designed using Balsamiq.com with some light modifications. Guess the Country is a one page website consisting of six modals used to keep vistors engaged. 
 1. *Homepage Wireframe*
 ![Wireframe used for Homepage](assets/img/Wireframe1.jpeg)
 

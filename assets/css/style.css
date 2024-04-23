@@ -642,7 +642,7 @@ textarea {
 /* 404 page styling */
 #body-404 {
   background: #00A8A8;
-  background: linear-gradient(90deg, #43d2ef 0%, rgba(42,41,41,1) 100%);
+  background: linear-gradient(90deg, #43d2ef 0%, #189AB4 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -654,7 +654,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 400px;
+  width: 450px;
   min-height: 500px;
   display: flex;
   flex-direction: column;
@@ -851,6 +851,11 @@ textarea {
     height: auto;
   }
 
+   /* 404 page */
+   .container-404 {
+    width: 300px;
+    min-height: 400px;
+  }
 }
 
 @media only screen and (max-width: 400px) {

@@ -213,20 +213,13 @@ Testing document can be found [here](Testing.md)
 
 Bug | Status 
 ----|-------
-Horizontal scroll on smaller screen sizes| Resolved; adjusted size of images and used CSS overflow-x property on HTML.
-during changes for responsiveness | Resolved; CSS error.
-Favicon would not show on live site | Resolved; link was not placed in the header.
-Win message showing incorrectly behind tiles | Resolved, added z-index.
-Page refreshed before button was clicked | Resolved; when adding event listener, removed () after function. 
-Keys squished too much on smaller screens | Resolved; added height reduction in media queries.
-After game over appears, user can still erase letters and continue trying new words in the last row | Unresolved (Part of me likes this bug as it's nice for those who get frustrated easily. Like me for example.)
-JSHint error showing togglePlay() being unused as was being called in index.html file | Resolved; removed function from index.html file and added event listener to JavaScript file instead.
-Words with more than one letter repeated had incorrect colours. | Resolved; swapped order of over-lay colours in CSS so that green takes precedence over yellow.
-WAVE error for empty label field for music toggle button | Resolved; added screen-reader only class to a `<p>` with label inside.
-## Known Issues
-- On smaller screen sizes, the keyboard becomes slightly more squished. I attempted to fix this to the best of my ability but I feel this is still an issue.
-- On some small screens there is a small amount on vertical scroll, initially it was worse and the user could not see the first row of tiles when using the keyboard but I changed the CSS to fix this. While there's still a small amount of scroll on some small screens, it now does not disrupt the game.
-- If the user types in the incorrect word in the last row, the flipping tiles very briefly overlaps the game over message. This lasts for a split second and is very difficult to notice, so I left this as it is rather than attempt to change the code so close to my submission date.
+Horizontal scroll on smaller screen sizes| Resolved; adjusted size of images and used CSS overflow-x value on HTML property.
+Getting error 'Could not read property null' when adding favicon to workspace | Resolved; renamed and saved favicons in another folder before adding to workspace.
+From option button when clicked on correct or wrong answer button, the green or red color was not taking effect| Resolved; removed hover effect on the option buttons and applied hover effect on the text and border instead.
+Set timer was given 2000ms to generate the next image and options, but when user immediately clicked on the answer buttons back-to-back, sound was delayed and not produced | Resolved, aSet timer interval was increased to 3000ms.
+Initially user could click on all three options instead on one only | Resolved; other two incorrect option buttons were disabled in JavaScript. 
+Modals were not displaying in the center of the screens | Resolved; top and left position values were updated in CSS .
+From lighthouse test, found that images were too large that delayed loading of the page  | Resolved; Converted all images into webp format in tinypng.
 
 ## Credits
 

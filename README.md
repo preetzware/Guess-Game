@@ -193,7 +193,7 @@ The website was deployed on Github pages. The steps are as follows:
 **Steps to clone:**
 
 1. Navigate to GitHub repository.
-2. Go to the repository of this project https://github.com/preetzware/Bubble-Tea-Project.git
+2. Go to the repository of this project https://github.com/preetzware/guess-the-country/
 3. Click on the code button, and copy your preferred clone link.
 4. Open the repo in Gitpod by prefixing the URL with: gitpod.io/#.
 5. Confirm the workspace creation.

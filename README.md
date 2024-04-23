@@ -156,7 +156,8 @@ Generally, aria labels have been placed in all the pages as well as alt text on 
 4. **CSS** - the style sheet language I have used to style all the elements of my website.
 5. **JavaScript** - used to add interactivity in the website.
 5. **DevTools** - used for Lighthouse testing, to test the responsiveness of my website and to check for bugs.
-7.  **PageSpeed Insights** - used to test the performance of the website.
+7. **PageSpeed Insights** - used to test the performance of the website.
+7. **Wave Chrome Extension** - 
 6. **Font Awesome** - used to import social media and other icons.
 8. **Pinterest** - used to source website's imageries.
 10. **TinyPNG** - used to compress my website's imageries.
@@ -217,28 +218,6 @@ Google PageSpeed Insights (PSI), a free tool was utilized for gauging the perfor
 
 ![PSI results for Mobile Device](assets/img/PSI-2.png)
 
-### Device Testing ###
-The website was tested on the following devices:
-
-iPhone 12 Pro
-
-iPhone 14
-
-iPhone 15 Pro
-
-iPad Air 11"
-
-Macbook Pro 13"
-
-The website was tested on the following browsers:
-
-Google Chrome
-
-Safari
-
-Microsoft Edge
-
-**Additional testing was done on a variety of devices and screen sizes.**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |

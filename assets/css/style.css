@@ -804,6 +804,11 @@ textarea {
     width: 75%;
   }
 
+  .option:focus {
+    outline: none; 
+    box-shadow: none;
+  } 
+
   .timercontainer {
     width: 100%;
   }
@@ -894,6 +899,11 @@ textarea {
   .animate-character {
     font-size: 7vmin;
   }
+
+  .option:focus {
+    outline: none; 
+    box-shadow: none;
+  } 
 
   #feedbackText {
     width: 255px;

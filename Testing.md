@@ -13,6 +13,30 @@
 
 <hr>
 
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| ------- | ---------- | ---------- | -------- | ------- |
+| START Button| When clicked a pop-up window will appear requesting the user to enter their name which is required and upon doing so and clicking on **OK** button, pop-up closes and game starts with time ticking. | Clicked START | Pop-up window show up, input added, OK clicked, game starts, timer ticking starts. | Pass |
+| How to Play Button| When clicked a pop-up window will show up in the center of the screen, containing step by step instruction on how to play the game with information on the allocated time to play. Clicking on **GOT IT!** button will close the modal window.| Clicked How to Play | Pop-up window opens, GOT IT! clicked, window closed | Pass |
+| Start  Link | When clicked the user will be redirected to the Menu page. | Clicked link | Redirected to the About page. | Pass |
+| Gallery Link | When clicked the user will be redirected to the Gallery page. | Clicked link | Redirected to the Portfolio page. | Pass |
+| Sign Up Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Contact page. | Pass |
+| --- | --- | --- | --- | --- |
+| `Footer` |
+|  |  |  |  |  |
+| Social Media Icons | When clicked the user will be redirected to the appropriate social media pages in a new window. | Clicked icon | Redirected to the social media page in a new window. | Pass |
+| Address Link | When clicked the user will be directed to the external link in Google maps.| Clicked link | directed to the Google maps exact location. | Pass |
+| --- | --- | --- | --- | --- |
+| `Home Page` |
+|   |   |   |   |
+| Menu button | When clicked the user will be redirected to the Menu page. | Clicked button | Redirected to the Menu page. | Pass |
+| Offers Link | When clicked the user will be redirected to the Menu page.| Clicked link | Redirected to the Menu page. | Pass |
+| 15% Discount Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Sign Up page. | Pass |
+| --- | --- | --- | --- | --- |
+| `Menu Page` |
+|   | 
+
+
 ## Manual Testing
 Manual testing was done on a MacBook Pro 2015 13in, running Mojave version 10.14.6 in Google Chrome.
 
@@ -69,6 +93,13 @@ Device | Result
 -------|-------
 Desktop| ![desktop-lighthouse](docs/testing_images/desktop-lighthouse.png)
 Mobile | ![mobile-lighthouse](docs/testing_images/mobile-lighthouse.png)
+
+### PSI Testing
+Google PageSpeed Insights (PSI), a free tool was utilized for gauging the performance and accessibility measures of the website. Initially, the performance and speed was not so highly rated generally because of the large images and lack of aria labels. I tried to compress and convert many of the images from jpeg format to png, and I added missing aria labels to elements for better accessibility which significantly improved the performance of my website. Below are the final PSI results:
+
+![PSI results for Desktop](assets/img/PSI-1.png)
+
+![PSI results for Mobile Device](assets/img/PSI-2.png)
 
 ## Accessibility Testing
 

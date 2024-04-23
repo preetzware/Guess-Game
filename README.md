@@ -15,7 +15,6 @@ Guess the Country is a free multi-landmark guessing game where a landmark image 
   - [Typography](#typography)
   - [Images](#images)
   - [Wireframes](#wireframes)
-  - [Mockups](#mockups)
 - [Features](#features)
   - [Game Screen](#Game-Screen)
   - [Modals](#Modals)
@@ -126,19 +125,31 @@ Landmark images situated below the sound/timer/score components will appear back
 **5.** <u>**Option Buttons**</u>
 Three option buttons are featured below each landmark image.
 
-**4.** <u>**Star Rating and form**</u>
+**6.** <u>**Star Rating and form**</u>
+The star rating and feedback form that appear below the the option buttons can be partly credited to this YouTube tutorial: https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s. The first star could not be fully unmarked once clicked and I fixed this by adding a 'remove star rating' function. Both ratings and feedback area are required in order to submit the form.
 
 - ### Footer
-The footer sits at the bottom of each page, adding spotlight to the operating days and hours of business, the contact information of the business such as email, address and phone number, and the social media links like Facebook, Instagram, Twitter and Yelp to connect to the business.
- 
- ![Footer for website](assets/img/Footer.png)
+At the bottom of the page, a simple footer features three social media icon links namely LinkedIn, Github and Instagram.
 
+![Footer for website](assets/img/Footer.png)
+
+- ### Modals
+In total, six modals have been integrated in this website with the aim to grab users’ attention, enhance user engagement and improve user experience.
+
+ Modal | Appearance/Purpose
+---------------|---------------
+**Start Message Pop-up**   | Appears when user straightaway clicks on answer options. Alerts and guides user to click on Start button to play.
+**User Name Pop-up**   | Appears on clicking on START button. Required to register the user's name and for game to start with timer on. Required for personalising pop-ups for user.
+**How to Play Pop-up**   | Appears on clicking on How to Play button. Provides information/instruction on how to play the game.
+**Time-up Pop-up**   | Appears when allotted 30 seconds to answer any question is over. To create a sense of urgency and purpose, and help user stay on track and avoid distractions.
+**Game End Pop-up**   | Appears at the end of the game after the tenth image is guessed. It provides final score of the user and show appreciation for playing the game.
+**Congratulations Pop-up**   | Appears with a cheering sound effect at the end of the game only when the user has clicked on all correct options and scored ten on ten. This win sound effect accompanying this pop-up shows appreciation to the best scorer and conveys congratulations message.
+**Feedback Pop-up**   | Appears when user clicks on submit button in feedback section. To thank the user for their feedback and rating.
 
 - ## 404 page
 
-Eventually, when clicking on the sign up button in the registration form, the user will land on the thank you page where they will also find their 15% discount code for their first purchase in store.
 
-![Thank you page](assets/img/Thankyou-page.png)
+![404 page](404.html)
 
 ## Future Implementations
 
@@ -146,7 +157,7 @@ At some point in the future, I would like to add a welcome page that will featur
 
 ## Accessibility
 
-Generally, aria labels have been placed in all the pages as well as alt text on images to make it more accessible for users with low vision, users with mobility disabilities and users with memory loss. 
+Generally, aria labels as well as alt texts have been used on images and icons to make it more accessible for users with low vision, users with mobility disabilities and users with memory loss. 
 
 ## Technologies Used
 
@@ -155,15 +166,16 @@ Generally, aria labels have been placed in all the pages as well as alt text on 
 3. **HTML 5** - language used to build the core of my website.
 4. **CSS** - the style sheet language I have used to style all the elements of my website.
 5. **JavaScript** - used to add interactivity in the website.
-5. **DevTools** - used for Lighthouse testing, to test the responsiveness of my website and to check for bugs.
+6. **DevTools** - used for Lighthouse testing, to test the responsiveness of my website and to check for bugs.
 7. **PageSpeed Insights** - used to test the performance of the website.
-7. **Wave Chrome Extension** - 
-6. **Font Awesome** - used to import social media and other icons.
-8. **Pinterest** - used to source website's imageries.
-10. **TinyPNG** - used to compress my website's imageries.
-11. **Favicon.io** - used to create favicon for my website.
-12. **Balsamiq** - used to create the wireframes for the initial design process of my website.
-13. **Am I Responsive?** - used to test the responsiveness of the website.
+8. **Wave Chrome Extension** - 
+9. **Font Awesome** - used to import social media and other icons.
+10. **Pinterest** - used to source website's imageries.
+11. **TinyPNG** - used to compress my website's imageries.
+12. **Favicon.io** - used to create favicon for my website.
+13. **Balsamiq** - used to create the wireframes for the initial design process of my website.
+14. **Pixabay**  - used to download sound effects for the game.
+15. **Am I Responsive?** - used to test the responsiveness of the website.
 
 ## Languages Used
 HTML 5, CSS, JavaScript
@@ -193,90 +205,47 @@ The website was deployed on Github pages. The steps are as follows:
 ## Testing
 
 ### Manual Testing
-**Jigsaw CSS Validator was used to validate the CSS codes written for my website**
 
-![CSS Validator results](assets/img/ValidatedCSS.png)
-
-**W3C Validator was used to validate the HTML 5 code written on all pages for my website**
-
-![W3C Overall HTML Validator results](assets/img/HTMLchecker.png)
-
-![W3C HTML Checker results for Homepage](assets/img/index.png)
-
-![W3C HTML Checker results for Menu page](assets/img/Menu-checker.png)
-
-![W3C HTML Checker results for Gallery page](assets/img/Gallery-checker.png)
-
-![W3C HTML Checker results for Sign Up page](assets/img/Form-checker.png)
-
-![W3C HTML Checker results for Thank You page](assets/img/Thankyou-checker.png)
-
-### PSI Testing
-Google PageSpeed Insights (PSI), a free tool was utilized for gauging the performance and accessibility measures of the website. Initially, the performance and speed was not so highly rated generally because of the large images and lack of aria labels. I tried to compress and convert many of the images from jpeg format to png, and I added missing aria labels to elements for better accessibility which significantly improved the performance of my website. Below are the final PSI results:
-
-![PSI results for Desktop](assets/img/PSI-1.png)
-
-![PSI results for Mobile Device](assets/img/PSI-2.png)
-
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| `Buttons` |
-|  |  |  |  |  |
-| START | When clicked a pop-up window will appear requesting the user to enter their name which is required and upon doing so and clicking on **OK** button, pop-up closes and game starts with time ticking. | Clicked START | Pop-up window show up, input added, OK clicked, game starts, timer ticking starts. | Pass |
-| How to Play | When clicked a pop-up window will show up in the center of the screen, containing step by step instruction on how to play the game with information on the allocated time to play. Clicking on **GOT IT!** button will close the modal window.| Clicked How to Play | Pop-up window opens, GOT IT! clicked, window closed | Pass |
-| Menu Link | When clicked the user will be redirected to the Menu page. | Clicked link | Redirected to the About page. | Pass |
-| Gallery Link | When clicked the user will be redirected to the Gallery page. | Clicked link | Redirected to the Portfolio page. | Pass |
-| Sign Up Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Contact page. | Pass |
-| --- | --- | --- | --- | --- |
-| `Footer` |
-|  |  |  |  |  |
-| Social Media Icons | When clicked the user will be redirected to the appropriate social media pages in a new window. | Clicked icon | Redirected to the social media page in a new window. | Pass |
-| Address Link | When clicked the user will be directed to the external link in Google maps.| Clicked link | directed to the Google maps exact location. | Pass |
-| --- | --- | --- | --- | --- |
-| `Home Page` |
-|   |   |   |   |
-| Menu button | When clicked the user will be redirected to the Menu page. | Clicked button | Redirected to the Menu page. | Pass |
-| Offers Link | When clicked the user will be redirected to the Menu page.| Clicked link | Redirected to the Menu page. | Pass |
-| 15% Discount Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Sign Up page. | Pass |
-| --- | --- | --- | --- | --- |
-| `Menu Page` |
-|   |   |   |   |
-| 15% Discount Link | When clicked the user will be redirected to the Sign Up page. | Clicked link | Redirected to the Sign Up page. | Pass |
-| --- | --- | --- | --- | --- |
-| `Sign Up Page` |
-|   |   |   |   |
-| Sign Up form | Required fields and correct email address format needed in order to submit.| Clicked submit while leaving form unfillled | Form will not submit without a name, a last name and a correctly formatted email address. | Pass |
-| Sign Up button | Upon filling the form correctly and clicking on the Sign Up button, the user is redirected to the Thank You page. | Form completed, sign up button clicked | User redirected to Thank You page. | Pass |
-|   |   |   |   |
-
+# Testing
+Testing document can be found [here](Testing.md)
 
 ## Known Bugs
 
-When scrolling on mobile devices, the menu page was displaying white space on the right side and I took tutor support to resolve that. It has now been removed.
-
-There was an issue with the responsiveness of the Menu page as well. The images would not wrap when adjusting them in media queries for screen max-size 594px. With tutor's assistance, that was fixed as well. 
-
-At the initial stage of the project there were issues with Codeanywhere not loading up for hours and that was so frustrating because it was time wasting. I then decided to work on VS Code but at a later stage when I got stuck with few sections in my project, I needed tutor support, and then I was advised to shift to Gitpod cloud IDE. Hence, I copied my progress to Gitpod and worked from there to have a workspace that I knew would load for me every time, and also make use of the tutoring facility. 
-
-However, just few days before I complete my project, there was an unusual change with Gitpod - I could not see the changes I made in the browser in realtime, even though I was clearing the cache. This was again so frustrating because I was very close to the finish. I had to use Gitpod from another laptop to be able to complete my work and I had student care support as well.
-
-I came across semantic errors after validating my HTML and CSS codes, and all of them were fixed.
+Bug | Status 
+----|-------
+Horizontal scroll on smaller screen sizes| Resolved; adjusted size of images and used CSS overflow-x property on HTML.
+during changes for responsiveness | Resolved; CSS error.
+Favicon would not show on live site | Resolved; link was not placed in the header.
+Win message showing incorrectly behind tiles | Resolved, added z-index.
+Page refreshed before button was clicked | Resolved; when adding event listener, removed () after function. 
+Keys squished too much on smaller screens | Resolved; added height reduction in media queries.
+After game over appears, user can still erase letters and continue trying new words in the last row | Unresolved (Part of me likes this bug as it's nice for those who get frustrated easily. Like me for example.)
+JSHint error showing togglePlay() being unused as was being called in index.html file | Resolved; removed function from index.html file and added event listener to JavaScript file instead.
+Words with more than one letter repeated had incorrect colours. | Resolved; swapped order of over-lay colours in CSS so that green takes precedence over yellow.
+WAVE error for empty label field for music toggle button | Resolved; added screen-reader only class to a `<p>` with label inside.
+## Known Issues
+- On smaller screen sizes, the keyboard becomes slightly more squished. I attempted to fix this to the best of my ability but I feel this is still an issue.
+- On some small screens there is a small amount on vertical scroll, initially it was worse and the user could not see the first row of tiles when using the keyboard but I changed the CSS to fix this. While there's still a small amount of scroll on some small screens, it now does not disrupt the game.
+- If the user types in the incorrect word in the last row, the flipping tiles very briefly overlaps the game over message. This lasts for a split second and is very difficult to notice, so I left this as it is rather than attempt to change the code so close to my submission date.
 
 ## Credits
 
+- My mentor, for reviewing my project and giving useful advice to improve it.
+- J. Janardhan, for his valuable support and advice throughout the project.
+- Brian McConway, for drawing my attention to few bugs that I could fix on time, and for always motivating me.
+- Niclas_5p_lead from Slack community, to point out few bugs and improvements on styling, thanks to him I could fix the issues.
 - YouTube video tutorials:
  - How to create Star Rating form: 
  <https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s> 
  - Creating page title CSS animation:
  <https://alvarotrigo.com/blog/css-text-animations/>
-- My mentor, 
-- Brian McConway, for sharing tips and tricks throughout the project.
+
 
 ## Acknowledgements
 
-- Friends, family and colleagues, for testing my project at every stage, and also for their feedback.
+- Friends, family,  and colleagues, for testing my project at every stage, and also for their feedback.
 - My Mentor for constructive feedback and direction.
+- My cohort coordinator Amy for always being there and provide guidance.
 - My tutors from Code Institute, for their valuable assistance.
 - Student Care for their valuable support.
 - The Code Institute, for all the facilities and support.

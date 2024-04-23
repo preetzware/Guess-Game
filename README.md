@@ -76,24 +76,11 @@ The background image was downloaded from <a href="https://unsplash.com/photos/as
 
 ## Wireframes
 The first and foremost wireframes for this website were made using paper and pencil. Thereafter they were digitally designed using Balsamiq.com with some light modifications. Guess the Country is a one page website consisting of six modals used to keep vistors engaged. 
-1. *Homepage Wireframe*
-![Wireframe used for Homepage](assets/img/Wireframe1.jpeg)
 
-2. *Menu Page Wireframe*
+*Homepage Wireframe view on desktop and mobile*
 
-![Wireframe used for Menu page](assets/img/Wireframe2.jpeg)
+![Wireframe used for Homepage](assets/img/Wireframes.png)
 
-3. *Gallery Page Wireframe*
-
-![Wireframe used for gallery page](assets/img/Wireframe3.jpeg)
-
-4. *Sign-Up Page Wireframe*
-
-![Wireframe used for sign-up page](assets/img/Wireframe4.jpeg)
-
-5. *Thank You Page Wireframe*
-
-![Wireframe used for Thank you page](assets/img/Wireframe5.jpeg)
 
 ## Features
 
@@ -220,6 +207,8 @@ Set timer was given 2000ms to generate the next image and options, but when user
 Initially user could click on all three options instead on one only | Resolved; other two incorrect option buttons were disabled in JavaScript. 
 Modals were not displaying in the center of the screens | Resolved; top and left position values were updated in CSS .
 From lighthouse test, found that images were too large that delayed loading of the page  | Resolved; Converted all images into webp format in tinypng.
+Star rating did not unmark after submitting feedback form  |  Resolved; Added a function in JavaScrit to remove the star rating after feedback submission
+
 
 ## Credits
 

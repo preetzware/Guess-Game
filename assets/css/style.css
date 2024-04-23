@@ -671,11 +671,13 @@ textarea {
 #heading404 p {
   font-size: 1.2em;
   color: #666;
+  text-align: center;
 }
 
 #heading404 a {
   color: #007bff;
   text-decoration: none;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

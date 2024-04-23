@@ -79,7 +79,7 @@ The first and foremost wireframes for this website were made using paper and pen
 
 *Homepage Wireframe view on desktop and mobile*
 
-![Wireframe used for Homepage](assets/img/Wireframes.png)
+![Wireframe used for Homepage](assets/img/wireframes.png)
 
 
 ## Features
@@ -90,13 +90,11 @@ The first and foremost wireframes for this website were made using paper and pen
 
 Guess the Country is a one page website designed simply, with some amount of interactivity and a touch of elegance. The desktop game screen features the 'guessing cat' logo in the top-center and two buttons on its either side - a start button and a 'How to Play' button. While the mobile game screen features the logo on the very top and the same two buttons below it, styled differently.
 
-![Logo and buttons component](assets/img/Navbar.png)
+![Logo and buttons component](assets/img/logo-btns.webp)
 
 **2.** <u>**Title**</u>
 
-The title has been styled into a gorgeous text animation effect. Credit goes to <a href="https://alvarotrigo.com/blog/css-text-animations/" target="_blank">alvarotrigo.com</a>
-
-![Title](assets/img/Hamburger.jpg)
+The title as seen above, has been styled into a gorgeous text animation effect. Credit goes to <a href="https://alvarotrigo.com/blog/css-text-animations/" target="_blank">alvarotrigo.com</a>
 
 **3.** <u>**Sound/Timer/Score Components**</u>
 
@@ -106,22 +104,33 @@ The Score is positioned on the right side below the title and it will keep updat
 
 The timer is placed in the middle of the mute/unmute button and the score so that all three major components are visible on the user's screen when playing the game. 
 
+![Sound/Timer/Score](assets/img/SoundTimerScore.webp)
+
 **4.** <u>**Landmark Images**</u>
 Landmark images situated below the sound/timer/score components will appear back-to-back when the game will be on.
 
+![Landmarks](assets/img/landmarks-btns.webp)
+
 **5.** <u>**Option Buttons**</u>
-Three option buttons are featured below each landmark image.
+Three option buttons as shown above, are featured below each landmark image.
 
 **6.** <u>**Star Rating and form**</u>
 The star rating and feedback form that appear below the the option buttons can be partly credited to this YouTube tutorial: https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s. The first star could not be fully unmarked once clicked and I fixed this by adding a 'remove star rating' function. Both ratings and feedback area are required in order to submit the form.
 
+![feedback section](assets/img/feedback.webp)
+
 - ### Footer
 At the bottom of the page, a simple footer features three social media icon links namely LinkedIn, Github and Instagram.
 
-![Footer for website](assets/img/Footer.png)
+![Footer for website](assets/img/Footer.webp)
 
 - ### Modals
 In total, six modals have been integrated in this website with the aim to grab users’ attention, enhance user engagement and improve user experience.
+
+![Username pop-up](assets/img/user-name.webp)   ![How to play modal](assets/img/howtoplay.webp)
+
+![Time up modal](assets/img/timeup.webp)   ![Congratulations modal](assets/img/congrats.webp)
+
 
  Modal | Appearance/Purpose
 ---------------|---------------
@@ -133,8 +142,8 @@ In total, six modals have been integrated in this website with the aim to grab u
 **Congratulations Pop-up**   | Appears with a cheering sound effect at the end of the game only when the user has clicked on all correct options and scored ten on ten. This win sound effect accompanying this pop-up shows appreciation to the best scorer and conveys congratulations message.
 **Feedback Pop-up**   | Appears when user clicks on submit button in feedback section. To thank the user for their feedback and rating.
 
-- ## 404 page
 
+ ## 404 page
 
 ![404 page](404.html)
 

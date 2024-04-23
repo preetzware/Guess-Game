@@ -640,9 +640,26 @@ textarea {
 }
 
 /* 404 page styling */
+#body-404 {
+  background: #00A8A8;
+  background: linear-gradient(90deg, #43d2ef 0%, rgba(42,41,41,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 .container-404 {
-  text-align: center;
+  background-color: #fffdfd89;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #heading404 {

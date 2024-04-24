@@ -117,7 +117,7 @@ Three option buttons as shown above, are featured below each landmark image. Whe
 
 **6.** <u>**Star Rating and form**</u>
 
-The star rating and feedback form that appear below the the option buttons can be partly credited to this YouTube tutorial: https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s. The first star could not be fully unmarked once clicked and I fixed this by adding a 'remove star rating' function. Both ratings and feedback area are required in order to submit the form.
+The star rating and feedback form that appear below the the option buttons can be partly credited to this YouTube tutorial: <a href="https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s" target="_blank">Star Rating</a>. The first star could not be fully unmarked once clicked and I fixed this by adding a 'remove star rating' function. Both ratings and feedback area are required in order to submit the form.
 
 ![feedback section](assets/img/feedback.webp)
 

@@ -23,11 +23,8 @@ Guess the Country is a free multi-landmark guessing game where a landmark image 
 - [Testing](#testing)
 - [Technologies And Languages](#technologies-and-languages)
 - [Deployment](#deployment)
-  - [Creating A Fork](#creating-a-fork)
   - [Cloning Repository](#cloning-repository)
 - [Credits](#credits)
-  - [Media](#media)
-  - [Code](#code)
   - [Acknowledgements](#acknowledgements)
   - [Comments](#comments)
 
@@ -145,7 +142,7 @@ In total, six modals have been integrated in this website with the aim to grab u
 
  ## 404 page
 
-![404 page](404.html)
+![404 page](assets/img/404page.png)
 
 ## Future Implementations
 

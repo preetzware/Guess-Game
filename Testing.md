@@ -79,29 +79,43 @@ iPhone X | Works mostly as expected, keyboard slightly off center but functional
 iPhone 7 | Works as expected
 iPad (unsure of model or year)| Works as expected
 Samsung Galaxy S20 FE | As expected
-OnePlus 6 | As expected
 iPhone 11 Pro | Mostly as expected, keyboard slightly cut off but functional
 iPhone 11 | Mostly as expected, keyboard slightly cut off but functional
 <hr>
 
 ## Validator Testing
+### HTML Validation
 
+![HTML Validation](assets/img/htmlvalidator.webp)
+
+**404 HTML**
+![HTML Validation](assets/img/404validation.png)
+
+### CSS Validation
+
+![CSS Validation](assets/img/cssvalidator.webp)
+
+### JavaScript Validation
+
+![JS Validation](assets/img/jshintvalidator.webp)
 
 ## Lighthouse Testing
 
-Device | Result
--------|-------
-Desktop| ![desktop-lighthouse](docs/testing_images/desktop-lighthouse.png)
-Mobile | ![mobile-lighthouse](docs/testing_images/mobile-lighthouse.png)
+**Desktop Performance**
+![Lighthouse for desktop](assets/img/lighthouse-desktop.webp)
+
+**Mobile Performance**
+![Lighthouse for mobile](assets/img/mobile-lighthouse.webp)
+
 
 ### PSI Testing
 Google PageSpeed Insights (PSI), a free tool was utilized for gauging the performance and accessibility measures of the website. Initially, the performance and speed was not so highly rated generally because of the large images and lack of aria labels. I tried to compress and convert many of the images from jpeg format to png, and I added missing aria labels to elements for better accessibility which significantly improved the performance of my website. Below are the final PSI results:
 
-![PSI results for Desktop](assets/img/PSI-1.png)
+![PSI results for Desktop](assets/img/psi-desktop.webp)
 
-![PSI results for Mobile Device](assets/img/PSI-2.png)
+![PSI results for Mobile Device](assets/img/psi-mobile.webp)
 
 ## Accessibility Testing
 
-![wave-testing](docs/testing_images/wave-testing.png)
-![wave-results](docs/testing_images/wave-results.png)
+**Wave Testing**
+![wave-results](assets/img/wavetest.webp)

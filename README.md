@@ -69,9 +69,11 @@ Built-in font family Verdana was used throughout this website, with fallback fon
 ![Fonts used in the project](assets/img/verdana.webp)
 
 ## Imagery
+
 The background image was downloaded from <a href="https://unsplash.com/photos/assorted-color-hot-air-balloons-during-daytime-DuBNA1QMpPA" target="_blank">unsplash.com</a> and the logo was taken from <a href="https://www.iosicongallery.com/" target="_blank">ios icon gallery</a> while the landmark images were wisely chosen from Pinterest with the exception of Sénanque Abbey (France) imagery which was taken from Shutterstock website. After Lighthouse testing, all images were converted into webp format to improve the website's performance.
 
 ## Wireframes
+
 The first and foremost wireframes for this website were made using paper and pencil. Thereafter they were digitally designed using Balsamiq.com with some light modifications. Guess the Country is a one page website consisting of six modals used to keep vistors engaged. 
 
 *Homepage Wireframe view on desktop and mobile*
@@ -101,35 +103,35 @@ The Score is positioned on the right side below the title and it will keep updat
 
 The timer is placed in the middle of the mute/unmute button and the score so that all three major components are visible on the user's screen when playing the game. 
 
-![Sound/Timer/Score](assets/img/SoundTimerScore.webp)
+![Sound/Timer/Score](assets/img/soundtimerscore.webp)
 
 **4.** <u>**Landmark Images**</u>
+
 Landmark images situated below the sound/timer/score components will appear back-to-back when the game will be on.
 
 ![Landmarks](assets/img/landmarks-btns.webp)
 
 **5.** <u>**Option Buttons**</u>
-Three option buttons as shown above, are featured below each landmark image.
+
+Three option buttons as shown above, are featured below each landmark image. When correct option is clicked, button turns green and produces a pleasing sound. Upon clicking on incorrect otion, button turns red with a disappointment sound and also indicates the correct answer in green.
 
 **6.** <u>**Star Rating and form**</u>
+
 The star rating and feedback form that appear below the the option buttons can be partly credited to this YouTube tutorial: https://www.youtube.com/watch?v=lqrsLpcGTes&t=3s. The first star could not be fully unmarked once clicked and I fixed this by adding a 'remove star rating' function. Both ratings and feedback area are required in order to submit the form.
 
 ![feedback section](assets/img/feedback.webp)
 
-- ### Footer
+**7.** <u>**Footer**</u>
+
 At the bottom of the page, a simple footer features three social media icon links namely LinkedIn, Github and Instagram.
 
 ![Footer for website](assets/img/Footer.webp)
 
-- ### Modals
+**8.** <u>**MODALS**</u>
+
 In total, six modals have been integrated in this website with the aim to grab users’ attention, enhance user engagement and improve user experience.
 
-![Username pop-up](assets/img/user-name.webp)   ![How to play modal](assets/img/howtoplay.webp)
-
-![Time up modal](assets/img/timeup.webp)   ![Congratulations modal](assets/img/congrats.webp)
-
-
- Modal | Appearance/Purpose
+ **Modal** | **Appearance/Purpose**
 ---------------|---------------
 **Start Message Pop-up**   | Appears when user straightaway clicks on answer options. Alerts and guides user to click on Start button to play.
 **User Name Pop-up**   | Appears on clicking on START button. Required to register the user's name and for game to start with timer on. Required for personalising pop-ups for user.
@@ -139,8 +141,14 @@ In total, six modals have been integrated in this website with the aim to grab u
 **Congratulations Pop-up**   | Appears with a cheering sound effect at the end of the game only when the user has clicked on all correct options and scored ten on ten. This win sound effect accompanying this pop-up shows appreciation to the best scorer and conveys congratulations message.
 **Feedback Pop-up**   | Appears when user clicks on submit button in feedback section. To thank the user for their feedback and rating.
 
+![Username pop-up](assets/img/user-name.webp)   ![How to play modal](assets/img/howtoplay.webp)
+
+![Time up modal](assets/img/timeup.webp)   ![Congratulations modal](assets/img/congrats.webp)
+
+<hr>
 
  ## 404 page
+ The 404 page is very simly designed using the same color theme as in the main page. The text informs the user that there this page they are looking for does not exist and has a link that directs them to the valid game screen.
 
 ![404 page](assets/img/404page.png)
 
@@ -161,7 +169,7 @@ Generally, aria labels as well as alt texts have been used on images and icons t
 5. **JavaScript** - used to add interactivity in the website.
 6. **DevTools** - used for Lighthouse testing, to test the responsiveness of my website and to check for bugs.
 7. **PageSpeed Insights** - used to test the performance of the website.
-8. **Wave Chrome Extension** - 
+8. **Wave Chrome Extension** - to check accessibility of the website.
 9. **Font Awesome** - used to import social media and other icons.
 10. **Pinterest** - used to source website's imageries.
 11. **TinyPNG** - used to compress my website's imageries.
@@ -169,6 +177,7 @@ Generally, aria labels as well as alt texts have been used on images and icons t
 13. **Balsamiq** - used to create the wireframes for the initial design process of my website.
 14. **Pixabay**  - used to download sound effects for the game.
 15. **Am I Responsive?** - used to test the responsiveness of the website.
+16. **ChatGpt** - used for consultation when things did not make sense at times.
 
 ## Languages Used
 HTML 5, CSS, JavaScript
@@ -195,14 +204,10 @@ The website was deployed on Github pages. The steps are as follows:
 4. Open the repo in Gitpod by prefixing the URL with: gitpod.io/#.
 5. Confirm the workspace creation.
 
-## Testing
-
-### Manual Testing
-
 # Testing
-Testing document can be found [here](Testing.md)
+Testing document can be found [here](/Testing.md)
 
-## Known Bugs
+### Known Bugs
 
 Bug | Status 
 ----|-------
